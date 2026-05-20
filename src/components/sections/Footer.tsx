@@ -29,7 +29,6 @@ export function Footer() {
 
             {/* NAP — microformat address element */}
             <address className="not-italic text-[var(--brand-cream)] text-sm space-y-1 opacity-80">
-              <p className="font-semibold text-white">Big Red Moving Company</p>
               <p>
                 {footer.address.city}, {footer.address.state} {footer.address.zip}
               </p>
