@@ -7,7 +7,7 @@ export function Header() {
     <>
       {/* Main sticky header */}
       <header className="sticky top-0 z-50 bg-[var(--brand-black)] border-b-2 border-[var(--brand-red)]">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
           {/* Logo */}
           <a
             href="#top"
@@ -17,8 +17,8 @@ export function Header() {
             <Image
               src="/IMG_5595.png"
               alt="Big Red Moving Company — Hingham, MA"
-              width={52}
-              height={52}
+              width={64}
+              height={64}
               priority
               className="rounded-sm"
             />

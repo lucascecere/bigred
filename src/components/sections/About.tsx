@@ -23,9 +23,13 @@ export function About() {
             >
               {about.heading}
             </h2>
-            <p className="text-[var(--brand-steel)] text-base md:text-lg leading-relaxed mb-8">
-              {about.body}
-            </p>
+            <div className="text-base md:text-lg mb-8">
+              {about.body.split('\n\n').map((para, i) => (
+                <p key={i} className="text-[var(--brand-steel)] leading-relaxed mt-4 first:mt-0">
+                  {para}
+                </p>
+              ))}
+            </div>
 
             {/* Owner credit */}
             <div>
@@ -41,8 +45,19 @@ export function About() {
 
           {/* Right: photo placeholder */}
           <div className="flex justify-center md:justify-end">
-            <div className="bg-[var(--brand-charcoal)] border-2 border-[var(--brand-black)] shadow-[6px_6px_0_var(--brand-black)] aspect-[3/4] w-full max-w-xs rounded-[4px] flex items-center justify-center text-[var(--brand-steel)] text-sm text-center p-4">
-              Photo of {about.ownerName} goes here
+            <div className="bg-[var(--brand-charcoal)] aspect-[3/4] w-full max-w-xs rounded-[4px] border-2 border-[var(--brand-red)] shadow-[6px_6px_0_var(--brand-red-deep)] flex flex-col items-center justify-center gap-4 p-6">
+              {/* Truck icon */}
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <rect x="4" y="20" width="36" height="28" rx="2" fill="#C8102E"/>
+                <rect x="40" y="28" width="20" height="20" rx="2" fill="#C8102E"/>
+                <polygon points="40,28 56,28 60,36 40,36" fill="#8B0A1F"/>
+                <circle cx="16" cy="50" r="6" fill="#1A1A1A" stroke="#C8102E" strokeWidth="2"/>
+                <circle cx="48" cy="50" r="6" fill="#1A1A1A" stroke="#C8102E" strokeWidth="2"/>
+                <rect x="8" y="24" width="20" height="14" rx="1" fill="#F8F5F0" opacity="0.15"/>
+              </svg>
+              <p className="text-[var(--brand-cream)] text-sm text-center opacity-60 leading-snug">
+                Owner photo<br/>coming soon
+              </p>
             </div>
           </div>
         </div>

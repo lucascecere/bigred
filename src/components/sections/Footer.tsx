@@ -17,8 +17,8 @@ export function Footer() {
               <Image
                 src="/IMG_5595.png"
                 alt="Big Red Moving Company — Hingham, MA"
-                width={80}
-                height={80}
+                width={120}
+                height={120}
                 className="rounded-sm"
               />
             </div>

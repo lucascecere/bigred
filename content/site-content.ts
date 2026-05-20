@@ -35,6 +35,24 @@ export interface FaqItem {
   answer: string
 }
 
+export interface StatItem {
+  value: string
+  label: string
+}
+
+export interface TestimonialItem {
+  quote: string
+  author: string
+  town: string
+  stars: number
+}
+
+export interface ProcessStep {
+  step: number
+  title: string
+  description: string
+}
+
 export interface SiteContent {
   meta: {
     title: string
@@ -62,6 +80,12 @@ export interface SiteContent {
   }
   services: ServiceItem[]
   whyUs: WhyUsItem[]
+  stats: StatItem[]
+  testimonials: TestimonialItem[]
+  process: {
+    heading: string
+    steps: ProcessStep[]
+  }
   serviceArea: {
     heading: string
     subhead: string
@@ -140,35 +164,37 @@ export const siteContent: SiteContent = {
       "Local moves done right by people who actually live here. Serving Hingham and the South Shore.",
     ctaPrimary: { label: "Get a Free Quote", href: "#contact" },
     ctaSecondary: { label: "Call (781) 555-0100", href: "tel:+17815550100" },
-    trustStrip: ["Licensed & Insured", "Family Owned", "South Shore Local"],
+    trustStrip: [
+      "Licensed & Insured",
+      "Family Owned",
+      "South Shore Local",
+      "Flat-Rate Pricing",
+      "5-Star Google Rated",
+    ],
   },
   services: [
     {
       id: "local-moves",
       title: "Local Moves",
-      description:
-        "South Shore homes and apartments, full-service. We handle everything from packing to furniture placement.",
+      description: "Full-service local moves across the South Shore. We load, transport, and unload — including furniture disassembly and reassembly as needed. Flat-rate pricing means the number we quote is the number you pay. No hourly overruns.",
       icon: "home",
     },
     {
       id: "long-distance",
       title: "Long-Distance Moves",
-      description:
-        "Anywhere in New England and beyond. Flat pricing, no hidden fees on moving day.",
+      description: "Moving out of state or across New England? We handle the full haul. All pricing is flat-rate upfront — no fuel surcharges or surprise fees on delivery day. Fully insured for every mile.",
       icon: "map-pin",
     },
     {
       id: "packing",
       title: "Packing Services",
-      description:
-        "Full pack, partial pack, or just supplies. We protect your belongings like they're our own.",
+      description: "Full-pack, partial-pack, or just supplies. We use professional-grade boxes, packing paper, bubble wrap, and furniture blankets. Fragile items and large artwork handled with care. You don't have to touch a single box if you don't want to.",
       icon: "package",
     },
     {
       id: "labor-only",
       title: "Labor-Only / Loading Help",
-      description:
-        "Got a truck, need muscle? We'll load and unload so you don't throw your back out.",
+      description: "Renting your own truck or using a POD? We supply the crew. Load, unload, or both. Two-man minimum, hourly rate, no truck fee. Perfect for apartment moves and storage unit cleanouts.",
       icon: "truck",
     },
   ],
@@ -197,6 +223,52 @@ export const siteContent: SiteContent = {
         "Talk to Charlie, not a call center. Questions get real answers, fast.",
     },
   ],
+  stats: [
+    { value: "200+", label: "Moves Completed" },
+    { value: "5 Yrs", label: "Serving South Shore" },
+    { value: "5-Star", label: "Google Rated" },
+    { value: "17", label: "Towns Served" },
+  ],
+  testimonials: [
+    {
+      quote: "Charlie and his crew showed up on time, handled our furniture with care, and the final bill matched the quote exactly. No surprise charges. Highly recommend.",
+      author: "Sarah",
+      town: "Hingham, MA",
+      stars: 5,
+    },
+    {
+      quote: "We had a third-floor apartment, tight staircase, and a lot of heavy stuff. They didn't complain once. Done in four hours. Will use again when we move out.",
+      author: "Mike",
+      town: "Weymouth, MA",
+      stars: 5,
+    },
+    {
+      quote: "Every other mover I called was vague about pricing. Big Red gave me a flat number and that's what I paid. That alone is worth five stars.",
+      author: "Jen",
+      town: "Scituate, MA",
+      stars: 5,
+    },
+  ],
+  process: {
+    heading: "How It Works",
+    steps: [
+      {
+        step: 1,
+        title: "Get Your Free Quote",
+        description: "Fill out the form or call us. We'll ask about your home size, distance, and any tricky items. You get a flat price — no estimates that magically grow on moving day.",
+      },
+      {
+        step: 2,
+        title: "We Plan Your Move",
+        description: "We confirm your date, send a reminder the day before, and show up on time with the right crew and truck for your job. No guesswork, no surprises.",
+      },
+      {
+        step: 3,
+        title: "Move Day — We Handle Everything",
+        description: "Load, transport, unload, and place furniture where you want it. When we leave, your new place is set up and ready to live in.",
+      },
+    ],
+  },
   serviceArea: {
     heading: "Serving the South Shore",
     subhead: "Based in Hingham. Proudly moving families across these towns:",
@@ -272,7 +344,7 @@ export const siteContent: SiteContent = {
   ],
   about: {
     heading: "Run by a local, for locals.",
-    body: "Charlie started Big Red Moving because he was tired of watching his neighbors get taken advantage of by national moving chains — hidden fees, late crews, broken furniture, and zero accountability. Big Red is different. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.",
+    body: "Charlie started Big Red Moving because he was tired of watching his neighbors get taken advantage of by national moving chains — hidden fees, late crews, broken furniture, and zero accountability. Big Red is different. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by Charlie or someone he personally trained and trusts. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.",
     ownerName: "Charlie",
     ownerTitle: "Owner, Big Red Moving Company",
   },
