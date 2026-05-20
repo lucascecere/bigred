@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { siteContent } from '@content/site-content'
 import { PhoneCTA } from '@/components/ui/PhoneCTA'
 import { StarIcon } from '@/components/ui/StarIcon'
@@ -57,70 +58,21 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right: box truck SVG illustration */}
-        <div className="hidden md:flex items-center justify-center">
-          <TruckIllustration />
+        {/* Right: moving photo */}
+        <div className="hidden md:flex items-center justify-center relative">
+          <div className="relative w-full max-w-lg aspect-[4/3] rounded-[4px] overflow-hidden border-4 border-[var(--brand-red)] shadow-[8px_8px_0_var(--brand-red-deep)]">
+            <Image
+              src="https://images.unsplash.com/photo-rEqEQK_DFJE?w=800&q=80&auto=format&fit=crop"
+              alt="Big Red Moving crew unloading furniture from a moving truck"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Dark overlay for contrast */}
+            <div className="absolute inset-0 bg-[var(--brand-black)] opacity-20" aria-hidden="true" />
+          </div>
         </div>
       </div>
     </section>
-  )
-}
-
-function TruckIllustration() {
-  return (
-    <svg
-      viewBox="0 0 400 260"
-      width="400"
-      height="260"
-      aria-label="Big Red Moving truck"
-      role="img"
-      className="w-full max-w-md"
-    >
-      {/* Truck body (cargo box) */}
-      <rect x="20" y="60" width="230" height="140" rx="4" fill="var(--brand-red)" />
-      {/* Cargo box door detail */}
-      <rect x="30" y="70" width="210" height="120" rx="2" fill="var(--brand-red-deep)" opacity="0.4" />
-      {/* Horizontal stripe on box */}
-      <rect x="20" y="155" width="230" height="12" fill="var(--brand-black)" opacity="0.3" />
-
-      {/* Cab */}
-      <rect x="250" y="100" width="120" height="100" rx="4" fill="var(--brand-red)" />
-      {/* Cab roof curve */}
-      <path d="M255 100 Q310 60 370 100" fill="var(--brand-red)" />
-      {/* Windshield */}
-      <path d="M265 100 Q310 70 365 100 L365 135 L265 135 Z" fill="#1a2a3a" opacity="0.7" rx="3" />
-      {/* Door panel */}
-      <rect x="255" y="138" width="110" height="55" rx="2" fill="var(--brand-red-deep)" opacity="0.2" />
-      {/* Door window */}
-      <rect x="270" y="145" width="60" height="35" rx="2" fill="#1a2a3a" opacity="0.5" />
-      {/* Door handle */}
-      <rect x="325" y="160" width="20" height="5" rx="2" fill="var(--brand-gold)" />
-
-      {/* Front bumper */}
-      <rect x="360" y="170" width="30" height="30" rx="2" fill="var(--brand-charcoal)" />
-      {/* Headlight */}
-      <rect x="363" y="173" width="18" height="10" rx="1" fill="var(--brand-gold)" opacity="0.8" />
-
-      {/* Chassis / undercarriage */}
-      <rect x="20" y="198" width="375" height="10" rx="2" fill="var(--brand-charcoal)" />
-
-      {/* Wheels */}
-      {/* Rear axle — two wheels (dual rear) */}
-      <circle cx="90" cy="215" r="30" fill="var(--brand-charcoal)" />
-      <circle cx="90" cy="215" r="20" fill="#2a2a2a" />
-      <circle cx="90" cy="215" r="8" fill="var(--brand-steel)" />
-
-      <circle cx="155" cy="215" r="30" fill="var(--brand-charcoal)" />
-      <circle cx="155" cy="215" r="20" fill="#2a2a2a" />
-      <circle cx="155" cy="215" r="8" fill="var(--brand-steel)" />
-
-      {/* Front axle */}
-      <circle cx="305" cy="215" r="28" fill="var(--brand-charcoal)" />
-      <circle cx="305" cy="215" r="18" fill="#2a2a2a" />
-      <circle cx="305" cy="215" r="7" fill="var(--brand-steel)" />
-
-      {/* "BIG RED" text on truck side */}
-      <text x="135" y="138" textAnchor="middle" fontFamily="Anton, sans-serif" fontSize="28" fill="white" fontWeight="bold" letterSpacing="2">BIG RED</text>
-    </svg>
   )
 }

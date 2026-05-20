@@ -1,5 +1,25 @@
+import Image from 'next/image'
 import { siteContent } from '@content/site-content'
 import { DiagonalBanner } from '@/components/ui/DiagonalBanner'
+
+const serviceImages: Record<string, { src: string; alt: string }> = {
+  'local-moves': {
+    src: 'https://images.unsplash.com/photo-6nIkztwmYMQ?w=600&q=80&auto=format&fit=crop',
+    alt: 'Movers loading boxes into a moving van',
+  },
+  'long-distance': {
+    src: 'https://images.unsplash.com/photo-crHhZlES310?w=600&q=80&auto=format&fit=crop',
+    alt: 'Moving truck ready for a long-distance move',
+  },
+  'packing': {
+    src: 'https://images.unsplash.com/photo-j7vbBmTHmjY?w=600&q=80&auto=format&fit=crop',
+    alt: 'Room packed with moving boxes ready for a move',
+  },
+  'labor-only': {
+    src: 'https://images.unsplash.com/photo-wS40ELZROLE?w=600&q=80&auto=format&fit=crop',
+    alt: 'Person moving boxes in a living room',
+  },
+}
 
 // Inline SVG icons per service — no lucide-react
 function HomeIcon() {
@@ -79,6 +99,17 @@ export function Services() {
               key={service.id}
               className="bg-white border-2 border-[var(--brand-black)] shadow-[6px_6px_0_var(--brand-black)] rounded-[4px] overflow-hidden flex flex-col"
             >
+              {/* Card image */}
+              {serviceImages[service.id] && (
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={serviceImages[service.id].src}
+                    alt={serviceImages[service.id].alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <DiagonalBanner />
               <div className="p-6 flex flex-col flex-1">
                 <div className="w-10 h-10 flex items-center justify-center bg-[var(--brand-red)] text-white rounded-[4px] mb-4 shrink-0">

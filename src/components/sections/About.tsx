@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { siteContent } from '@content/site-content'
 
 export function About() {
@@ -43,21 +44,15 @@ export function About() {
             </div>
           </div>
 
-          {/* Right: photo placeholder */}
+          {/* Right: team photo */}
           <div className="flex justify-center md:justify-end">
-            <div className="bg-[var(--brand-charcoal)] aspect-[3/4] w-full max-w-xs rounded-[4px] border-2 border-[var(--brand-red)] shadow-[6px_6px_0_var(--brand-red-deep)] flex flex-col items-center justify-center gap-4 p-6">
-              {/* Truck icon */}
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <rect x="4" y="20" width="36" height="28" rx="2" fill="#C8102E"/>
-                <rect x="40" y="28" width="20" height="20" rx="2" fill="#C8102E"/>
-                <polygon points="40,28 56,28 60,36 40,36" fill="#8B0A1F"/>
-                <circle cx="16" cy="50" r="6" fill="#1A1A1A" stroke="#C8102E" strokeWidth="2"/>
-                <circle cx="48" cy="50" r="6" fill="#1A1A1A" stroke="#C8102E" strokeWidth="2"/>
-                <rect x="8" y="24" width="20" height="14" rx="1" fill="#F8F5F0" opacity="0.15"/>
-              </svg>
-              <p className="text-[var(--brand-cream)] text-sm text-center opacity-60 leading-snug">
-                Owner photo<br/>coming soon
-              </p>
+            <div className="relative w-full max-w-xs aspect-[3/4] rounded-[4px] overflow-hidden border-4 border-[var(--brand-red)] shadow-[8px_8px_0_var(--brand-red-deep)]">
+              <Image
+                src="https://images.unsplash.com/photo-ZlgYTC28pGE?w=600&q=80&auto=format&fit=crop"
+                alt="The Big Red Moving Company crew"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
