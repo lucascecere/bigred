@@ -176,26 +176,26 @@ export const siteContent: SiteContent = {
     {
       id: "local-moves",
       title: "Local Moves",
-      description: "Full-service local moves across the South Shore. We load, transport, and unload — including furniture disassembly and reassembly as needed. Flat-rate pricing means the number we quote is the number you pay. No hourly overruns.",
+      description: "Full-service local and short-distance moves across the South Shore and surrounding Massachusetts. We load, transport, and unload — including furniture disassembly and reassembly. Flat-rate pricing, no surprise charges on moving day.",
       icon: "home",
     },
     {
-      id: "long-distance",
-      title: "Long-Distance Moves",
-      description: "Moving out of state or across New England? We handle the full haul. All pricing is flat-rate upfront — no fuel surcharges or surprise fees on delivery day. Fully insured for every mile.",
-      icon: "map-pin",
-    },
-    {
-      id: "packing",
-      title: "Packing Services",
-      description: "Full-pack, partial-pack, or just supplies. We use professional-grade boxes, packing paper, bubble wrap, and furniture blankets. Fragile items and large artwork handled with care. You don't have to touch a single box if you don't want to.",
-      icon: "package",
+      id: "junk-removal",
+      title: "Junk Removal & Hauling",
+      description: "Clearing out a garage, basement, or estate? We haul it away. Furniture, appliances, yard debris, renovation debris — if you need it gone, we'll take it. Fast scheduling, fair flat pricing.",
+      icon: "truck",
     },
     {
       id: "labor-only",
       title: "Labor-Only / Loading Help",
       description: "Renting your own truck or using a POD? We supply the crew. Load, unload, or both. Two-man minimum, hourly rate, no truck fee. Perfect for apartment moves and storage unit cleanouts.",
-      icon: "truck",
+      icon: "muscle",
+    },
+    {
+      id: "furniture-hauling",
+      title: "Furniture & Large Items",
+      description: "Moving a single piece of furniture, a treadmill, or a piano? We handle one-off heavy hauls without requiring a full move booking. Call us — if it's big and heavy, we can move it.",
+      icon: "box",
     },
   ],
   whyUs: [
@@ -224,7 +224,7 @@ export const siteContent: SiteContent = {
   ],
   stats: [
     { value: "200+", label: "Moves Completed" },
-    { value: "5 Yrs", label: "Serving South Shore" },
+    { value: "3 Yrs", label: "Serving South Shore" },
     { value: "5-Star", label: "Google Rated" },
     { value: "17", label: "Towns Served" },
   ],
@@ -316,9 +316,8 @@ export const siteContent: SiteContent = {
         "Most local moves in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and hours needed. We provide flat-rate quotes so there are no surprises on moving day. Contact us for a free estimate tailored to your specific move.",
     },
     {
-      question: "Do you provide packing supplies?",
-      answer:
-        "Yes. We offer full packing services, partial packing, and box-only supply orders. We bring professional-grade boxes, packing paper, bubble wrap, and furniture blankets. Just let us know what level of help you need when you book.",
+      question: "Do you do junk removal?",
+      answer: "Yes. We haul away furniture, appliances, garage clutter, yard waste, renovation debris, and general junk. We can usually schedule junk removal jobs within a day or two. Call us with a description of what needs to go and we'll give you a flat price.",
     },
     {
       question: "Are you licensed and insured?",
@@ -343,7 +342,7 @@ export const siteContent: SiteContent = {
   ],
   about: {
     heading: "Run by locals, for locals.",
-    body: "Big Red Moving was founded by three South Shore guys — Charles Even, Andrew Concannon, and Anthony Fabrizio — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.",
+    body: "Big Red Moving was founded by three South Shore guys — Charles Even, Andrew Concannon, and Anthony Fabrizio — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also do junk removal and hauling — clearing out garages, basements, and estates for South Shore families who just need the stuff gone. Same crew, same flat pricing, same reliability.",
     ownerName: "Charles, Andrew & Anthony",
     ownerTitle: "Co-Founders, Big Red Moving Company",
   },

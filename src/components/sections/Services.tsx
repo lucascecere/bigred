@@ -7,17 +7,17 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
     src: 'https://images.unsplash.com/photo-6nIkztwmYMQ?w=600&q=80&auto=format&fit=crop',
     alt: 'Movers loading boxes into a moving van',
   },
-  'long-distance': {
-    src: 'https://images.unsplash.com/photo-crHhZlES310?w=600&q=80&auto=format&fit=crop',
-    alt: 'Moving truck ready for a long-distance move',
-  },
-  'packing': {
-    src: 'https://images.unsplash.com/photo-j7vbBmTHmjY?w=600&q=80&auto=format&fit=crop',
-    alt: 'Room packed with moving boxes ready for a move',
+  'junk-removal': {
+    src: 'https://images.unsplash.com/photo-vyOERax9oI4?w=600&q=80&auto=format&fit=crop',
+    alt: 'Cluttered garage ready for junk removal cleanout',
   },
   'labor-only': {
     src: 'https://images.unsplash.com/photo-wS40ELZROLE?w=600&q=80&auto=format&fit=crop',
     alt: 'Person moving boxes in a living room',
+  },
+  'furniture-hauling': {
+    src: 'https://images.unsplash.com/photo-4_TYsMnML60?w=600&q=80&auto=format&fit=crop',
+    alt: 'Large appliance loaded into a delivery truck',
   },
 }
 
