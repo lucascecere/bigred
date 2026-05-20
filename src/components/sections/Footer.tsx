@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { siteContent } from '@content/site-content'
 import { StarIcon } from '@/components/ui/StarIcon'
 
@@ -13,15 +14,13 @@ export function Footer() {
           <div>
             {/* Logo */}
             <div className="mb-4">
-              <span
-                className="font-display text-2xl text-[var(--brand-red)] uppercase tracking-tight leading-none block"
-                style={{ fontFamily: 'var(--font-display)' }}
-              >
-                BIG RED MOVING
-              </span>
-              <span className="text-[var(--brand-gold)] text-xs uppercase tracking-[0.2em] font-bold block mt-0.5">
-                HINGHAM, MA
-              </span>
+              <Image
+                src="/IMG_5595.png"
+                alt="Big Red Moving Company — Hingham, MA"
+                width={80}
+                height={80}
+                className="rounded-sm"
+              />
             </div>
 
             <p className="text-[var(--brand-cream)] text-sm opacity-70 mb-4 leading-relaxed">

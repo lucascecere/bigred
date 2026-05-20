@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { siteContent } from '@content/site-content'
 import { PhoneCTA } from '@/components/ui/PhoneCTA'
 
@@ -13,15 +14,14 @@ export function Header() {
             className="flex flex-col leading-none shrink-0"
             aria-label="Big Red Moving Company — Home"
           >
-            <span
-              className="font-display text-xl text-[var(--brand-red)] uppercase tracking-tight leading-none"
-              style={{ fontFamily: 'var(--font-display)' }}
-            >
-              {siteContent.header.logoText}
-            </span>
-            <span className="text-[var(--brand-gold)] text-[10px] uppercase tracking-[0.2em] font-bold">
-              {siteContent.header.tagline}
-            </span>
+            <Image
+              src="/IMG_5595.png"
+              alt="Big Red Moving Company — Hingham, MA"
+              width={52}
+              height={52}
+              priority
+              className="rounded-sm"
+            />
           </a>
 
           {/* Desktop nav */}
