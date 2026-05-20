@@ -4,19 +4,19 @@ import { DiagonalBanner } from '@/components/ui/DiagonalBanner'
 
 const serviceImages: Record<string, { src: string; alt: string }> = {
   'local-moves': {
-    src: 'https://images.unsplash.com/photo-6nIkztwmYMQ?w=600&q=80&auto=format&fit=crop',
+    src: 'https://plus.unsplash.com/premium_photo-1661409078904-42334551db0c?w=600&q=80&auto=format&fit=crop',
     alt: 'Movers loading boxes into a moving van',
   },
   'junk-removal': {
-    src: 'https://images.unsplash.com/photo-vyOERax9oI4?w=600&q=80&auto=format&fit=crop',
+    src: 'https://images.unsplash.com/photo-1709831917664-804b57448953?w=600&q=80&auto=format&fit=crop',
     alt: 'Cluttered garage ready for junk removal cleanout',
   },
   'labor-only': {
-    src: 'https://images.unsplash.com/photo-wS40ELZROLE?w=600&q=80&auto=format&fit=crop',
+    src: 'https://images.unsplash.com/photo-1714647211902-bb711d643a17?w=600&q=80&auto=format&fit=crop',
     alt: 'Person moving boxes in a living room',
   },
   'furniture-hauling': {
-    src: 'https://images.unsplash.com/photo-4_TYsMnML60?w=600&q=80&auto=format&fit=crop',
+    src: 'https://images.unsplash.com/photo-1517478615425-ea923377dac7?w=600&q=80&auto=format&fit=crop',
     alt: 'Large appliance loaded into a delivery truck',
   },
 }

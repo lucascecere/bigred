@@ -44,17 +44,32 @@ export function Hero() {
             </PhoneCTA>
           </div>
 
-          {/* Trust strip */}
-          <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-[var(--brand-gold)] text-sm uppercase tracking-[0.15em]">
-            {hero.trustStrip.map((item, i) => (
-              <span key={item} className="flex items-center gap-1.5">
-                <StarIcon size={12} />
-                {item}
-                {i < hero.trustStrip.length - 1 && (
-                  <span className="ml-3 opacity-40">·</span>
-                )}
-              </span>
-            ))}
+          {/* Trust strip — scrollable on mobile, wrap on desktop */}
+          <div className="mt-8">
+            {/* Mobile: horizontal scroll slider */}
+            <div className="md:hidden overflow-x-auto scrollbar-hide -mx-5 px-5">
+              <div className="flex gap-5 pb-1 w-max">
+                {siteContent.hero.trustStrip.map((item) => (
+                  <span key={item} className="flex items-center gap-1.5 shrink-0 text-[var(--brand-gold)] text-sm uppercase tracking-[0.12em] font-semibold">
+                    <StarIcon size={11} />
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Desktop: flex wrap */}
+            <div className="hidden md:flex flex-wrap gap-x-4 gap-y-2 text-[var(--brand-gold)] text-sm uppercase tracking-[0.15em]">
+              {siteContent.hero.trustStrip.map((item, i) => (
+                <span key={item} className="flex items-center gap-1.5">
+                  <StarIcon size={12} />
+                  {item}
+                  {i < siteContent.hero.trustStrip.length - 1 && (
+                    <span className="ml-2 opacity-40" aria-hidden="true">·</span>
+                  )}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -62,7 +77,7 @@ export function Hero() {
         <div className="hidden md:flex items-center justify-center relative">
           <div className="relative w-full max-w-lg aspect-[4/3] rounded-[4px] overflow-hidden border-4 border-[var(--brand-red)] shadow-[8px_8px_0_var(--brand-red-deep)]">
             <Image
-              src="https://images.unsplash.com/photo-rEqEQK_DFJE?w=800&q=80&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1698917414969-feade59e3343?w=800&q=80&auto=format&fit=crop"
               alt="Big Red Moving crew unloading furniture from a moving truck"
               fill
               className="object-cover"
