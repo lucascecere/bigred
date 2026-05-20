@@ -2,7 +2,7 @@ import { siteContent } from '@content/site-content'
 
 export function HowItWorks() {
   return (
-    <section className="bg-[var(--brand-cream)] py-20 px-4" id="how-it-works" aria-labelledby="how-it-works-heading">
+    <section className="bg-[var(--brand-cream)] py-20 px-5 sm:px-6" id="how-it-works" aria-labelledby="how-it-works-heading">
       <div className="max-w-7xl mx-auto">
         <h2
           id="how-it-works-heading"

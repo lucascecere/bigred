@@ -10,7 +10,7 @@ export function ServiceArea() {
       className="bg-white py-20 md:py-28"
       aria-labelledby="service-area-heading"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Section header */}
         <div className="mb-10 md:mb-14">
           <p className="text-[var(--brand-red)] text-sm font-bold uppercase tracking-[0.2em] mb-2">

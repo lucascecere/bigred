@@ -3,7 +3,7 @@ import { StarIcon } from '@/components/ui/StarIcon'
 
 export function Testimonials() {
   return (
-    <section className="bg-[var(--brand-charcoal)] py-20 px-4" aria-labelledby="testimonials-heading">
+    <section className="bg-[var(--brand-charcoal)] py-20 px-5 sm:px-6" aria-labelledby="testimonials-heading">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">

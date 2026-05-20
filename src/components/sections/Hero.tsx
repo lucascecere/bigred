@@ -11,7 +11,7 @@ export function Hero() {
       className="relative bg-[var(--brand-black)] grain-overlay overflow-hidden min-h-[80vh] flex items-center"
       aria-label="Hero"
     >
-      <div className="max-w-7xl mx-auto px-4 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
         {/* Left: text */}
         <div>
           <h1

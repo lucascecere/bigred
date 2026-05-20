@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[var(--brand-black)] border-t-4 border-[var(--brand-red)] pt-12 pb-24 md:pb-12">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Three-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-10">
           {/* Column 1: NAP */}

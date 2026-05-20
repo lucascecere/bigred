@@ -9,7 +9,7 @@ export function About() {
       className="bg-[var(--brand-cream)] py-20 md:py-28 border-t-2 border-[var(--brand-black)]/10"
       aria-labelledby="about-heading"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: text */}
           <div>

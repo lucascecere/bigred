@@ -1,24 +1,37 @@
 import { siteContent } from '@content/site-content'
 
 export function StatsBar() {
+  const items = [...siteContent.stats, ...siteContent.stats]
+
   return (
-    <section className="bg-[var(--brand-red)] border-y-2 border-[var(--brand-red-deep)]" aria-label="Company stats">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 divide-y-2 md:divide-y-0 md:divide-x-2 divide-white/20">
-          {siteContent.stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center justify-center text-center py-2 md:py-0 px-4">
-              <span
-                className="text-4xl md:text-5xl font-bold text-white leading-none mb-1"
-                style={{ fontFamily: 'var(--font-display)' }}
-              >
-                {stat.value}
-              </span>
-              <span className="text-white/80 text-sm uppercase tracking-widest font-semibold">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
+    <section
+      className="bg-[var(--brand-red)] border-y-2 border-[var(--brand-red-deep)] overflow-hidden"
+      aria-label="Company stats"
+    >
+      <div
+        className="flex py-6 w-max"
+        style={{ animation: 'marquee-scroll 28s linear infinite' }}
+      >
+        {items.map((stat, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-3 px-10 shrink-0"
+          >
+            {/* Star divider */}
+            <span className="text-white/40 text-lg select-none" aria-hidden="true">★</span>
+            {/* Stat value */}
+            <span
+              className="text-white font-bold text-2xl leading-none"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              {stat.value}
+            </span>
+            {/* Stat label */}
+            <span className="text-white/80 text-sm uppercase tracking-widest font-semibold">
+              {stat.label}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   )

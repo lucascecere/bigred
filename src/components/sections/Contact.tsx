@@ -74,7 +74,7 @@ export function Contact() {
       className="bg-[var(--brand-charcoal)] py-20 md:py-28"
       aria-labelledby="contact-heading"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Section header */}
         <div className="mb-10 md:mb-14">
           <p className="text-[var(--brand-gold)] text-sm font-bold uppercase tracking-[0.2em] mb-2">

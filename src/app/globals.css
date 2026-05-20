@@ -139,6 +139,11 @@ html {
   }
 }
 
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 .animate-headline {
   animation: headline-in 0.6s ease-out both;
 }
