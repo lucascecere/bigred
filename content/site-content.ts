@@ -219,8 +219,7 @@ export const siteContent: SiteContent = {
     {
       id: "responsive",
       title: "Real People Answer the Phone",
-      description:
-        "Talk to Charlie, not a call center. Questions get real answers, fast.",
+      description: "Talk to Charles, Andrew, or Anthony directly — not a call center. Questions get real answers from the people who actually run the crew.",
     },
   ],
   stats: [
@@ -231,7 +230,7 @@ export const siteContent: SiteContent = {
   ],
   testimonials: [
     {
-      quote: "Charlie and his crew showed up on time, handled our furniture with care, and the final bill matched the quote exactly. No surprise charges. Highly recommend.",
+      quote: "The Big Red crew showed up on time, handled our furniture with care, and the final bill matched the quote exactly. No surprise charges. Highly recommend.",
       author: "Sarah",
       town: "Hingham, MA",
       stars: 5,
@@ -343,10 +342,10 @@ export const siteContent: SiteContent = {
     },
   ],
   about: {
-    heading: "Run by a local, for locals.",
-    body: "Charlie started Big Red Moving because he was tired of watching his neighbors get taken advantage of by national moving chains — hidden fees, late crews, broken furniture, and zero accountability. Big Red is different. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by Charlie or someone he personally trained and trusts. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.",
-    ownerName: "Charlie",
-    ownerTitle: "Owner, Big Red Moving Company",
+    heading: "Run by locals, for locals.",
+    body: "Big Red Moving was founded by three South Shore guys — Charles Even, Andrew Concannon, and Anthony Fabrizio — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.",
+    ownerName: "Charles, Andrew & Anthony",
+    ownerTitle: "Co-Founders, Big Red Moving Company",
   },
   contact: {
     heading: "Get Your Free Quote",

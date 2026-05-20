@@ -17,8 +17,8 @@ export function Header() {
             <Image
               src="/IMG_5595.png"
               alt="Big Red Moving Company — Hingham, MA"
-              width={64}
-              height={64}
+              width={76}
+              height={76}
               priority
               className="rounded-sm"
             />

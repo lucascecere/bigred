@@ -60,7 +60,7 @@ export function Footer() {
             >
               Service Area
             </h3>
-            <ul className="list-none space-y-1.5">
+            <ul className="list-none grid grid-cols-2 gap-x-4 gap-y-1.5">
               {serviceArea.towns.map((town) => (
                 <li key={town} className="flex items-center gap-2">
                   <span className="text-[var(--brand-red)] shrink-0">
