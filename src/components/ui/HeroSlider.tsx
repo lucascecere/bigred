@@ -4,24 +4,24 @@ import { useState, useEffect } from 'react'
 
 const slides = [
   {
-    src: 'https://images.unsplash.com/photo-1698917414969-feade59e3343?w=800&q=80&auto=format&fit=crop',
-    alt: 'Big Red Moving crew unloading furniture from a moving truck',
+    src: 'https://images.unsplash.com/photo-1635108198322-18c814f9b70f?w=800&q=80&auto=format&fit=crop',
+    alt: 'Cluttered garage full of tools and junk ready for cleanout',
   },
   {
-    src: 'https://plus.unsplash.com/premium_photo-1661409078904-42334551db0c?w=800&q=80&auto=format&fit=crop',
-    alt: 'Moving boxes and furniture ready for a South Shore move',
+    src: 'https://plus.unsplash.com/premium_photo-1755742204274-14fce63e051a?w=800&q=80&auto=format&fit=crop',
+    alt: 'Suburban South Shore neighborhood homes with garages',
   },
   {
-    src: 'https://images.unsplash.com/photo-1714647211902-bb711d643a17?w=800&q=80&auto=format&fit=crop',
-    alt: 'Movers loading a truck for a local South Shore move',
+    src: 'https://images.unsplash.com/photo-1647299852821-40401c0b0976?w=800&q=80&auto=format&fit=crop',
+    alt: 'Packed garage filled with items ready for junk removal',
   },
   {
-    src: 'https://images.unsplash.com/photo-1517478615425-ea923377dac7?w=800&q=80&auto=format&fit=crop',
-    alt: 'Moving team handling large furniture on the South Shore',
+    src: 'https://plus.unsplash.com/premium_photo-1732652605028-ab8c5d4bd403?w=800&q=80&auto=format&fit=crop',
+    alt: 'Stacked cardboard boxes ready for hauling',
   },
   {
-    src: 'https://images.unsplash.com/photo-1601654717399-7486d5ebedca?w=800&q=80&auto=format&fit=crop',
-    alt: 'Big Red Moving crew preparing for a residential move in Hingham MA',
+    src: 'https://images.unsplash.com/photo-1753911371922-fea40946a1af?w=800&q=80&auto=format&fit=crop',
+    alt: 'Clean empty room after a full property cleanout',
   },
 ]
 
