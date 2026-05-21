@@ -21,7 +21,7 @@ export function Hero() {
           >
             HINGHAM&apos;S
             <br />
-            MOVING
+            JUNK REMOVAL
             <br />
             COMPANY.
           </h1>

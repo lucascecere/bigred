@@ -13,9 +13,6 @@ export function HowItWorks() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative">
-          {/* Connector line on desktop */}
-          <div className="hidden md:block absolute top-10 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-0.5 bg-[var(--brand-red)] opacity-30" aria-hidden="true" />
-
           {siteContent.process.steps.map((step) => (
             <div key={step.step} className="relative flex flex-col items-center text-center md:items-start md:text-left">
               {/* Step number circle */}

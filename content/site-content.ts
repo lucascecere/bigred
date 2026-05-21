@@ -144,8 +144,8 @@ export const siteContent: SiteContent = {
     siteUrl: "https://bigredmovingco.com",
   },
   phone: {
-    display: "(781) 555-0100",
-    href: "tel:+17815550100",
+    display: "(617) 874-6030",
+    href: "tel:+16178746030",
   },
   email: "info@bigredmovingco.com",
   header: {
@@ -161,24 +161,16 @@ export const siteContent: SiteContent = {
   hero: {
     headline: "HINGHAM'S MOVING COMPANY.",
     subhead:
-      "Local moves done right by people who actually live here. Serving Hingham, Quincy, Weymouth, and the South Shore.",
+      "Hingham's junk removal and hauling crew. Serving all of the South Shore.",
     ctaPrimary: { label: "Get a Free Quote", href: "#contact" },
-    ctaSecondary: { label: "Call (781) 555-0100", href: "tel:+17815550100" },
+    ctaSecondary: { label: "Call (617) 874-6030", href: "tel:+16178746030" },
     trustStrip: [
-      "Licensed & Insured",
-      "Family Owned",
       "South Shore Local",
       "Flat-Rate Pricing",
       "5-Star Google Rated",
     ],
   },
   services: [
-    {
-      id: "local-moves",
-      title: "Local Moves",
-      description: "Full-service local and short-distance moves across the South Shore and surrounding Massachusetts. We load, transport, and unload — including furniture disassembly and reassembly. Flat-rate pricing, no surprise charges on moving day.",
-      icon: "home",
-    },
     {
       id: "junk-removal",
       title: "Junk Removal & Hauling",
@@ -194,7 +186,7 @@ export const siteContent: SiteContent = {
     {
       id: "furniture-hauling",
       title: "Furniture & Large Items",
-      description: "Moving a single piece of furniture, a treadmill, or a piano? We handle one-off heavy hauls without requiring a full move booking. Call us — if it's big and heavy, we can move it.",
+      description: "Moving a single piece of furniture, a treadmill, or an oversized item? We handle one-off heavy hauls without requiring a full move booking. Call us — if it's big and heavy, we can move it.",
       icon: "box",
     },
   ],
@@ -211,15 +203,9 @@ export const siteContent: SiteContent = {
         "No surprise charges on moving day. The price we quote is the price you pay.",
     },
     {
-      id: "insured",
-      title: "Fully Licensed & Insured",
-      description:
-        "Your stuff is protected, period. MA moving license, full liability coverage.",
-    },
-    {
       id: "responsive",
       title: "Real People Answer the Phone",
-      description: "Talk to Charles, Andrew, or Anthony directly — not a call center. Questions get real answers from the people who actually run the crew.",
+      description: "Talk to Andrew, Anthony, or Charles directly — not a call center. Questions get real answers from the people who actually run the crew.",
     },
   ],
   stats: [
@@ -258,19 +244,19 @@ export const siteContent: SiteContent = {
       },
       {
         step: 2,
-        title: "We Plan Your Move",
-        description: "We confirm your date, send a reminder the day before, and show up on time with the right crew and truck for your job. No guesswork, no surprises.",
+        title: "We Plan It Out",
+        description: "We confirm your date, send a reminder the day before, and show up on time with the right crew and equipment for your job. No guesswork, no surprises.",
       },
       {
         step: 3,
-        title: "Move Day — We Handle Everything",
-        description: "Load, transport, unload, and place furniture where you want it. When we leave, your new place is set up and ready to live in.",
+        title: "We Show Up & Finish It",
+        description: "We load, haul, and place everything where you want it. When we leave, the job is done and done right.",
       },
     ],
   },
   serviceArea: {
     heading: "Serving the South Shore",
-    subhead: "Based in Hingham. Proudly moving families across these towns:",
+    subhead: "Based in Hingham. Hauling junk and clearing out homes across these towns:",
     towns: [
       "Hingham",
       "Cohasset",
@@ -293,27 +279,27 @@ export const siteContent: SiteContent = {
     clusters: [
       {
         name: "hingham-cohasset-hull",
-        body: "Moving in Hingham? We know every neighborhood from World's End to Crow Point. Our trucks navigate the narrow streets of Hingham Square daily. Cohasset and Hull moves are our specialty — we've handled every tight waterfront driveway on the coast.",
+        body: "Junk removal in Hingham's waterfront estates and Crow Point neighborhoods — we know these streets. Garage cleanouts, basement hauls, full estate cleanouts in Hull and Cohasset. Narrow driveways and tight access roads are no problem for our crew.",
       },
       {
         name: "scituate-marshfield-duxbury",
-        body: "Heading to Scituate, Marshfield, or Duxbury? South Shore coastal moves are our specialty. We handle the tight driveways and historic homes that bigger movers won't touch. Year-round service, no beach-season surcharges.",
+        body: "Coastal junk removal for Scituate, Marshfield, and Duxbury. We clear seasonal homes, beach property cleanouts, and estate hauls up and down the South Shore coast. Year-round service, no seasonal surcharges.",
       },
       {
         name: "weymouth-braintree-quincy",
-        body: "Moving to or from Weymouth, Braintree, or Quincy? We make this run constantly. Apartment buildings, condos, multi-families — we've seen it all on the northern stretch of the South Shore. No elevator fee surprises, no stair nonsense.",
+        body: "Dense residential junk removal in Weymouth, Braintree, and Quincy. Apartment cleanouts, furniture hauls, renovation debris removal — we handle high-rise logistics and multi-family buildings without the extra fees.",
       },
       {
         name: "rockland-hanover-pembroke",
-        body: "Serving inland Rockland, Hanover, Pembroke, and the surrounding towns. Whether you're upsizing to a colonial or downsizing out of a ranch, our crew handles the whole job so you can focus on the next chapter.",
+        body: "Inland junk removal for Rockland, Hanover, Pembroke, and surrounding towns. Garage cleanouts, full property hauls, and estate clear-outs for suburban homes throughout the South Shore interior.",
       },
     ],
   },
   faq: [
     {
-      question: "How much does a local move in Hingham cost?",
+      question: "How much does a local job in Hingham cost?",
       answer:
-        "Most local moves in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and hours needed. We provide flat-rate quotes so there are no surprises on moving day. Contact us for a free estimate tailored to your specific move.",
+        "Most local jobs in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and hours needed. We provide flat-rate quotes so there are no surprises on the day. Contact us for a free estimate tailored to your specific job.",
     },
     {
       question: "Do you do junk removal?",
@@ -322,12 +308,12 @@ export const siteContent: SiteContent = {
     {
       question: "Are you licensed and insured?",
       answer:
-        "Yes. Big Red Moving Company is fully licensed with the Massachusetts Department of Public Utilities and carries full liability coverage. Your belongings are protected from the moment we arrive until the last box is placed.",
+        "Yes. Big Red is fully insured for every job we take on. Your property and belongings are covered from the moment we pull up until the last load is cleared.",
     },
     {
-      question: "How far in advance should I book my move?",
+      question: "How far in advance should I book?",
       answer:
-        "We recommend booking at least 2–3 weeks in advance, especially for weekend moves during peak season (May through September). Last-minute moves happen — call us and we'll do our best to accommodate. Early bookers get first pick of dates and times.",
+        "About a week out is ideal, but we're flexible. If something just came up, give us a call — we'll do our best to fit you in. Early bookings get first pick on dates and times.",
     },
     {
       question: "Do you move on weekends?",
@@ -348,14 +334,14 @@ export const siteContent: SiteContent = {
       answer: "Yes. If you're renting your own moving truck or using a POD, we'll supply the crew to load, unload, or both. Our labor-only service is billed hourly with a two-man minimum. It's a popular option for apartment moves and small relocations where you don't need us to provide the truck."
     },
     {
-      question: "Can you move a single heavy item like a treadmill or piano?",
-      answer: "Absolutely. We handle single-item hauls without requiring a full move booking. Whether it's a treadmill, upright piano, safe, or oversized sectional, our crew can move it. Call us with the item details and we'll give you a price. If it's big and heavy, we can move it."
+      question: "Can you haul a single heavy item like a treadmill or oversized furniture?",
+      answer: "Yes. We handle single-item hauls without a full booking. Treadmill, safe, hot tub, oversized sectional — if it's big and heavy, we can move it. Call us with the details and we'll give you a flat price."
     },
   ],
   about: {
     heading: "Run by locals, for locals.",
-    body: "Big Red Moving was founded by three South Shore guys — Charles Even, Andrew Concannon, and Anthony Fabrizio — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also do junk removal and hauling — clearing out garages, basements, and estates for South Shore families who just need the stuff gone. Same crew, same flat pricing, same reliability.",
-    ownerName: "Charles, Andrew & Anthony",
+    body: "Big Red Moving was founded by three South Shore guys — Andrew Concannon, Anthony Fabrizio, and Charles Even — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also do junk removal and hauling — clearing out garages, basements, and estates for South Shore families who just need the stuff gone. Same crew, same flat pricing, same reliability.",
+    ownerName: "Andrew, Anthony & Charles",
     ownerTitle: "Co-Founders, Big Red Moving Company",
   },
   contact: {

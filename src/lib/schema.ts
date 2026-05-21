@@ -7,7 +7,7 @@ export function getLocalBusinessSchema(): Record<string, unknown> {
     "@context": "https://schema.org",
     "@type": ["MovingCompany", "LocalBusiness"],
     "name": "Big Red Moving Company",
-    "telephone": "+1-781-555-0100",
+    "telephone": "+1-617-874-6030",
     "email": "info@bigredmovingco.com",
     "url": "https://bigredmovingco.com",
     "image": "https://bigredmovingco.com/IMG_5595.png",
@@ -82,7 +82,7 @@ export function getServiceSchema(
     "@type": "MovingCompany",
     "name": "Big Red Moving Company",
     "url": "https://bigredmovingco.com",
-    "telephone": "+1-781-555-0100",
+    "telephone": "+1-617-874-6030",
   }
 
   const areaServed = [
@@ -148,7 +148,7 @@ export function getLocationPageSchema(params: {
     "@type": types,
     "name": `Big Red Moving Company — ${town}, MA`,
     "url": url,
-    "telephone": "+1-781-555-0100",
+    "telephone": "+1-617-874-6030",
     "email": "info@bigredmovingco.com",
     "address": {
       "@type": "PostalAddress",
