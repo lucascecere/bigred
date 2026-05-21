@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Anton, DM_Sans } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import { Header } from '@/components/sections/Header'
 import { Footer } from '@/components/sections/Footer'
@@ -75,6 +74,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
+        {/* Google Analytics — inline in <head> so scanners detect it in raw HTML */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9ZH91DVF1" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B9ZH91DVF1');`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }}
@@ -88,16 +95,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-B9ZH91DVF1"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-B9ZH91DVF1');`}
-        </Script>
       </body>
     </html>
   )
