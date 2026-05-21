@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     'hingham moving company',
     'moving company south shore',
   ],
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',

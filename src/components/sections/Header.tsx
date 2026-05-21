@@ -7,7 +7,7 @@ export function Header() {
     <>
       {/* Main sticky header */}
       <header className="sticky top-0 z-50 bg-[var(--brand-black)] border-b-2 border-[var(--brand-red)]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6 h-20 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
           <a
             href="/"
