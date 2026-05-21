@@ -161,7 +161,7 @@ export const siteContent: SiteContent = {
   hero: {
     headline: "HINGHAM'S MOVING COMPANY.",
     subhead:
-      "Local moves done right by people who actually live here. Serving Hingham and the South Shore.",
+      "Local moves done right by people who actually live here. Serving Hingham, Quincy, Weymouth, and the South Shore.",
     ctaPrimary: { label: "Get a Free Quote", href: "#contact" },
     ctaSecondary: { label: "Call (781) 555-0100", href: "tel:+17815550100" },
     trustStrip: [
@@ -338,6 +338,18 @@ export const siteContent: SiteContent = {
       question: "What towns do you serve on the South Shore?",
       answer:
         "We serve Hingham, Cohasset, Hull, Norwell, Scituate, Weymouth, Braintree, Quincy, Milton, Holbrook, Rockland, Abington, Whitman, Hanover, Pembroke, Marshfield, and Duxbury. Don't see your town? Call us — we may still be able to help.",
+    },
+    {
+      question: "How much does junk removal cost in the South Shore?",
+      answer: "Most junk removal jobs in the South Shore run between $150 and $500 depending on the volume and type of items. We price by the load, not by the hour — so you know exactly what you're paying before we start. Call us with a description of what needs to go and we'll give you a flat price on the spot."
+    },
+    {
+      question: "Do you offer labor-only help if I have my own truck?",
+      answer: "Yes. If you're renting your own moving truck or using a POD, we'll supply the crew to load, unload, or both. Our labor-only service is billed hourly with a two-man minimum. It's a popular option for apartment moves and small relocations where you don't need us to provide the truck."
+    },
+    {
+      question: "Can you move a single heavy item like a treadmill or piano?",
+      answer: "Absolutely. We handle single-item hauls without requiring a full move booking. Whether it's a treadmill, upright piano, safe, or oversized sectional, our crew can move it. Call us with the item details and we'll give you a price. If it's big and heavy, we can move it."
     },
   ],
   about: {

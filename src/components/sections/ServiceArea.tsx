@@ -1,5 +1,17 @@
+import Link from 'next/link'
 import { siteContent } from '@content/site-content'
 import { StarIcon } from '@/components/ui/StarIcon'
+
+const priorityTownLinks: Record<string, string> = {
+  Hingham: '/moving-company-hingham-ma',
+  Quincy: '/moving-company-quincy-ma',
+  Weymouth: '/moving-company-weymouth-ma',
+  Braintree: '/moving-company-braintree-ma',
+  Scituate: '/moving-company-scituate-ma',
+  Marshfield: '/moving-company-marshfield-ma',
+  Duxbury: '/moving-company-duxbury-ma',
+  Norwell: '/moving-company-norwell-ma',
+}
 
 export function ServiceArea() {
   const { serviceArea } = siteContent
@@ -38,9 +50,18 @@ export function ServiceArea() {
               <span className="text-[var(--brand-red)] shrink-0">
                 <StarIcon size={12} />
               </span>
-              <span className="text-[var(--brand-black)] font-medium text-sm md:text-base">
-                {town}
-              </span>
+              {priorityTownLinks[town] ? (
+                <Link
+                  href={priorityTownLinks[town]}
+                  className="text-[var(--brand-black)] font-medium text-sm md:text-base hover:text-[var(--brand-red)] transition-colors underline-offset-2 hover:underline"
+                >
+                  {town}
+                </Link>
+              ) : (
+                <span className="text-[var(--brand-black)] font-medium text-sm md:text-base">
+                  {town}
+                </span>
+              )}
             </li>
           ))}
         </ul>

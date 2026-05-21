@@ -1,6 +1,18 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { siteContent } from '@content/site-content'
 import { StarIcon } from '@/components/ui/StarIcon'
+
+const priorityTownLinks: Record<string, string> = {
+  Hingham: '/moving-company-hingham-ma',
+  Quincy: '/moving-company-quincy-ma',
+  Weymouth: '/moving-company-weymouth-ma',
+  Braintree: '/moving-company-braintree-ma',
+  Scituate: '/moving-company-scituate-ma',
+  Marshfield: '/moving-company-marshfield-ma',
+  Duxbury: '/moving-company-duxbury-ma',
+  Norwell: '/moving-company-norwell-ma',
+}
 
 export function Footer() {
   const { footer, phone, email, serviceArea } = siteContent
@@ -65,12 +77,21 @@ export function Footer() {
                   <span className="text-[var(--brand-red)] shrink-0">
                     <StarIcon size={10} />
                   </span>
-                  <a
-                    href="#service-area"
-                    className="text-[var(--brand-cream)] text-sm opacity-70 hover:opacity-100 hover:text-[var(--brand-red)] transition-colors"
-                  >
-                    {town}
-                  </a>
+                  {priorityTownLinks[town] ? (
+                    <Link
+                      href={priorityTownLinks[town]}
+                      className="text-[var(--brand-cream)] text-sm opacity-70 hover:opacity-100 hover:text-[var(--brand-red)] transition-colors"
+                    >
+                      {town}
+                    </Link>
+                  ) : (
+                    <a
+                      href="#service-area"
+                      className="text-[var(--brand-cream)] text-sm opacity-70 hover:opacity-100 hover:text-[var(--brand-red)] transition-colors"
+                    >
+                      {town}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -10,15 +10,15 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-5 sm:px-6 h-20 flex items-center justify-between gap-4">
           {/* Logo */}
           <a
-            href="#top"
+            href="/"
             className="flex flex-col leading-none shrink-0"
             aria-label="Big Red Moving Company — Home"
           >
             <Image
               src="/IMG_5595.png"
               alt="Big Red Moving Company — Hingham, MA"
-              width={76}
-              height={76}
+              width={96}
+              height={96}
               priority
               className="rounded-sm"
             />
