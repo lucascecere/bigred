@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Anton, DM_Sans } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { Header } from '@/components/sections/Header'
 import { Footer } from '@/components/sections/Footer'
@@ -87,6 +88,16 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-B9ZH91DVF1"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-B9ZH91DVF1');`}
+        </Script>
       </body>
     </html>
   )
