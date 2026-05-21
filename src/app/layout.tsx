@@ -3,7 +3,7 @@ import { Anton, DM_Sans } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/sections/Header'
 import { Footer } from '@/components/sections/Footer'
-import { getLocalBusinessSchema } from '@/lib/schema'
+import { getLocalBusinessSchema, getWebsiteSchema } from '@/lib/schema'
 
 const anton = Anton({
   subsets: ['latin'],
@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     apple: { url: '/apple-icon.png', sizes: '180x180' },
   },
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://bigredmovingco.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -68,9 +71,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${anton.variable} ${dmSans.variable}`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebsiteSchema()) }}
         />
       </head>
       <body>

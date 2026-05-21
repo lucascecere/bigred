@@ -9,6 +9,7 @@ export const LeadFormSchema = z.object({
   moveDate: z.string().optional(),
   notes: z.string().max(1000).optional(),
   serviceType: z.enum(["moving", "junk-removal", "labor-only", "other"]).optional(),
+  _honey: z.string().optional(),
 })
 
 export type LeadFormData = z.infer<typeof LeadFormSchema>

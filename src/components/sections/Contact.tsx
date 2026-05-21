@@ -12,6 +12,7 @@ export function Contact() {
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({})
+  const [honey, setHoney] = useState('')
 
   const { contact, phone } = siteContent
 
@@ -48,7 +49,7 @@ export function Contact() {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(validation.data),
+        body: JSON.stringify({ ...validation.data, _honey: honey }),
       })
       const json = await res.json()
       if (json.success) {
@@ -175,6 +176,20 @@ export function Contact() {
                       {fieldErrors.email}
                     </span>
                   )}
+                </div>
+
+                {/* Honeypot — leave empty. Bots fill this; real users never see it. */}
+                <div style={{ position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
+                  <label htmlFor="_honey">Leave this empty</label>
+                  <input
+                    id="_honey"
+                    name="_honey"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honey}
+                    onChange={(e) => setHoney(e.target.value)}
+                  />
                 </div>
 
                 {/* Moving From / To */}

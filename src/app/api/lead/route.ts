@@ -31,6 +31,19 @@ function checkRateLimit(ip: string): { allowed: boolean; retryAfterSeconds: numb
 }
 
 export async function POST(request: NextRequest): Promise<Response> {
+  // 0a. Content-Type check — reject anything that isn't JSON
+  const contentType = request.headers.get('content-type') ?? ''
+  if (!contentType.includes('application/json')) {
+    return Response.json({ success: false, error: 'Invalid request.' }, { status: 415 })
+  }
+
+  // 0b. Origin check — reject cross-origin POSTs (CSRF/CORS protection)
+  const origin = request.headers.get('origin')
+  const allowedOrigins = ['https://bigredmovingco.com', 'https://www.bigredmovingco.com']
+  if (origin && !allowedOrigins.includes(origin)) {
+    return Response.json({ success: false, error: 'Forbidden.' }, { status: 403 })
+  }
+
   // 1. Extract IP — NextRequest.ip was removed in Next.js v15+; read from headers instead
   const ip =
     request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
@@ -73,6 +86,12 @@ export async function POST(request: NextRequest): Promise<Response> {
       },
       { status: 400 },
     )
+  }
+
+  // 4b. Honeypot check — if the hidden field is filled, it's a bot
+  if (result.data._honey) {
+    // Silently succeed to avoid tipping off the bot
+    return Response.json({ success: true })
   }
 
   // 5. Send notification email via Resend
