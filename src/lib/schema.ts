@@ -8,8 +8,8 @@ export function getLocalBusinessSchema(): Record<string, unknown> {
     "@type": ["MovingCompany", "LocalBusiness"],
     "name": "Big Red Moving Company",
     "telephone": "+1-781-555-0100",
-    "email": "hello@bigredmoving.com",
-    "url": "https://bigredmoving.com",
+    "email": "hello@bigredmovingco.com",
+    "url": "https://bigredmovingco.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hingham",

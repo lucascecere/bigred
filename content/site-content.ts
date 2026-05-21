@@ -141,13 +141,13 @@ export const siteContent: SiteContent = {
     ogTitle: "Big Red Moving Company | Hingham, MA",
     ogDescription:
       "Local movers based in Hingham. Family-owned, licensed & insured. Serving the South Shore.",
-    siteUrl: "https://bigredmoving.com",
+    siteUrl: "https://bigredmovingco.com",
   },
   phone: {
     display: "(781) 555-0100",
     href: "tel:+17815550100",
   },
-  email: "hello@bigredmoving.com",
+  email: "hello@bigredmovingco.com",
   header: {
     logoText: "BIG RED MOVING",
     tagline: "HINGHAM, MA",

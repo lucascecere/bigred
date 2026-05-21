@@ -8,7 +8,7 @@ const resend = new Resend(env.RESEND_API_KEY)
 
 export async function sendLeadEmail(data: LeadFormData): Promise<void> {
   await resend.emails.send({
-    from: 'Big Red Moving <leads@bigredmoving.com>',
+    from: 'Big Red Moving <leads@bigredmovingco.com>',
     to: env.LEAD_NOTIFICATION_EMAIL,
     subject: `New Moving Lead — ${data.name}`,
     html: buildEmailHtml(data),
@@ -67,7 +67,7 @@ function buildEmailHtml(data: LeadFormData): string {
                 Big Red Moving Company &mdash; Hingham, MA
               </p>
               <p style="margin:4px 0 0;font-family:sans-serif;font-size:12px;color:#aaa;">
-                This lead was submitted via bigredmoving.com
+                This lead was submitted via bigredmovingco.com
               </p>
             </td>
           </tr>

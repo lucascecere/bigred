@@ -7,7 +7,7 @@ import { z } from 'zod'
 const envSchema = z.object({
   RESEND_API_KEY: z.string().min(1),
   LEAD_NOTIFICATION_EMAIL: z.string().email(),
-  NEXT_PUBLIC_SITE_URL: z.string().optional().default('https://bigredmoving.com'),
+  NEXT_PUBLIC_SITE_URL: z.string().optional().default('https://bigredmovingco.com'),
 })
 
 export const env = envSchema.parse(process.env)
