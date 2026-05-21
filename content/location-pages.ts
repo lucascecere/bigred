@@ -339,4 +339,112 @@ export const junkRemovalLocationPages: LocationPage[] = [
       },
     ],
   },
+  {
+    slug: "junk-removal-scituate-ma",
+    town: "Scituate",
+    state: "MA",
+    titleTag: "Junk Removal Scituate MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Scituate, MA. Big Red Moving Company clears coastal homes, estate cleanouts, and seasonal property hauls. Upfront pricing, fully insured.",
+    h1: "Junk Removal in Scituate, MA",
+    heroSubhead:
+      "Scituate's trusted junk removal crew. Coastal estate cleanouts, seasonal property hauls, and single-item pickups — handled with care and upfront pricing.",
+    bodyParagraph1:
+      "Scituate's coastal homes and historic neighborhoods generate a unique set of junk removal needs — from multi-generation estate cleanouts near Scituate Harbor to seasonal cleanups at Egypt Beach cottages. Big Red Moving Company is the South Shore's go-to junk removal crew for exactly these jobs. We understand the access constraints of Scituate's coastal roads, handle narrow driveways and limited parking without complaint, and clear your property efficiently in a single visit. Whether you're preparing a home for sale, clearing out after a move, or simply reclaiming your garage, we handle all the heavy lifting.",
+    bodyParagraph2:
+      "Our Scituate junk removal service covers furniture, appliances, mattresses, yard waste, renovation debris, and general household junk of any volume. We load everything ourselves, sweep up after, and dispose of items responsibly — donating reusable goods where possible. All pricing is quoted upfront by volume, with no hidden fees added on pickup day. We schedule Scituate jobs quickly and work around seasonal beach road conditions when needed.",
+    faq: [
+      {
+        question: "Do you do estate cleanouts for Scituate coastal properties?",
+        answer:
+          "Yes. Estate cleanouts are one of our most common Scituate jobs — especially for waterfront and harbor-area homes. We clear entire properties, work respectfully around family members or estate reps on-site, and handle all access logistics for coastal roads.",
+      },
+      {
+        question: "Can you remove junk from a seasonal beach property in Scituate?",
+        answer:
+          "Absolutely. Seasonal property cleanouts near Egypt Beach, Scituate Harbor, and other coastal areas are something we handle regularly. We're flexible with scheduling to match your seasonal calendar.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-marshfield-ma",
+    town: "Marshfield",
+    state: "MA",
+    titleTag: "Junk Removal Marshfield MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Marshfield, MA. Big Red Moving Company hauls furniture, appliances, and debris from beach properties and suburban homes. Upfront pricing.",
+    h1: "Junk Removal in Marshfield, MA",
+    heroSubhead:
+      "Marshfield junk removal for beach cottages, colonial homes, and everything in between. We load it, haul it, and leave your space clean.",
+    bodyParagraph1:
+      "Marshfield spans a wide range of housing — from oceanfront beach cottages in Brant Rock and Green Harbor to large colonial homes set back from the coast. Big Red Moving Company serves all of Marshfield with reliable junk removal, whether you need a single piece of furniture hauled or a full property cleared. Seasonal beach house cleanouts are among our most popular Marshfield jobs: furniture, old appliances, and accumulated beach gear that has outgrown the storage space. We handle all of it in a single trip with no trips back to add charges.",
+    bodyParagraph2:
+      "We cover all Marshfield neighborhoods including Marshfield Hills, Ocean Bluffs, and the Route 139 corridor. Renovation debris, garage cleanouts, appliance removal, and mattress disposal are all standard scope. Pricing is volume-based and quoted before we start — no surprises on pickup day. Our crew arrives fully equipped and clears the space faster than you'd expect.",
+    faq: [
+      {
+        question: "Do you haul junk from beach properties in Brant Rock and Green Harbor?",
+        answer:
+          "Yes. Beach property cleanouts in Brant Rock, Green Harbor, and Ocean Bluffs are common for us in Marshfield. We work around seasonal parking and access restrictions and can schedule around your beach season.",
+      },
+      {
+        question: "Can you remove renovation debris and old appliances from a Marshfield home?",
+        answer:
+          "We can. Renovation debris, old appliances, furniture, mattresses, and yard items are all within scope. Let us know the volume when you call so we bring the right truck size.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-duxbury-ma",
+    town: "Duxbury",
+    state: "MA",
+    titleTag: "Junk Removal Duxbury MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Duxbury, MA. Big Red Moving Company handles estate cleanouts, upscale home hauls, and coastal property debris removal. Upfront pricing.",
+    h1: "Junk Removal in Duxbury, MA",
+    heroSubhead:
+      "Duxbury's trusted junk removal team. Upscale homes, estate cleanouts, and waterfront properties — cleared with the care and professionalism they deserve.",
+    bodyParagraph1:
+      "Duxbury is one of the South Shore's most prestigious communities, and junk removal here demands a higher standard of care. Big Red Moving Company provides professional junk removal for Duxbury estates, waterfront homes near Duxbury Beach and Powder Point, and residential properties throughout town. We treat every property with respect — protecting floors, walls, and landscaping as we work — and we operate discreetly for estate cleanouts where family privacy matters. Whether you're clearing a home before sale, dealing with a full estate, or removing years of accumulated storage, we arrive prepared.",
+    bodyParagraph2:
+      "Our Duxbury service covers all neighborhoods including the historic downtown area, waterfront zones, and inland residential streets. We remove furniture, appliances, antiques (non-consignment), renovation debris, and general household items. All pricing is quoted upfront by volume. For larger Duxbury estates or multi-day cleanouts, we offer custom quotes and can stage the work across multiple visits to minimize disruption.",
+    faq: [
+      {
+        question: "Do you handle estate cleanouts for upscale Duxbury properties?",
+        answer:
+          "Yes. Estate cleanouts in Duxbury are a core part of our service. We're experienced with high-value properties, respectful of family members present, and careful with every room. Contact us for a custom quote on larger estates.",
+      },
+      {
+        question: "Can you remove junk from a waterfront home near Duxbury Beach or Powder Point?",
+        answer:
+          "Absolutely. We handle the access logistics for Duxbury Beach and Powder Point properties, including parking constraints and narrow approach roads. We plan these jobs carefully in advance.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-norwell-ma",
+    town: "Norwell",
+    state: "MA",
+    titleTag: "Junk Removal Norwell MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Norwell, MA. Big Red Moving Company clears garages, basements, and entire homes across Norwell. Upfront pricing, fully licensed and insured.",
+    h1: "Junk Removal in Norwell, MA",
+    heroSubhead:
+      "Norwell junk removal made simple. Garage cleanouts, basement hauls, old furniture — one call and it's gone.",
+    bodyParagraph1:
+      "Norwell's single-family neighborhoods and spacious suburban homes are full of garages, basements, and sheds that accumulate years of items no longer needed. Big Red Moving Company provides fast, professional junk removal across all of Norwell — from the Norwell Center neighborhoods to South Norwell and the Route 53 corridor. Garage cleanouts are one of our most popular Norwell requests: lawn equipment, old tools, boxes, holiday decor, and miscellaneous junk that have taken over usable space. We load everything ourselves and leave the floor clean and empty.",
+    bodyParagraph2:
+      "Beyond garage cleanouts, we handle basement clearing, furniture and appliance removal, renovation debris, and full-home estate cleanouts throughout Norwell. Our pricing is always volume-based and quoted before we start — no hidden fees added on the day. We're fully licensed and insured in Massachusetts, we show up on time, and we work efficiently so your day stays on track.",
+    faq: [
+      {
+        question: "Do you do garage and basement cleanouts in Norwell?",
+        answer:
+          "Yes — garage and basement cleanouts are among our most common Norwell jobs. We clear everything you want gone: old appliances, tools, boxes, furniture, and general junk. We do all the loading and sweep up before we leave.",
+      },
+      {
+        question: "Can you remove large furniture or appliances from a Norwell home?",
+        answer:
+          "Absolutely. Sofas, mattresses, refrigerators, washers, dryers, dressers — all standard scope. We carry everything out of the home ourselves. No need to move items to the curb.",
+      },
+    ],
+  },
 ]

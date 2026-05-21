@@ -4,14 +4,14 @@ import { siteContent } from '@content/site-content'
 import { StarIcon } from '@/components/ui/StarIcon'
 
 const priorityTownLinks: Record<string, string> = {
-  Hingham: '/moving-company-hingham-ma',
-  Quincy: '/moving-company-quincy-ma',
-  Weymouth: '/moving-company-weymouth-ma',
-  Braintree: '/moving-company-braintree-ma',
-  Scituate: '/moving-company-scituate-ma',
-  Marshfield: '/moving-company-marshfield-ma',
-  Duxbury: '/moving-company-duxbury-ma',
-  Norwell: '/moving-company-norwell-ma',
+  Hingham: '/junk-removal-hingham-ma',
+  Quincy: '/junk-removal-quincy-ma',
+  Weymouth: '/junk-removal-weymouth-ma',
+  Braintree: '/junk-removal-braintree-ma',
+  Scituate: '/junk-removal-scituate-ma',
+  Marshfield: '/junk-removal-marshfield-ma',
+  Duxbury: '/junk-removal-duxbury-ma',
+  Norwell: '/junk-removal-norwell-ma',
 }
 
 export function Footer() {
