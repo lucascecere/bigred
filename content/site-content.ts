@@ -147,7 +147,7 @@ export const siteContent: SiteContent = {
     display: "(781) 555-0100",
     href: "tel:+17815550100",
   },
-  email: "hello@bigredmovingco.com",
+  email: "info@bigredmovingco.com",
   header: {
     logoText: "BIG RED MOVING",
     tagline: "HINGHAM, MA",
