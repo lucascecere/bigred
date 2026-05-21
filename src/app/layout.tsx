@@ -29,9 +29,12 @@ export const metadata: Metadata = {
     'moving company south shore',
   ],
   icons: {
-    icon: '/icon.png',
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.png', type: 'image/png', sizes: '192x192' },
+    ],
     shortcut: '/favicon.ico',
-    apple: '/apple-icon.png',
+    apple: { url: '/apple-icon.png', sizes: '180x180' },
   },
   robots: { index: true, follow: true },
   openGraph: {
