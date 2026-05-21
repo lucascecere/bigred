@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import { siteContent } from '@content/site-content'
 import { PhoneCTA } from '@/components/ui/PhoneCTA'
 import { StarIcon } from '@/components/ui/StarIcon'
+import { HeroSlider } from '@/components/ui/HeroSlider'
 
 export function Hero() {
   const { hero, phone } = siteContent
@@ -73,19 +73,9 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right: moving photo */}
+        {/* Right: moving photo slideshow */}
         <div className="hidden md:flex items-center justify-center relative">
-          <div className="relative w-full max-w-lg aspect-[4/3] rounded-[4px] overflow-hidden border-4 border-[var(--brand-red)] shadow-[8px_8px_0_var(--brand-red-deep)]">
-            <Image
-              src="https://images.unsplash.com/photo-1698917414969-feade59e3343?w=800&q=80&auto=format&fit=crop"
-              alt="Big Red Moving crew unloading furniture from a moving truck"
-              fill
-              className="object-cover"
-              priority
-            />
-            {/* Dark overlay for contrast */}
-            <div className="absolute inset-0 bg-[var(--brand-black)] opacity-20" aria-hidden="true" />
-          </div>
+          <HeroSlider />
         </div>
       </div>
     </section>
