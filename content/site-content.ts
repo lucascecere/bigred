@@ -144,8 +144,8 @@ export const siteContent: SiteContent = {
     siteUrl: "https://bigredmovingco.com",
   },
   phone: {
-    display: "(617) 874-6030",
-    href: "tel:+16178746030",
+    display: "(320) 321-5865",
+    href: "tel:+13203215865",
   },
   email: "info@bigredmovingco.com",
   header: {
@@ -163,7 +163,7 @@ export const siteContent: SiteContent = {
     subhead:
       "Hingham's junk removal and hauling crew. Serving all of the South Shore.",
     ctaPrimary: { label: "Get a Free Quote", href: "#contact" },
-    ctaSecondary: { label: "Call (617) 874-6030", href: "tel:+16178746030" },
+    ctaSecondary: { label: "Call (320) 321-5865", href: "tel:+13203215865" },
     trustStrip: [
       "South Shore Local",
       "Flat-Rate Pricing",
