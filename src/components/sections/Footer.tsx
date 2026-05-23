@@ -106,7 +106,6 @@ export function Footer() {
               Legal & Info
             </h3>
             <div className="space-y-3 text-[var(--brand-cream)] text-sm opacity-70">
-              <p>{footer.license}</p>
               <ul className="list-none space-y-2">
                 <li>
                   <a href="#services" className="hover:text-[var(--brand-red)] transition-colors">

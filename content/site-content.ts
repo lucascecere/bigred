@@ -126,7 +126,6 @@ export interface SiteContent {
       state: string
       zip: string
     }
-    license: string
     credit: string
     creditUrl: string
     copyright: string
@@ -372,7 +371,6 @@ export const siteContent: SiteContent = {
       state: "MA",
       zip: "02043",
     },
-    license: "MA DPU Licensed · Fully Insured",
     credit: "Built by Your Website Friend",
     creditUrl: "https://yourwebsitefriend.com",
     copyright: `© ${new Date().getFullYear()} Big Red Moving Company. All rights reserved.`,
