@@ -136,10 +136,10 @@ export const siteContent: SiteContent = {
   meta: {
     title: "Big Red Moving Company | Local Movers in Hingham, MA & South Shore",
     description:
-      "Hingham-based local moving company serving the South Shore — Hingham, Cohasset, Scituate, Weymouth, Quincy, and surrounding towns. Family-owned, licensed, insured. Get a free quote today.",
+      "Hingham-based local moving company serving the South Shore — Hingham, Cohasset, Scituate, Weymouth, Quincy, and surrounding towns. Family-owned and fully insured. Get a free quote today.",
     ogTitle: "Big Red Moving Company | Hingham, MA",
     ogDescription:
-      "Local movers based in Hingham. Family-owned, licensed & insured. Serving the South Shore.",
+      "Local movers based in Hingham. Family-owned and fully insured. Serving the South Shore.",
     siteUrl: "https://bigredmovingco.com",
   },
   phone: {
@@ -305,7 +305,7 @@ export const siteContent: SiteContent = {
       answer: "Yes. We haul away furniture, appliances, garage clutter, yard waste, renovation debris, and general junk. We can usually schedule junk removal jobs within a day or two. Call us with a description of what needs to go and we'll give you a flat price.",
     },
     {
-      question: "Are you licensed and insured?",
+      question: "Are you insured?",
       answer:
         "Yes. Big Red is fully insured for every job we take on. Your property and belongings are covered from the moment we pull up until the last load is cleared.",
     },
