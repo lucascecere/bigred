@@ -14,7 +14,7 @@ export function Hero() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
         {/* Left: text */}
-        <div>
+        <div className="min-w-0">
           <h1
             className="font-display text-5xl md:text-7xl lg:text-8xl uppercase leading-none tracking-tight text-white animate-headline"
             style={{ fontFamily: 'var(--font-display)' }}
