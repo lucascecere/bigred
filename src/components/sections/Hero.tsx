@@ -34,7 +34,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href={hero.ctaPrimary.href}
-              className="inline-flex items-center justify-center px-8 py-4 bg-[var(--brand-red)] text-white font-bold uppercase tracking-wider border-2 border-[var(--brand-black)] shadow-[6px_6px_0_var(--brand-black)] hover:bg-[var(--brand-red-deep)] transition-colors text-center"
+              className="flex items-center justify-start sm:justify-center px-8 py-4 bg-[var(--brand-red)] text-white font-bold uppercase tracking-wider border-2 border-[var(--brand-black)] shadow-[6px_6px_0_var(--brand-black)] hover:bg-[var(--brand-red-deep)] transition-colors"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {hero.ctaPrimary.label}
