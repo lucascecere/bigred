@@ -46,12 +46,12 @@ export function About() {
 
           {/* Right: team photo */}
           <div className="flex justify-center md:justify-end">
-            <div className="relative w-full max-w-xs aspect-[3/4] rounded-[4px] overflow-hidden border-4 border-[var(--brand-red)] shadow-[8px_8px_0_var(--brand-red-deep)]">
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-[4px] overflow-hidden border-4 border-[var(--brand-red)] shadow-[8px_8px_0_var(--brand-red-deep)]">
               <Image
-                src="https://images.unsplash.com/photo-1601654717399-7486d5ebedca?w=600&q=80&auto=format&fit=crop"
-                alt="The Big Red Moving Company crew"
+                src="/images/team/crew-group.jpg"
+                alt="Andrew, Anthony, and Charles — the Big Red Moving Company team"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
           </div>

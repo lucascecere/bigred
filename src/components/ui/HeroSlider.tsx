@@ -4,24 +4,24 @@ import { useState, useEffect } from 'react'
 
 const slides = [
   {
-    src: 'https://images.unsplash.com/photo-1635108198322-18c814f9b70f?w=800&q=80&auto=format&fit=crop',
-    alt: 'Cluttered garage full of tools and junk ready for cleanout',
+    src: '/images/team/crew-action.png',
+    alt: 'Big Red Moving crew loading boxes onto their red truck',
   },
   {
-    src: 'https://plus.unsplash.com/premium_photo-1755742204274-14fce63e051a?w=800&q=80&auto=format&fit=crop',
-    alt: 'Suburban South Shore neighborhood homes with garages',
+    src: '/images/team/crew-group.jpg',
+    alt: 'Andrew, Anthony, and Charles — the Big Red Moving team',
   },
   {
-    src: 'https://images.unsplash.com/photo-1647299852821-40401c0b0976?w=800&q=80&auto=format&fit=crop',
-    alt: 'Packed garage filled with items ready for junk removal',
+    src: '/images/team/owner-andrew.png',
+    alt: 'Andrew Concannon, co-founder of Big Red Moving Company',
   },
   {
-    src: 'https://plus.unsplash.com/premium_photo-1732652605028-ab8c5d4bd403?w=800&q=80&auto=format&fit=crop',
-    alt: 'Stacked cardboard boxes ready for hauling',
+    src: '/images/team/owner-anthony.png',
+    alt: 'Anthony Fabrizio, co-founder of Big Red Moving Company',
   },
   {
-    src: 'https://images.unsplash.com/photo-1753911371922-fea40946a1af?w=800&q=80&auto=format&fit=crop',
-    alt: 'Clean empty room after a full property cleanout',
+    src: '/images/team/owner-charles.png',
+    alt: 'Charles Even, co-founder of Big Red Moving Company',
   },
 ]
 
