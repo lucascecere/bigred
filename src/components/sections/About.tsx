@@ -51,7 +51,8 @@ export function About() {
                 src="/images/team/crew-group.jpg"
                 alt="Andrew, Anthony, and Charles — the Big Red Moving Company team"
                 fill
-                className="object-cover object-top"
+                className="object-cover"
+                style={{ objectPosition: 'center 20%' }}
               />
             </div>
           </div>

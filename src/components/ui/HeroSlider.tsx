@@ -6,22 +6,27 @@ const slides = [
   {
     src: '/images/team/crew-action.png',
     alt: 'Big Red Moving crew loading boxes onto their red truck',
+    objectPosition: 'center 30%',
   },
   {
     src: '/images/team/crew-group.jpg',
     alt: 'Andrew, Anthony, and Charles — the Big Red Moving team',
+    objectPosition: 'center 20%',
   },
   {
     src: '/images/team/owner-andrew.png',
     alt: 'Andrew Concannon, co-founder of Big Red Moving Company',
+    objectPosition: 'center 10%',
   },
   {
     src: '/images/team/owner-anthony.png',
     alt: 'Anthony Fabrizio, co-founder of Big Red Moving Company',
+    objectPosition: 'center 10%',
   },
   {
     src: '/images/team/owner-charles.png',
     alt: 'Charles Even, co-founder of Big Red Moving Company',
+    objectPosition: 'center 10%',
   },
 ]
 
@@ -48,6 +53,7 @@ export function HeroSlider() {
             alt={slide.alt}
             fill
             className="object-cover"
+            style={{ objectPosition: slide.objectPosition }}
             priority={i === 0}
             sizes="(max-width: 1024px) 100vw, 512px"
           />

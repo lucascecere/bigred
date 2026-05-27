@@ -93,7 +93,7 @@ export function Services() {
         </div>
 
         {/* Service cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {siteContent.services.map((service) => (
             <article
               key={service.id}
