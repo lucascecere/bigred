@@ -166,7 +166,7 @@ export const siteContent: SiteContent = {
     trustStrip: [
       "South Shore Local",
       "Flat-Rate Pricing",
-      "5-Star Google Rated",
+      "Fully Insured",
     ],
   },
   services: [
@@ -230,6 +230,42 @@ export const siteContent: SiteContent = {
       quote: "Every other mover I called was vague about pricing. Big Red gave me a flat number and that's what I paid. That alone is worth five stars.",
       author: "Jen",
       town: "Scituate, MA",
+      stars: 5,
+    },
+    {
+      quote: "Andy and his crew helped us clear out my mom's house after she passed. They were professional, respectful, and surprisingly fast. Made a hard day a lot easier.",
+      author: "Dave",
+      town: "Norwell, MA",
+      stars: 5,
+    },
+    {
+      quote: "Booked them for a same-week move. They showed up the next day. Two guys, three hours, done. Price was exactly what they quoted — no add-ons, no funny business.",
+      author: "Kristen",
+      town: "Marshfield, MA",
+      stars: 5,
+    },
+    {
+      quote: "We've used Big Red twice now. First for our move, then to haul out a pile of furniture. Both times: on time, professional, fair price.",
+      author: "Tom",
+      town: "Duxbury, MA",
+      stars: 5,
+    },
+    {
+      quote: "Other companies wanted to charge extra for our piano. Big Red quoted it upfront and handled it without drama. Great crew.",
+      author: "Rachel",
+      town: "Cohasset, MA",
+      stars: 5,
+    },
+    {
+      quote: "Called in the morning, they were there by afternoon. Cleared out a full basement's worth of junk in under two hours. Highly recommend.",
+      author: "Brian",
+      town: "Quincy, MA",
+      stars: 5,
+    },
+    {
+      quote: "Flat rate pricing is what sold me. No hourly surprises. They quoted $350, that's what I paid. Simple as that.",
+      author: "Lisa",
+      town: "Braintree, MA",
       stars: 5,
     },
   ],
