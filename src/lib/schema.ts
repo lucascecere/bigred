@@ -10,7 +10,7 @@ export function getLocalBusinessSchema(): Record<string, unknown> {
     "telephone": "+1-320-321-5865",
     "email": "info@bigredmovingco.com",
     "url": "https://bigredmovingco.com",
-    "image": "https://bigredmovingco.com/IMG_5595.png",
+    "image": "https://bigredmovingco.com/logo.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hingham",
@@ -166,7 +166,7 @@ export function getLocationPageSchema(params: {
       },
     },
     "priceRange": "$$",
-    "image": "https://bigredmovingco.com/IMG_5595.png",
+    "image": "https://bigredmovingco.com/logo.png",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",

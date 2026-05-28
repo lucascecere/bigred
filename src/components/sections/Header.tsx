@@ -15,7 +15,7 @@ export function Header() {
             aria-label="Big Red Moving Company — Home"
           >
             <Image
-              src="/IMG_5595.png"
+              src="/logo.png"
               alt="Big Red Moving Company — Hingham, MA"
               width={96}
               height={96}
