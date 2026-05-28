@@ -27,11 +27,10 @@ export function Footer() {
             {/* Logo */}
             <div className="mb-4">
               <Image
-                src="/IMG_5595.png"
+                src="/logo.png"
                 alt="Big Red Moving Company — Hingham, MA"
-                width={120}
-                height={120}
-                className="rounded-sm"
+                width={150}
+                height={110}
               />
             </div>
 

@@ -17,10 +17,9 @@ export function Header() {
             <Image
               src="/logo.png"
               alt="Big Red Moving Company — Hingham, MA"
-              width={96}
-              height={96}
+              width={130}
+              height={95}
               priority
-              className="rounded-sm"
             />
           </a>
 
