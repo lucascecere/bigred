@@ -109,7 +109,7 @@ export function Contact() {
                 </p>
                 <div className="mt-6">
                   <PhoneCTA variant="contact" href={phone.href}>
-                    Call {phone.display}
+                    Call or Text {phone.display}
                   </PhoneCTA>
                 </div>
               </div>
@@ -293,11 +293,12 @@ export function Contact() {
 
             <a
               href={phone.href}
-              className="block text-3xl md:text-4xl font-bold text-[var(--brand-red)] hover:text-[var(--brand-red-deep)] transition-colors mb-6 leading-tight"
+              className="block text-3xl md:text-4xl font-bold text-[var(--brand-red)] hover:text-[var(--brand-red-deep)] transition-colors mb-2 leading-tight"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {phone.display}
             </a>
+            <p className="text-[var(--brand-steel)] text-sm mb-6">Call or text — we respond fast.</p>
 
             <div className="space-y-2 text-[var(--brand-steel)] text-sm">
               <p className="font-semibold uppercase tracking-wide text-[var(--brand-black)]">Hours</p>

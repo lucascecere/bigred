@@ -40,7 +40,7 @@ export function Hero() {
               {hero.ctaPrimary.label}
             </a>
             <PhoneCTA variant="hero" href={phone.href}>
-              Call {phone.display}
+              Call or Text {phone.display}
             </PhoneCTA>
           </div>
 
