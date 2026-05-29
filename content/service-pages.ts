@@ -14,10 +14,10 @@ export const movingServicePage: ServicePageContent = {
   slug: "moving",
   titleTag: "Moving Company South Shore MA | Big Red Moving Company",
   metaDescription:
-    "Local and short-distance moves across the South Shore, MA. Flat-rate pricing, licensed & insured. Serving Hingham, Quincy, Weymouth & 14+ more towns.",
+    "Local and short-distance moves across the South Shore, MA. Flat-rate pricing, family-owned. Serving Hingham, Quincy, Weymouth & 14+ more towns.",
   h1: "South Shore Moving Company",
   heroSubhead:
-    "Big Red Moving Company handles local and short-distance moves across the entire South Shore of Massachusetts. Flat-rate pricing. Licensed and insured. No surprises on moving day.",
+    "Big Red Moving Company handles local and short-distance moves across the entire South Shore of Massachusetts. Flat-rate pricing. No surprises on moving day.",
   sections: [
     {
       heading: "Why South Shore Families Choose Big Red",
@@ -37,11 +37,6 @@ export const movingServicePage: ServicePageContent = {
     },
   ],
   faq: [
-    {
-      question: "Are you licensed and insured in Massachusetts?",
-      answer:
-        "Yes. Big Red Moving Company is fully licensed and insured to operate as a moving company in Massachusetts. We carry liability insurance and cargo coverage on all moves.",
-    },
     {
       question: "How far in advance should I book?",
       answer:

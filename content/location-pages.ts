@@ -18,14 +18,14 @@ export const movingLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Moving Company Hingham MA | Big Red Moving Company",
     metaDescription:
-      "Local movers in Hingham, MA. Big Red Moving Company serves World's End, Crow Point, and all Hingham neighborhoods. Flat-rate pricing. Licensed & insured.",
+      "Local movers in Hingham, MA. Big Red Moving Company serves World's End, Crow Point, and all Hingham neighborhoods. Flat-rate pricing, family-owned.",
     h1: "Moving Company in Hingham, MA",
     heroSubhead:
       "Hingham's trusted local movers. From downtown to World's End, we handle every move with care and flat-rate pricing — no surprises on moving day.",
     bodyParagraph1:
       "Big Red Moving Company has been serving Hingham and the surrounding South Shore for years. Whether you're relocating from a waterfront colonial near Crow Point, moving out of a downtown condo, or settling into a new home near the Derby Street Shoppes, our crew knows Hingham's streets, neighborhoods, and the nuances that make every move here unique. We carry all the right equipment for narrow driveways, antique hardwood floors, and seaside properties.",
     bodyParagraph2:
-      "We price our Hingham moves flat-rate — you'll know your total before we arrive. No hidden fuel charges, no surprise staircase fees. Our team is fully licensed and insured in Massachusetts, and we treat your home and belongings like our own. Most Hingham jobs are completed in a single day, and we work 7 days a week to fit your schedule.",
+      "We price our Hingham moves flat-rate — you'll know your total before we arrive. No hidden fuel charges, no surprise staircase fees. Our team treats your home and belongings like our own. Most Hingham jobs are completed in a single day, and we work 7 days a week to fit your schedule.",
     faq: [
       {
         question: "Do you move to or from World's End or Crow Point in Hingham?",
@@ -45,14 +45,14 @@ export const movingLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Moving Company Quincy MA | Big Red Moving Company",
     metaDescription:
-      "Local movers in Quincy, MA. Big Red Moving Company handles apartment moves, high-rises, and relocations across the City of Presidents. Licensed & insured.",
+      "Local movers in Quincy, MA. Big Red Moving Company handles apartment moves, high-rises, and relocations across the City of Presidents. Flat-rate pricing.",
     h1: "Moving Company in Quincy, MA",
     heroSubhead:
       "From Quincy Center high-rises to Wollaston Beach cottages, Big Red Moving Company handles every Quincy move with flat-rate pricing and a professional crew.",
     bodyParagraph1:
       "Quincy — the City of Presidents — is one of the most densely populated cities on the South Shore, and that means a lot of apartment buildings, multi-family homes, and tight city streets. Big Red Moving Company specializes in urban Quincy moves: we know how to navigate elevator reservations, loading dock logistics, and parallel-park a truck on Hancock Street. Whether you're in North Quincy, Wollaston, Squantum, or Quincy Point, we've moved there.",
     bodyParagraph2:
-      "Our Quincy moves are priced flat-rate, always. We don't charge extra for stairs, elevators, or long carries — everything is quoted upfront. Our licensed and insured crew arrives on time, works efficiently, and treats your building and belongings with the same respect we'd want for our own homes. Most Quincy moves are completed in a half-day to full day depending on size.",
+      "Our Quincy moves are priced flat-rate, always. We don't charge extra for stairs, elevators, or long carries — everything is quoted upfront. Our crew arrives on time, works efficiently, and treats your building and belongings with the same respect we'd want for our own homes. Most Quincy moves are completed in a half-day to full day depending on size.",
     faq: [
       {
         question: "Do you move out of high-rise apartments in Quincy?",
@@ -79,7 +79,7 @@ export const movingLocationPages: LocationPage[] = [
     bodyParagraph1:
       "Weymouth is one of the largest towns on the South Shore, and its housing stock is as varied as its neighborhoods — from newer construction near South Weymouth commuter rail to established multi-family streets in East Weymouth. Big Red Moving Company has the experience and equipment to handle any Weymouth move, whether you're in a ground-floor apartment on Washington Street or a four-bedroom colonial near Jackson Square.",
     bodyParagraph2:
-      "We know the parking restrictions, the tight neighborhood streets, and the quirks of Weymouth's older triple-deckers. Every move is quoted flat-rate before we start, so there's no uncertainty on moving day. Our team is punctual, efficient, and fully insured — and we make sure your walls, floors, and doorframes are protected throughout the job.",
+      "We know the parking restrictions, the tight neighborhood streets, and the quirks of Weymouth's older triple-deckers. Every move is quoted flat-rate before we start, so there's no uncertainty on moving day. Our team is punctual and efficient — and we make sure your walls, floors, and doorframes are protected throughout the job.",
     faq: [
       {
         question: "Do you move apartments and multi-family homes in Weymouth?",
@@ -99,14 +99,14 @@ export const movingLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Moving Company Braintree MA | Big Red Moving Company",
     metaDescription:
-      "Local movers in Braintree, MA. Big Red Moving Company serves all Braintree neighborhoods with flat-rate pricing. Easy I-93 access, licensed & insured.",
+      "Local movers in Braintree, MA. Big Red Moving Company serves all Braintree neighborhoods with flat-rate pricing. Easy I-93 access, family-owned.",
     h1: "Moving Company in Braintree, MA",
     heroSubhead:
       "Braintree movers you can trust. Strong I-93 access means we get there fast and keep your move on schedule. Flat-rate pricing, no hidden fees.",
     bodyParagraph1:
       "Braintree sits at a major South Shore crossroads — easy access to I-93 and Route 3 makes it a convenient hub for movers going north to Boston or south toward Plymouth. Big Red Moving Company leverages that same geography: we can staff and route your Braintree move efficiently, whether you're relocating within town or moving across the South Shore. From the single-family neighborhoods near the golf course to condos along Washington Street, we know Braintree.",
     bodyParagraph2:
-      "We serve all of Braintree including South Braintree, East Braintree, and the areas near South Shore Plaza. All of our Braintree moves are flat-rate priced — you'll receive a firm quote before your moving day. Our crew is licensed, insured, and background-checked, and we show up on time with all the equipment needed to protect your home.",
+      "We serve all of Braintree including South Braintree, East Braintree, and the areas near South Shore Plaza. All of our Braintree moves are flat-rate priced — you'll receive a firm quote before your moving day. Our crew shows up on time with all the equipment needed to protect your home.",
     faq: [
       {
         question: "Can you move me from Braintree to Boston or other cities?",
@@ -126,7 +126,7 @@ export const movingLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Moving Company Scituate MA | Big Red Moving Company",
     metaDescription:
-      "Local movers in Scituate, MA. Big Red Moving Company specializes in coastal and waterfront home moves. Flat-rate pricing. Licensed & insured on the South Shore.",
+      "Local movers in Scituate, MA. Big Red Moving Company specializes in coastal and waterfront home moves. Flat-rate pricing, family-owned on the South Shore.",
     h1: "Moving Company in Scituate, MA",
     heroSubhead:
       "Scituate coastal movers. We handle waterfront homes, seasonal moves, and everything in between — with flat-rate pricing and a crew that respects your property.",
@@ -153,7 +153,7 @@ export const movingLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Moving Company Marshfield MA | Big Red Moving Company",
     metaDescription:
-      "Local movers in Marshfield, MA. Big Red Moving Company handles seasonal coastal and residential moves across Marshfield. Flat-rate pricing, licensed & insured.",
+      "Local movers in Marshfield, MA. Big Red Moving Company handles seasonal coastal and residential moves across Marshfield. Flat-rate pricing, family-owned.",
     h1: "Moving Company in Marshfield, MA",
     heroSubhead:
       "Marshfield's local movers. Seasonal beach properties, sprawling colonials, and everything in between — handled with care and flat-rate pricing.",
@@ -180,14 +180,14 @@ export const movingLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Moving Company Duxbury MA | Big Red Moving Company",
     metaDescription:
-      "Local movers in Duxbury, MA. Big Red Moving Company serves upscale residential and waterfront properties across Duxbury. Flat-rate pricing, licensed & insured.",
+      "Local movers in Duxbury, MA. Big Red Moving Company serves upscale residential and waterfront properties across Duxbury. Flat-rate pricing, family-owned.",
     h1: "Moving Company in Duxbury, MA",
     heroSubhead:
       "Duxbury's trusted movers. Upscale homes, waterfront estates, and coastal properties — moved with the care and professionalism they deserve.",
     bodyParagraph1:
       "Duxbury is one of the South Shore's most sought-after communities, known for its stunning beaches, historic character, and beautiful homes. Moving in Duxbury often means long driveways, large floor plans, and high-value furnishings that require an extra level of care. Big Red Moving Company's crew is trained to handle upscale residential moves — we use floor runners, furniture pads, and specialized dollies to ensure every piece arrives at its destination without a scratch.",
     bodyParagraph2:
-      "We serve all of Duxbury including areas near Duxbury Beach, Powder Point, and the historic downtown area. Whether you're moving a full estate, a large colonial, or a beach cottage, we quote everything flat-rate upfront. No surprises. We're fully licensed and insured in Massachusetts and bring the same professionalism to every job regardless of home size.",
+      "We serve all of Duxbury including areas near Duxbury Beach, Powder Point, and the historic downtown area. Whether you're moving a full estate, a large colonial, or a beach cottage, we quote everything flat-rate upfront. No surprises. We bring the same professionalism to every job regardless of home size.",
     faq: [
       {
         question: "Do you move high-value or luxury homes in Duxbury?",
@@ -207,7 +207,7 @@ export const movingLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Moving Company Norwell MA | Big Red Moving Company",
     metaDescription:
-      "Local movers in Norwell, MA. Big Red Moving Company handles residential and suburban moves across Norwell. Flat-rate pricing, licensed & insured.",
+      "Local movers in Norwell, MA. Big Red Moving Company handles residential and suburban moves across Norwell. Flat-rate pricing, family-owned.",
     h1: "Moving Company in Norwell, MA",
     heroSubhead:
       "Norwell residential movers. Quiet streets, spacious homes, and a crew that makes moving day easy — flat-rate pricing, no surprises.",
@@ -267,7 +267,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
       "Junk removal in Quincy, MA. Big Red Moving Company clears apartments, multi-family units, and high-rises across the City of Presidents. Same-week availability.",
     h1: "Junk Removal in Quincy, MA",
     heroSubhead:
-      "Quincy junk removal for apartments, high-rises, and multi-family homes. We haul it all — fast, affordable, and fully insured.",
+      "Quincy junk removal for apartments, high-rises, and multi-family homes. We haul it all — fast, affordable, upfront pricing.",
     bodyParagraph1:
       "Quincy's density makes it one of the busiest junk removal markets on the South Shore. High-rise apartment buildings, multi-family triple-deckers, and packed urban units generate a constant need for reliable cleanout services — and Big Red Moving Company handles it all. We specialize in apartment building junk removal, coordinating with building management for elevator access, loading dock usage, and move-out window scheduling. Whether you're in a studio in North Quincy, a fourth-floor unit in Quincy Center, or a triple-decker near Wollaston, we've cleared homes just like yours.",
     bodyParagraph2:
@@ -298,7 +298,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     bodyParagraph1:
       "Weymouth's sprawling residential neighborhoods — from East Weymouth near the harbor to South Weymouth's newer developments — produce a steady stream of junk removal needs. Big Red Moving Company serves all of Weymouth with reliable, same-week junk removal for homes, garages, and yards. Garage cleanouts are among our most popular Weymouth jobs: decades of accumulated tools, old appliances, holiday decorations, and miscellaneous items that have taken over usable space. We load everything ourselves and leave the garage floor clean and empty.",
     bodyParagraph2:
-      "We also handle renovation debris removal throughout Weymouth — drywall scraps, lumber, old fixtures, and construction waste that contractors leave behind or homeowners need cleared after a DIY project. Every job is priced by volume and quoted before we start, so there are no surprises. Our crew is fully insured, punctual, and efficient — most Weymouth residential jobs wrap up in under two hours.",
+      "We also handle renovation debris removal throughout Weymouth — drywall scraps, lumber, old fixtures, and construction waste that contractors leave behind or homeowners need cleared after a DIY project. Every job is priced by volume and quoted before we start, so there are no surprises. Our crew is punctual and efficient — most Weymouth residential jobs wrap up in under two hours.",
     faq: [
       {
         question: "Do you do garage cleanouts in Weymouth?",
@@ -345,7 +345,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Junk Removal Scituate MA | Big Red Moving Company",
     metaDescription:
-      "Junk removal in Scituate, MA. Big Red Moving Company clears coastal homes, estate cleanouts, and seasonal property hauls. Upfront pricing, fully insured.",
+      "Junk removal in Scituate, MA. Big Red Moving Company clears coastal homes, estate cleanouts, and seasonal property hauls. Upfront pricing, family-owned.",
     h1: "Junk Removal in Scituate, MA",
     heroSubhead:
       "Scituate's trusted junk removal crew. Coastal estate cleanouts, seasonal property hauls, and single-item pickups — handled with care and upfront pricing.",
@@ -426,14 +426,14 @@ export const junkRemovalLocationPages: LocationPage[] = [
     state: "MA",
     titleTag: "Junk Removal Norwell MA | Big Red Moving Company",
     metaDescription:
-      "Junk removal in Norwell, MA. Big Red Moving Company clears garages, basements, and entire homes across Norwell. Upfront pricing, fully licensed and insured.",
+      "Junk removal in Norwell, MA. Big Red Moving Company clears garages, basements, and entire homes across Norwell. Upfront pricing, family-owned.",
     h1: "Junk Removal in Norwell, MA",
     heroSubhead:
       "Norwell junk removal made simple. Garage cleanouts, basement hauls, old furniture — one call and it's gone.",
     bodyParagraph1:
       "Norwell's single-family neighborhoods and spacious suburban homes are full of garages, basements, and sheds that accumulate years of items no longer needed. Big Red Moving Company provides fast, professional junk removal across all of Norwell — from the Norwell Center neighborhoods to South Norwell and the Route 53 corridor. Garage cleanouts are one of our most popular Norwell requests: lawn equipment, old tools, boxes, holiday decor, and miscellaneous junk that have taken over usable space. We load everything ourselves and leave the floor clean and empty.",
     bodyParagraph2:
-      "Beyond garage cleanouts, we handle basement clearing, furniture and appliance removal, renovation debris, and full-home estate cleanouts throughout Norwell. Our pricing is always volume-based and quoted before we start — no hidden fees added on the day. We're fully licensed and insured in Massachusetts, we show up on time, and we work efficiently so your day stays on track.",
+      "Beyond garage cleanouts, we handle basement clearing, furniture and appliance removal, renovation debris, and full-home estate cleanouts throughout Norwell. Our pricing is always volume-based and quoted before we start — no hidden fees added on the day. We show up on time and work efficiently so your day stays on track.",
     faq: [
       {
         question: "Do you do garage and basement cleanouts in Norwell?",

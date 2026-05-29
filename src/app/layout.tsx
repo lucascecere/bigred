@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://bigredmovingco.com'),
   title: 'Big Red Moving Company | Local Movers in Hingham, MA & South Shore',
   description:
-    'Hingham-based local moving company serving the South Shore — Hingham, Cohasset, Scituate, Weymouth, Quincy, and surrounding towns. Family-owned and fully insured. Get a free quote today.',
+    'Hingham-based local moving company serving the South Shore — Hingham, Cohasset, Scituate, Weymouth, Quincy, and surrounding towns. Family-owned, flat-rate pricing. Get a free quote today.',
   keywords: [
     'movers hingham ma',
     'south shore moving company',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: '/',
     siteName: 'Big Red Moving Company',
     title: 'Big Red Moving Company | Local Movers in Hingham, MA',
-    description: 'Hingham-based movers serving the South Shore. Family-owned and fully insured.',
+    description: 'Hingham-based movers serving the South Shore. Family-owned, flat-rate pricing.',
     images: [
       {
         url: '/opengraph-image',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Big Red Moving Company | Hingham, MA',
-    description: 'Local movers based in Hingham. Family-owned and fully insured.',
+    description: 'Local movers based in Hingham. Family-owned, flat-rate pricing.',
   },
 }
 

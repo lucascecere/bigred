@@ -167,9 +167,9 @@ export default async function LocationPage({
 
           {/* Trust strip */}
           <div className="flex flex-wrap gap-4 mb-6">
-            <span className="text-[var(--brand-red)] font-semibold text-sm">✓ Licensed &amp; Insured</span>
+            <span className="text-[var(--brand-red)] font-semibold text-sm">✓ Family Owned</span>
             <span className="text-[var(--brand-red)] font-semibold text-sm">✓ Flat-Rate Pricing</span>
-            <span className="text-[var(--brand-red)] font-semibold text-sm">✓ 5-Star Rated</span>
+            <span className="text-[var(--brand-red)] font-semibold text-sm">✓ South Shore Local</span>
           </div>
 
           <p className="text-[var(--brand-steel)] leading-relaxed text-lg">

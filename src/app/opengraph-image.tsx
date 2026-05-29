@@ -75,7 +75,7 @@ export default async function Image() {
             letterSpacing: '4px',
           }}
         >
-          LICENSED · INSURED · FAMILY OWNED
+          FLAT-RATE · FAMILY OWNED · SOUTH SHORE
         </div>
 
         {/* Red bottom bar */}
