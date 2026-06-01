@@ -158,7 +158,7 @@ export const siteContent: SiteContent = {
     ],
   },
   hero: {
-    headline: "SOUTH SHORE'S MOVING COMPANY.",
+    headline: "HINGHAM'S MOVING COMPANY.",
     subhead:
       "Hingham's junk removal and hauling crew. Serving all of the South Shore.",
     ctaPrimary: { label: "Get a Free Quote", href: "#contact" },
@@ -204,7 +204,7 @@ export const siteContent: SiteContent = {
     {
       id: "responsive",
       title: "Real People Answer the Phone",
-      description: "Talk to Andrew, Anthony, or Charlie directly — not a call center. Questions get real answers from the people who actually run the crew.",
+      description: "Talk to Andrew, Anthony, or Charles directly — not a call center. Questions get real answers from the people who actually run the crew.",
     },
   ],
   stats: [
@@ -371,7 +371,7 @@ export const siteContent: SiteContent = {
   about: {
     heading: "Run by locals, for locals.",
     body: "Big Red Moving Co. is three South Shore guys who got tired of watching neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. We built Big Red as the answer to all of that.\n\nEvery job is run by an owner or someone we personally trained. No rotating strangers, no subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also handle junk removal and hauling — garages, basements, estate cleanouts. Same crew, same flat pricing, same reliability.\n\nWe show up, we work hard, we're careful with your stuff, and we get it done. That's it.",
-    ownerName: "Andrew, Anthony & Charlie",
+    ownerName: "Andrew, Anthony & Charles",
     ownerTitle: "Owners, Big Red Moving Company",
   },
   contact: {
@@ -396,7 +396,7 @@ export const siteContent: SiteContent = {
     },
   },
   footer: {
-    tagline: "Hingham's moving company.",
+    tagline: "South Shore's moving company.",
     address: {
       city: "Hingham",
       state: "MA",

@@ -10,7 +10,7 @@ const slides = [
   },
   {
     src: '/images/team/crew-group.jpg',
-    alt: 'Andrew, Anthony, and Charlie — the Big Red Moving team',
+    alt: 'Andrew, Anthony, and Charles — the Big Red Moving team',
     objectPosition: 'center 20%',
   },
   {
@@ -25,7 +25,7 @@ const slides = [
   },
   {
     src: '/images/team/owner-charles.png',
-    alt: 'Charlie, owner of Big Red Moving Company',
+    alt: 'Charles, owner of Big Red Moving Company',
     objectPosition: 'center 10%',
   },
 ]
