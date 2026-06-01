@@ -10,22 +10,22 @@ const slides = [
   },
   {
     src: '/images/team/crew-group.jpg',
-    alt: 'Andrew, Anthony, and Charles — the Big Red Moving team',
+    alt: 'Andrew, Anthony, and Charlie — the Big Red Moving team',
     objectPosition: 'center 20%',
   },
   {
     src: '/images/team/owner-andrew.png',
-    alt: 'Andrew Concannon, co-founder of Big Red Moving Company',
+    alt: 'Andrew, owner of Big Red Moving Company',
     objectPosition: 'center 10%',
   },
   {
     src: '/images/team/owner-anthony.png',
-    alt: 'Anthony Fabrizio, co-founder of Big Red Moving Company',
+    alt: 'Anthony, owner of Big Red Moving Company',
     objectPosition: 'center 10%',
   },
   {
     src: '/images/team/owner-charles.png',
-    alt: 'Charles Even, co-founder of Big Red Moving Company',
+    alt: 'Charlie, owner of Big Red Moving Company',
     objectPosition: 'center 10%',
   },
 ]

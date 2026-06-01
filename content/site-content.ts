@@ -204,7 +204,7 @@ export const siteContent: SiteContent = {
     {
       id: "responsive",
       title: "Real People Answer the Phone",
-      description: "Talk to Andrew, Anthony, or Charles directly — not a call center. Questions get real answers from the people who actually run the crew.",
+      description: "Talk to Andrew, Anthony, or Charlie directly — not a call center. Questions get real answers from the people who actually run the crew.",
     },
   ],
   stats: [
@@ -370,9 +370,9 @@ export const siteContent: SiteContent = {
   ],
   about: {
     heading: "Run by locals, for locals.",
-    body: "Big Red Moving was founded by three South Shore guys — Andrew Concannon, Anthony Fabrizio, and Charles Even — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also do junk removal and hauling — clearing out garages, basements, and estates for South Shore families who just need the stuff gone. Same crew, same flat pricing, same reliability.",
-    ownerName: "Andrew, Anthony & Charles",
-    ownerTitle: "Co-Founders, Big Red Moving Company",
+    body: "Big Red Moving was started by three South Shore guys — Andrew, Anthony, and Charlie — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also do junk removal and hauling — clearing out garages, basements, and estates for South Shore families who just need the stuff gone. Same crew, same flat pricing, same reliability.",
+    ownerName: "Andrew, Anthony & Charlie",
+    ownerTitle: "Owners, Big Red Moving Company",
   },
   contact: {
     heading: "Get Your Free Quote",

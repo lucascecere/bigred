@@ -49,7 +49,7 @@ export function About() {
             <div className="relative w-full max-w-lg aspect-[4/3] rounded-[4px] overflow-hidden border-4 border-[var(--brand-red)] shadow-[8px_8px_0_var(--brand-red-deep)]">
               <Image
                 src="/images/team/crew-group.jpg"
-                alt="Andrew, Anthony, and Charles — the Big Red Moving Company team"
+                alt="Andrew, Anthony, and Charlie — the Big Red Moving Company team"
                 fill
                 className="object-cover"
                 style={{ objectPosition: 'center 20%' }}
