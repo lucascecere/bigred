@@ -158,7 +158,7 @@ export const siteContent: SiteContent = {
     ],
   },
   hero: {
-    headline: "HINGHAM'S MOVING COMPANY.",
+    headline: "SOUTH SHORE'S MOVING COMPANY.",
     subhead:
       "Hingham's junk removal and hauling crew. Serving all of the South Shore.",
     ctaPrimary: { label: "Get a Free Quote", href: "#contact" },
