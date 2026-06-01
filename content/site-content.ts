@@ -370,7 +370,7 @@ export const siteContent: SiteContent = {
   ],
   about: {
     heading: "Run by locals, for locals.",
-    body: "Big Red Moving was started by three South Shore guys — Andrew, Anthony, and Charlie — who got tired of watching their neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. Big Red is the answer to all of that. We're a small Hingham crew that treats every move like it's family. Because around here, it basically is.\n\nEvery job is run by one of the owners or someone they personally trained and trust. No rotating strangers. No subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also do junk removal and hauling — clearing out garages, basements, and estates for South Shore families who just need the stuff gone. Same crew, same flat pricing, same reliability.",
+    body: "Big Red Moving Co. is three South Shore guys who got tired of watching neighbors get burned by national moving chains. Hidden fees, late crews, broken furniture, zero accountability. We built Big Red as the answer to all of that.\n\nEvery job is run by an owner or someone we personally trained. No rotating strangers, no subcontractors hired off a list. You know who's showing up, and they know what they're doing.\n\nWe also handle junk removal and hauling — garages, basements, estate cleanouts. Same crew, same flat pricing, same reliability.\n\nWe show up, we work hard, we're careful with your stuff, and we get it done. That's it.",
     ownerName: "Andrew, Anthony & Charlie",
     ownerTitle: "Owners, Big Red Moving Company",
   },
