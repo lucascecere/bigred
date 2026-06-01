@@ -102,7 +102,7 @@ export function Footer() {
               className="font-display text-base uppercase text-white tracking-wide mb-4"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              Legal & Info
+              Quick Links
             </h3>
             <div className="space-y-3 text-[var(--brand-cream)] text-sm opacity-70">
               <ul className="list-none space-y-2">
