@@ -334,7 +334,7 @@ export const siteContent: SiteContent = {
     {
       question: "How much does a local job in Hingham cost?",
       answer:
-        "Most local jobs in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and hours needed. We provide flat-rate quotes so there are no surprises on the day. Contact us for a free estimate tailored to your specific job.",
+        "Most local jobs in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and hours needed. We charge hourly, so the final cost depends on how long the job takes. Contact us for a free estimate tailored to your specific job.",
     },
     {
       question: "Do you do junk removal?",
