@@ -1,16 +1,53 @@
 // Schema.org structured data helpers.
 // Use these in layout.tsx or page.tsx via <script type="application/ld+json">.
 // No external schema packages — plain TypeScript objects serialized with JSON.stringify.
+//
+// Two rules this file follows deliberately:
+//  1. There is ONE business entity, identified by BUSINESS_ID. Town pages
+//     reference it rather than declaring a second business with the same NAP —
+//     24 near-identical LocalBusiness entities reads as doorway spam.
+//  2. No aggregateRating / Review markup. Google disallows self-serving review
+//     markup for LocalBusiness, so it earns nothing and risks a manual action.
+//     Ratings live in the on-page testimonials, not in structured data.
+
+import {
+  SITE_URL,
+  BUSINESS_ID,
+  BUSINESS_NAME,
+  PHONE_E164,
+  EMAIL,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  SOCIAL_PROFILES,
+  SERVICE_AREA_TOWNS,
+} from "./site"
+
+const areaServed = SERVICE_AREA_TOWNS.map((name) => ({
+  "@type": "City",
+  "name": name,
+  "containedInPlace": { "@type": "State", "name": "Massachusetts" },
+}))
+
+const sameAs = [
+  ...(GOOGLE_BUSINESS_PROFILE_URL ? [GOOGLE_BUSINESS_PROFILE_URL] : []),
+  ...SOCIAL_PROFILES,
+]
+
+/** Lightweight reference to the single business entity declared in the root layout. */
+const providerRef = { "@id": BUSINESS_ID }
 
 export function getLocalBusinessSchema(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": ["MovingCompany", "LocalBusiness"],
-    "name": "Big Red Moving Company",
-    "telephone": "+1-320-321-5865",
-    "email": "info@bigredmovingco.com",
-    "url": "https://bigredmovingco.com",
-    "image": "https://bigredmovingco.com/logo.png",
+    "@id": BUSINESS_ID,
+    "name": BUSINESS_NAME,
+    "description":
+      "Family-owned junk removal, hauling and local moving company based in Hingham, MA, serving 17 towns across the South Shore.",
+    "telephone": PHONE_E164,
+    "email": EMAIL,
+    "url": SITE_URL,
+    "image": `${SITE_URL}/logo.png`,
+    "logo": `${SITE_URL}/logo.png`,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hingham",
@@ -23,22 +60,39 @@ export function getLocalBusinessSchema(): Record<string, unknown> {
       "latitude": 42.2417,
       "longitude": -70.8897,
     },
-    "areaServed": [
-      "Hingham", "Cohasset", "Hull", "Norwell", "Scituate",
-      "Weymouth", "Braintree", "Quincy", "Milton", "Holbrook",
-      "Rockland", "Abington", "Whitman", "Hanover", "Pembroke",
-      "Marshfield", "Duxbury",
-    ].map((name) => ({ "@type": "City", "name": name })),
+    "areaServed": areaServed,
     "priceRange": "$$",
-    "sameAs": [
-      "https://www.facebook.com/bigredmovingco",
-      "https://www.instagram.com/bigredmovingco",
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "47",
-      "bestRating": "5",
+    "currenciesAccepted": "USD",
+    "sameAs": sameAs,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Junk Removal & Hauling",
+            "url": `${SITE_URL}/junk-removal`,
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local & Short-Distance Moving",
+            "url": `${SITE_URL}/moving`,
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Labor-Only Loading & Unloading",
+            "url": `${SITE_URL}/moving`,
+          },
+        },
+      ],
     },
     "openingHoursSpecification": [
       {
@@ -78,29 +132,17 @@ export function getFAQSchema(
 export function getServiceSchema(
   serviceType: "moving" | "junk-removal",
 ): Record<string, unknown> {
-  const provider = {
-    "@type": "MovingCompany",
-    "name": "Big Red Moving Company",
-    "url": "https://bigredmovingco.com",
-    "telephone": "+1-320-321-5865",
-  }
-
-  const areaServed = [
-    "Hingham", "Cohasset", "Hull", "Norwell", "Scituate",
-    "Weymouth", "Braintree", "Quincy", "Milton", "Holbrook",
-    "Rockland", "Abington", "Whitman", "Hanover", "Pembroke",
-    "Marshfield", "Duxbury",
-  ].map((name) => ({ "@type": "City", "name": name }))
-
   if (serviceType === "moving") {
     return {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "MovingService",
+      "@id": `${SITE_URL}/moving#service`,
+      "serviceType": "Moving service",
       "name": "Local & Short-Distance Moving",
+      "url": `${SITE_URL}/moving`,
       "description":
         "Professional local and short-distance moving services across the South Shore of Massachusetts. We handle apartment moves, single-family homes, and office relocations throughout Hingham, Quincy, Weymouth, Braintree, Scituate, Marshfield, Duxbury, Norwell, and surrounding towns.",
-      "provider": provider,
+      "provider": providerRef,
       "areaServed": areaServed,
     }
   }
@@ -108,11 +150,31 @@ export function getServiceSchema(
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "HomeAndConstructionBusiness",
+    "@id": `${SITE_URL}/junk-removal#service`,
+    "serviceType": "Junk removal service",
     "name": "Junk Removal & Hauling",
+    "url": `${SITE_URL}/junk-removal`,
     "description":
       "Full-service junk removal and hauling across the South Shore of Massachusetts. We haul away furniture, appliances, electronics, and yard debris, and handle complete garage cleanouts, basement cleanouts, and estate clearing for residential and commercial clients.",
-    "provider": provider,
+    "provider": providerRef,
+    "areaServed": areaServed,
+  }
+}
+
+/** Schema for a specific sub-service (estate cleanouts, mattress disposal, …). */
+export function getSubServiceSchema(params: {
+  name: string
+  description: string
+  url: string
+}): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${params.url}#service`,
+    "name": params.name,
+    "description": params.description,
+    "url": params.url,
+    "provider": providerRef,
     "areaServed": areaServed,
   }
 }
@@ -132,31 +194,29 @@ export function getBreadcrumbSchema(
   }
 }
 
+/**
+ * Town page schema. Describes the SERVICE as offered in one town and points
+ * `provider` at the single business entity — it does not invent a second
+ * business located in that town.
+ */
 export function getLocationPageSchema(params: {
   town: string
   serviceType: "moving" | "junk-removal"
   url: string
 }): Record<string, unknown> {
   const { town, serviceType, url } = params
-  const types =
-    serviceType === "moving"
-      ? ["MovingCompany", "LocalBusiness"]
-      : ["HomeAndConstructionBusiness", "LocalBusiness"]
+  const isMoving = serviceType === "moving"
 
   return {
     "@context": "https://schema.org",
-    "@type": types,
-    "name": `Big Red Moving Company — ${town}, MA`,
+    "@type": "Service",
+    "@id": `${url}#service`,
+    "serviceType": isMoving ? "Moving service" : "Junk removal service",
+    "name": isMoving
+      ? `Moving Company in ${town}, MA`
+      : `Junk Removal in ${town}, MA`,
     "url": url,
-    "telephone": "+1-320-321-5865",
-    "email": "info@bigredmovingco.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Hingham",
-      "addressRegion": "MA",
-      "postalCode": "02043",
-      "addressCountry": "US",
-    },
+    "provider": providerRef,
     "areaServed": {
       "@type": "City",
       "name": town,
@@ -165,30 +225,23 @@ export function getLocationPageSchema(params: {
         "name": "Massachusetts",
       },
     },
-    "priceRange": "$$",
-    "image": "https://bigredmovingco.com/logo.png",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "47",
-      "bestRating": "5",
+    "isPartOf": {
+      "@type": "WebPage",
+      "url": url,
     },
   }
 }
 
 export function getWebsiteSchema(): Record<string, unknown> {
+  // No SearchAction — the site has no search endpoint, and advertising one
+  // that doesn't exist is a false signal.
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "url": "https://bigredmovingco.com",
-    "name": "Big Red Moving Company",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://bigredmovingco.com/?q={search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
+    "@id": `${SITE_URL}/#website`,
+    "url": SITE_URL,
+    "name": BUSINESS_NAME,
+    "publisher": providerRef,
+    "inLanguage": "en-US",
   }
 }

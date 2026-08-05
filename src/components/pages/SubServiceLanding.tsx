@@ -1,38 +1,34 @@
 import Link from 'next/link'
-import type { Metadata } from 'next'
-import { junkRemovalServicePage } from '@content/service-pages'
 import { siteContent } from '@content/site-content'
-import { junkRemovalLocationPages } from '@content/location-pages'
+import type { SubServicePage } from '@content/sub-service-pages'
 import { getSubServicesFor } from '@content/sub-service-pages'
 import {
-  getServiceSchema,
+  getSubServiceSchema,
   getBreadcrumbSchema,
   getFAQSchema,
 } from '@/lib/schema'
 import { SITE_URL } from '@/lib/site'
 
-export const dynamic = 'force-static'
+const PARENT_META = {
+  'junk-removal': { label: 'Junk Removal South Shore MA', href: '/junk-removal' },
+  moving: { label: 'Moving Company South Shore MA', href: '/moving' },
+} as const
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: junkRemovalServicePage.titleTag,
-    description: junkRemovalServicePage.metaDescription,
-    alternates: { canonical: '/junk-removal' },
-    openGraph: {
-      title: junkRemovalServicePage.titleTag,
-      description: junkRemovalServicePage.metaDescription,
-      url: '/junk-removal',
-    },
-  }
-}
+export function SubServiceLanding({ page }: { page: SubServicePage }) {
+  const parent = PARENT_META[page.parent]
+  const siblings = getSubServicesFor(page.parent).filter((p) => p.slug !== page.slug)
+  const url = `${SITE_URL}/${page.slug}`
 
-export default function JunkRemovalServicePage() {
   return (
     <main>
       {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getServiceSchema('junk-removal')) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getSubServiceSchema({ name: page.h1, description: page.metaDescription, url })
+          ),
+        }}
       />
       <script
         type="application/ld+json"
@@ -40,30 +36,56 @@ export default function JunkRemovalServicePage() {
           __html: JSON.stringify(
             getBreadcrumbSchema([
               { name: 'Home', url: SITE_URL },
-              { name: 'Junk Removal South Shore MA', url: `${SITE_URL}/junk-removal` },
+              { name: parent.label, url: `${SITE_URL}${parent.href}` },
+              { name: page.navLabel, url },
             ])
           ),
         }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(junkRemovalServicePage.faq)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(page.faq)) }}
       />
 
+      {/* Breadcrumb nav */}
+      <nav className="bg-[var(--brand-black)] border-b border-white/10 py-3" aria-label="Breadcrumb">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
+          <ol className="flex items-center gap-1 text-sm text-white/60 flex-wrap">
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true"> › </li>
+            <li>
+              <Link href={parent.href} className="hover:text-white transition-colors">
+                {parent.label}
+              </Link>
+            </li>
+            <li aria-hidden="true"> › </li>
+            <li>
+              <span className="text-white" aria-current="page">
+                {page.navLabel}
+              </span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
       {/* Hero */}
-      <section className="bg-[var(--brand-black)] py-20 md:py-28">
+      <section className="bg-[var(--brand-black)] py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <p className="text-[var(--brand-red)] text-sm font-bold uppercase tracking-[0.2em] mb-4">
-            Junk Removal Services
+            {page.navLabel}
           </p>
           <h1
             className="font-display text-4xl md:text-5xl uppercase text-white leading-none mb-6"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            {junkRemovalServicePage.h1}
+            {page.h1}
           </h1>
           <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-            {junkRemovalServicePage.heroSubhead}
+            {page.heroSubhead}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -76,17 +98,17 @@ export default function JunkRemovalServicePage() {
               href={siteContent.phone.href}
               className="border-2 border-white text-white font-bold uppercase tracking-wide px-8 py-4 rounded-[4px] hover:bg-white hover:text-[var(--brand-black)] transition-colors text-center"
             >
-              Call Us
+              Call {siteContent.phone.display}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Content Sections */}
+      {/* Body sections */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <div className="space-y-12">
-            {junkRemovalServicePage.sections.map((section, index) => (
+            {page.sections.map((section, index) => (
               <div key={index} className="max-w-3xl">
                 <h2
                   className="font-display text-3xl md:text-4xl uppercase text-[var(--brand-black)] leading-none mb-4"
@@ -103,93 +125,19 @@ export default function JunkRemovalServicePage() {
         </div>
       </section>
 
-      {/* Sub-service grid */}
-      <section className="bg-white pb-16">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6">
-          <h2
-            className="font-display text-3xl md:text-4xl uppercase text-[var(--brand-black)] leading-none mb-6"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            Junk Removal Services
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {getSubServicesFor('junk-removal').map((service) => (
-              <Link
-                key={service.slug}
-                href={`/${service.slug}`}
-                className="border-2 border-[var(--brand-black)] shadow-[3px_3px_0_var(--brand-black)] rounded-[4px] p-5 hover:-translate-y-1 transition-transform flex flex-col gap-2"
-              >
-                <span
-                  className="font-display text-xl uppercase text-[var(--brand-black)] leading-tight"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {service.navLabel}
-                </span>
-                <span className="text-[var(--brand-steel)] text-sm leading-relaxed flex-1">
-                  {service.heroSubhead.split('.')[0]}.
-                </span>
-                <span className="text-[var(--brand-red)] font-bold">→</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Location Grid */}
-      <section className="bg-[var(--brand-cream)] py-16">
-        <div className="max-w-7xl mx-auto px-5 sm:px-6">
-          <div className="mb-10">
-            <h2
-              className="font-display text-4xl md:text-5xl uppercase text-[var(--brand-black)] leading-none mb-3"
-              style={{ fontFamily: 'var(--font-display)' }}
-            >
-              Junk Removal by Town
-            </h2>
-            <p className="text-[var(--brand-steel)] leading-relaxed text-lg max-w-2xl">
-              We serve the South Shore. Click your town for local details, or see our{' '}
-              <Link
-                href="/moving"
-                className="text-[var(--brand-red)] font-semibold underline underline-offset-2 hover:text-[var(--brand-red-deep)] transition-colors"
-              >
-                local moving service
-              </Link>
-              .
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {junkRemovalLocationPages.map((loc) => (
-              <Link
-                key={loc.slug}
-                href={`/${loc.slug}`}
-                className="bg-white border-2 border-[var(--brand-black)] shadow-[3px_3px_0_var(--brand-black)] rounded-[4px] p-5 hover:-translate-y-1 transition-transform flex flex-col gap-1"
-              >
-                <span
-                  className="font-display text-xl uppercase text-[var(--brand-black)] leading-none"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {loc.town}
-                </span>
-                <span className="text-[var(--brand-steel)] text-sm">Junk Removal</span>
-                <span className="text-[var(--brand-red)] font-bold mt-1">→</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="bg-white py-16">
+      <section className="bg-[var(--brand-cream)] py-16">
         <div className="max-w-3xl mx-auto px-5 sm:px-6">
           <div className="mb-10">
             <h2
               className="font-display text-4xl md:text-5xl uppercase text-[var(--brand-black)] leading-none"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              Junk Removal FAQ
+              Questions
             </h2>
           </div>
           <div className="space-y-4">
-            {junkRemovalServicePage.faq.map((item, index) => (
+            {page.faq.map((item, index) => (
               <details
                 key={index}
                 className="border-2 border-[var(--brand-black)] rounded-[4px] shadow-[3px_3px_0_var(--brand-black)] bg-white"
@@ -213,6 +161,49 @@ export default function JunkRemovalServicePage() {
         </div>
       </section>
 
+      {/* Related services */}
+      {siblings.length > 0 && (
+        <section className="bg-white py-12">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6">
+            <h2
+              className="font-display text-3xl md:text-4xl uppercase text-[var(--brand-black)] leading-none mb-6"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              We Also Do
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {siblings.map((sibling) => (
+                <Link
+                  key={sibling.slug}
+                  href={`/${sibling.slug}`}
+                  className="border border-[var(--brand-black)]/20 rounded-[4px] p-4 hover:border-[var(--brand-red)] transition-colors flex flex-col gap-1"
+                >
+                  <span
+                    className="font-display text-lg uppercase text-[var(--brand-black)] leading-tight"
+                    style={{ fontFamily: 'var(--font-display)' }}
+                  >
+                    {sibling.navLabel}
+                  </span>
+                  <span className="text-[var(--brand-steel)] text-sm">Learn More →</span>
+                </Link>
+              ))}
+              <Link
+                href={parent.href}
+                className="border border-[var(--brand-black)]/20 rounded-[4px] p-4 hover:border-[var(--brand-red)] transition-colors flex flex-col gap-1"
+              >
+                <span
+                  className="font-display text-lg uppercase text-[var(--brand-black)] leading-tight"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  All {page.parent === 'moving' ? 'Moving' : 'Junk Removal'}
+                </span>
+                <span className="text-[var(--brand-steel)] text-sm">See Service Area →</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Banner */}
       <section className="bg-[var(--brand-red)] py-12">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 text-center">
@@ -220,10 +211,10 @@ export default function JunkRemovalServicePage() {
             className="font-display text-4xl md:text-5xl uppercase text-white leading-none mb-4"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            {junkRemovalServicePage.ctaHeading}
+            {page.ctaHeading}
           </h2>
           <p className="text-white/80 text-lg leading-relaxed max-w-xl mx-auto mb-8">
-            {junkRemovalServicePage.ctaSubhead}
+            {page.ctaSubhead}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

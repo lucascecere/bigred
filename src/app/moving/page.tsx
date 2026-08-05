@@ -3,11 +3,13 @@ import type { Metadata } from 'next'
 import { movingServicePage } from '@content/service-pages'
 import { siteContent } from '@content/site-content'
 import { movingLocationPages } from '@content/location-pages'
+import { getSubServicesFor } from '@content/sub-service-pages'
 import {
   getServiceSchema,
   getBreadcrumbSchema,
   getFAQSchema,
 } from '@/lib/schema'
+import { SITE_URL } from '@/lib/site'
 
 export const dynamic = 'force-static'
 
@@ -15,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: movingServicePage.titleTag,
     description: movingServicePage.metaDescription,
-    alternates: { canonical: 'https://bigredmovingco.com/moving' },
+    alternates: { canonical: '/moving' },
     openGraph: {
       title: movingServicePage.titleTag,
       description: movingServicePage.metaDescription,
@@ -37,8 +39,8 @@ export default function MovingServicePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://bigredmovingco.com' },
-              { name: 'Moving Company South Shore MA', url: 'https://bigredmovingco.com/moving' },
+              { name: 'Home', url: SITE_URL },
+              { name: 'Moving Company South Shore MA', url: `${SITE_URL}/moving` },
             ])
           ),
         }}
@@ -101,6 +103,38 @@ export default function MovingServicePage() {
         </div>
       </section>
 
+      {/* Sub-service grid */}
+      <section className="bg-white pb-16">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
+          <h2
+            className="font-display text-3xl md:text-4xl uppercase text-[var(--brand-black)] leading-none mb-6"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Moving Services
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {getSubServicesFor('moving').map((service) => (
+              <Link
+                key={service.slug}
+                href={`/${service.slug}`}
+                className="border-2 border-[var(--brand-black)] shadow-[3px_3px_0_var(--brand-black)] rounded-[4px] p-5 hover:-translate-y-1 transition-transform flex flex-col gap-2"
+              >
+                <span
+                  className="font-display text-xl uppercase text-[var(--brand-black)] leading-tight"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  {service.navLabel}
+                </span>
+                <span className="text-[var(--brand-steel)] text-sm leading-relaxed flex-1">
+                  {service.heroSubhead.split('.')[0]}.
+                </span>
+                <span className="text-[var(--brand-red)] font-bold">→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Location Grid */}
       <section className="bg-[var(--brand-cream)] py-16">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
@@ -112,7 +146,15 @@ export default function MovingServicePage() {
               Moving Company by Town
             </h2>
             <p className="text-[var(--brand-steel)] leading-relaxed text-lg max-w-2xl">
-              We serve 17+ towns on the South Shore. Click your town for local details.
+              We serve 17 towns on the South Shore. Click your town for local details, or
+              see our{' '}
+              <Link
+                href="/junk-removal"
+                className="text-[var(--brand-red)] font-semibold underline underline-offset-2 hover:text-[var(--brand-red-deep)] transition-colors"
+              >
+                junk removal service
+              </Link>
+              .
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

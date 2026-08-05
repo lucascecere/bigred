@@ -256,6 +256,11 @@ export const junkRemovalLocationPages: LocationPage[] = [
         answer:
           "Absolutely. We're familiar with the access constraints on Hingham's waterfront roads and coastal properties near Crow Point and World's End. We plan the logistics in advance and bring the right equipment to work within those limitations.",
       },
+      {
+        question: "Do you do garage cleanouts in Hingham?",
+        answer:
+          "Yes. Garage cleanouts are one of our most common requests in Hingham — clearing old appliances, tools, outdoor equipment, and accumulated household items. We load everything ourselves, sweep up before we leave, and can usually schedule within the same week.",
+      },
     ],
   },
   {
@@ -282,6 +287,11 @@ export const junkRemovalLocationPages: LocationPage[] = [
         question: "Can you remove large furniture from a Quincy apartment?",
         answer:
           "Absolutely. Sofas, bed frames, dressers, dining sets — we remove all large furniture items from Quincy apartments, including navigating tight stairwells and narrow hallways common in Quincy's older building stock. No disassembly required on your end.",
+      },
+      {
+        question: "Do you handle estate cleanouts in Quincy?",
+        answer:
+          "Yes. Estate cleanouts are something we do regularly in Quincy — clearing apartments, multi-family units, or homes of furniture, appliances, and household goods before a transition or sale. We coordinate building access, work efficiently, and handle every item without requiring you to sort or move anything in advance.",
       },
     ],
   },
@@ -310,6 +320,11 @@ export const junkRemovalLocationPages: LocationPage[] = [
         answer:
           "We can. Drywall, lumber scraps, flooring, old fixtures, and similar renovation debris are all items we haul away from Weymouth homes. If you have a large volume, let us know in advance so we can bring the right truck size.",
       },
+      {
+        question: "Do you handle estate or full-home cleanouts in Weymouth?",
+        answer:
+          "Yes. Full-home and estate cleanouts are well within our scope in Weymouth. We clear entire properties — furniture, appliances, personal items, and all household goods — in a single efficient visit. We work respectfully around family members or estate representatives and leave the home clean when we're done.",
+      },
     ],
   },
   {
@@ -336,6 +351,11 @@ export const junkRemovalLocationPages: LocationPage[] = [
         question: "Can you remove appliances and old furniture from a Braintree home?",
         answer:
           "Absolutely. We remove refrigerators, washers, dryers, sofas, mattresses, dressers, and all other household items from Braintree homes. We handle all carrying and loading — you don't need to move anything to the curb.",
+      },
+      {
+        question: "Do you do garage cleanouts in Braintree?",
+        answer:
+          "Yes. Garage cleanouts are a popular service in Braintree — clearing out tools, old appliances, boxes, lawn equipment, and years of accumulated items. We do all the loading and leave the space clean. Call us for a flat-rate quote based on the volume you need hauled.",
       },
     ],
   },
@@ -364,6 +384,11 @@ export const junkRemovalLocationPages: LocationPage[] = [
         answer:
           "Absolutely. Seasonal property cleanouts near Egypt Beach, Scituate Harbor, and other coastal areas are something we handle regularly. We're flexible with scheduling to match your seasonal calendar.",
       },
+      {
+        question: "Do you do garage and basement cleanouts in Scituate?",
+        answer:
+          "Yes. Garage and basement cleanouts are common in Scituate, especially for coastal and seasonal properties that accumulate beach gear, outdoor furniture, and equipment over many seasons. We clear everything in a single visit, load it ourselves, and sweep up before leaving.",
+      },
     ],
   },
   {
@@ -390,6 +415,11 @@ export const junkRemovalLocationPages: LocationPage[] = [
         question: "Can you remove renovation debris and old appliances from a Marshfield home?",
         answer:
           "We can. Renovation debris, old appliances, furniture, mattresses, and yard items are all within scope. Let us know the volume when you call so we bring the right truck size.",
+      },
+      {
+        question: "Do you handle estate cleanouts in Marshfield?",
+        answer:
+          "Yes. Estate cleanouts are a regular part of our Marshfield work — clearing full homes of furniture, appliances, and household goods before a sale or family transition. We work efficiently and respectfully, and can handle the full property including detached garages and outbuildings in a single visit.",
       },
     ],
   },
@@ -418,6 +448,11 @@ export const junkRemovalLocationPages: LocationPage[] = [
         answer:
           "Absolutely. We handle the access logistics for Duxbury Beach and Powder Point properties, including parking constraints and narrow approach roads. We plan these jobs carefully in advance.",
       },
+      {
+        question: "Do you do garage cleanouts in Duxbury?",
+        answer:
+          "Yes. Garage cleanouts are one of the most requested services in Duxbury. Many Duxbury homes have spacious garages and outbuildings that accumulate equipment, furniture, and stored items over the years. We clear it all, load ourselves, and leave the space clean. Call for a flat-rate quote.",
+      },
     ],
   },
   {
@@ -445,6 +480,321 @@ export const junkRemovalLocationPages: LocationPage[] = [
         answer:
           "Absolutely. Sofas, mattresses, refrigerators, washers, dryers, dressers — all standard scope. We carry everything out of the home ourselves. No need to move items to the curb.",
       },
+      {
+        question: "Do you handle estate cleanouts in Norwell?",
+        answer:
+          "Yes. Estate cleanouts in Norwell are well within our scope — clearing entire homes of furniture, appliances, and household goods before a sale or family transition. We work efficiently and with discretion, coordinating directly with family members or estate representatives throughout the process.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-hull-ma",
+    town: "Hull",
+    state: "MA",
+    titleTag: "Junk Removal Hull MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Hull, MA. Big Red Moving Company clears seasonal homes, beach cottages, and peninsula properties at Nantasket Beach. Upfront flat-rate pricing.",
+    h1: "Junk Removal in Hull, MA",
+    heroSubhead:
+      "Hull's trusted junk removal crew. Seasonal cleanouts, beach cottage hauls, and estate clearing on the Nantasket Peninsula — handled efficiently with upfront pricing.",
+    bodyParagraph1:
+      "Hull's location on a narrow peninsula makes it one of the more logistically interesting junk removal jobs on the South Shore — but it's nothing Big Red Moving Company hasn't handled before. We regularly clear seasonal homes and year-round residences along Nantasket Beach, Atlantic Hill, and Hull Shore Drive. Whether you're clearing out a summer cottage before closing for the season, emptying a property after a sale, or hauling decades of accumulated beach gear and furniture, we arrive with the right truck and crew to get it done in a single visit. We plan around Hull's seasonal traffic patterns and the access constraints of peninsula living.",
+    bodyParagraph2:
+      "Our Hull junk removal service covers furniture, mattresses, appliances, old electronics, yard items, and general household clutter. We load everything ourselves, work quickly to minimize time your driveway is occupied, and sweep up before leaving. All pricing is flat-rate and quoted before we start — no surprises added on removal day. Hull is a short drive from our Hingham base, so we offer fast scheduling with same-week availability on most jobs.",
+    faq: [
+      {
+        question: "Do you do seasonal cleanouts for Hull beach cottages and summer homes?",
+        answer:
+          "Yes. Seasonal cleanouts are one of our most common Hull jobs — clearing out summer homes, beach cottages, and seasonal rentals before closing for winter or preparing for the season. We work efficiently to get it done in a single visit and handle all the loading ourselves.",
+      },
+      {
+        question: "Can you handle junk removal on Hull's peninsula with limited parking?",
+        answer:
+          "Absolutely. Hull's peninsula geography is familiar to us. We plan our arrival for off-peak hours when possible and use appropriately sized trucks for tight neighborhood streets. We've cleared homes throughout Hull Shore Drive and the Nantasket area without issue.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-milton-ma",
+    town: "Milton",
+    state: "MA",
+    titleTag: "Junk Removal Milton MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Milton, MA. Big Red Moving Company hauls furniture, appliances, and estate cleanouts from Milton's historic homes and neighborhoods. Upfront pricing.",
+    h1: "Junk Removal in Milton, MA",
+    heroSubhead:
+      "Milton's trusted junk removal crew. Historic homes, large estates, and established neighborhoods — cleared with care and transparent flat-rate pricing.",
+    bodyParagraph1:
+      "Milton's tree-lined streets and well-established neighborhoods are home to some of the South Shore's most beautiful historic homes — and those homes accumulate a lot over the decades. Big Red Moving Company provides professional junk removal throughout Milton, from neighborhoods near the Blue Hills Reservation to the established streets of East Milton and Milton Hill. Estate cleanouts are among our most common Milton jobs: multi-generation homes with decades of furniture, appliances, and household items that need to be cleared before a sale or transition. We handle these jobs with professionalism and discretion, working around family members or estate representatives as needed.",
+    bodyParagraph2:
+      "We serve all of Milton's neighborhoods with same-week junk removal for furniture, mattresses, appliances, electronics, renovation debris, and general household items. Our crew handles all carrying and loading — you don't need to move anything to the curb or the front door. All pricing is volume-based and quoted before we start. Milton's close proximity to our South Shore base means we can schedule quickly and arrive on time. We also handle garage cleanouts and basement clearing for Milton's larger single-family homes.",
+    faq: [
+      {
+        question: "Do you handle estate cleanouts for large Milton homes?",
+        answer:
+          "Yes. Estate cleanouts in Milton are a regular part of our work — especially for older homes with decades of accumulated furniture and household items. We're experienced with larger properties, respectful of family members on-site, and efficient about clearing even a fully furnished home in a single visit.",
+      },
+      {
+        question: "Do you do garage and basement cleanouts in Milton?",
+        answer:
+          "Absolutely. Garages and basements in Milton's larger single-family homes accumulate significant amounts over the years. We clear out old appliances, tools, furniture, boxes, and general clutter, load everything ourselves, and sweep up before leaving. Call us for a flat-rate quote.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-holbrook-ma",
+    town: "Holbrook",
+    state: "MA",
+    titleTag: "Junk Removal Holbrook MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Holbrook, MA. Big Red Moving Company hauls furniture, appliances, and household junk from Holbrook homes. Fast scheduling, upfront pricing.",
+    h1: "Junk Removal in Holbrook, MA",
+    heroSubhead:
+      "Holbrook junk removal done right. Garage cleanouts, old furniture, appliances, and more — we load it, haul it, and leave your space clean.",
+    bodyParagraph1:
+      "Holbrook is a close-knit South Shore community with a mix of well-kept ranch homes, split-levels, and older residential properties that often have garages, basements, and sheds in need of clearing. Big Red Moving Company provides reliable junk removal throughout Holbrook — fast scheduling, upfront pricing, and a crew that does all the heavy lifting. Whether you're clearing out a garage full of old appliances and tools, hauling away furniture from a room refresh, or dealing with a full basement cleanout, we arrive prepared and get it done in a single trip.",
+    bodyParagraph2:
+      "Our Holbrook junk removal service covers all standard items: furniture, mattresses, box springs, appliances, electronics, yard debris, renovation debris, and general household clutter. We serve all Holbrook neighborhoods including areas near Route 37 and South Franklin Street. Pricing is volume-based and quoted before we start — no surprises on removal day. We typically schedule Holbrook jobs within the same week and often sooner for smaller loads.",
+    faq: [
+      {
+        question: "Do you do garage cleanouts in Holbrook?",
+        answer:
+          "Yes. Garage cleanouts are among our most popular Holbrook requests. We clear everything: old appliances, lawn equipment, boxes, tools, scrap lumber, and general junk. We load it all ourselves and sweep the floor before we leave.",
+      },
+      {
+        question: "Can you remove appliances from a Holbrook home?",
+        answer:
+          "Absolutely. We remove refrigerators, washing machines, dryers, stoves, dishwashers, and other appliances from Holbrook homes. We handle all carrying and loading — you don't need to disconnect or move anything. Let us know what you have when you call for a quote.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-rockland-ma",
+    town: "Rockland",
+    state: "MA",
+    titleTag: "Junk Removal Rockland MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Rockland, MA. Big Red Moving Company clears garages, basements, and homes across Rockland. Flat-rate pricing, same-week availability.",
+    h1: "Junk Removal in Rockland, MA",
+    heroSubhead:
+      "Rockland junk removal — fast, affordable, and done right. Garage cleanouts, furniture hauls, renovation debris — one call handles it all.",
+    bodyParagraph1:
+      "Rockland's residential neighborhoods along Routes 3A and 123 are home to a mix of single-family homes, ranch properties, and split-levels where garages, basements, and sheds have a way of filling up over time. Big Red Moving Company provides professional junk removal throughout Rockland — quick scheduling, honest pricing, and a crew that handles everything from a single heavy piece to a full property cleanout. We serve the entire town including neighborhoods near Union Street, Market Street, and the Route 228 corridor.",
+    bodyParagraph2:
+      "We haul away furniture, appliances, mattresses, electronics, yard waste, renovation debris, and general household items from Rockland homes. Most Rockland jobs are completed in under two hours and are available same-week or often sooner. Pricing is quoted flat-rate before we start — no hourly billing and no charges added on the day. Our crew does all the carrying and loading; you just tell us what needs to go.",
+    faq: [
+      {
+        question: "How quickly can you schedule junk removal in Rockland?",
+        answer:
+          "We typically have same-week availability in Rockland, and often next-day for smaller loads. Call us with a description of what needs to go and we'll give you a quote and check availability right away.",
+      },
+      {
+        question: "Do you remove renovation debris and construction waste from Rockland homes?",
+        answer:
+          "Yes. Renovation debris — drywall, flooring, old cabinets, tile, lumber — is something we haul regularly from Rockland homes. Let us know the approximate volume so we bring the right truck. We price renovation debris hauls at a flat rate based on load size.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-abington-ma",
+    town: "Abington",
+    state: "MA",
+    titleTag: "Junk Removal Abington MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Abington, MA. Big Red Moving Company hauls furniture, appliances, and household junk from Abington homes. Upfront pricing, same-week availability.",
+    h1: "Junk Removal in Abington, MA",
+    heroSubhead:
+      "Abington junk removal made simple. Old furniture, appliances, garage clutter — one call and it's gone.",
+    bodyParagraph1:
+      "Abington's quiet residential streets are full of single-family homes where garages and basements tend to fill up over the years with items that have long since outlived their usefulness. Big Red Moving Company provides fast, professional junk removal throughout Abington — from neighborhoods near Route 18 to the residential streets off Washington Street and Brockton Avenue. We handle every type of removal job: single-item hauls, full garage cleanouts, basement clearing, estate cleanouts, and renovation debris. Our crew does all the heavy lifting so you don't have to.",
+    bodyParagraph2:
+      "We haul furniture, mattresses, appliances, old electronics, yard debris, and general clutter from Abington homes. All pricing is flat-rate and quoted before we arrive — no surprises on removal day. Most Abington jobs are available same-week with quick turnaround, and we work Monday through Saturday to fit your schedule. For full home or estate cleanouts, we bring the right size truck and complete the job in a single efficient visit.",
+    faq: [
+      {
+        question: "Do you do full home or estate cleanouts in Abington?",
+        answer:
+          "Yes. Full home and estate cleanouts are well within our scope in Abington. We clear entire homes — furniture, appliances, personal items, boxes, and general clutter — in a single visit. We're respectful and efficient, and we can work around family members or estate representatives present on-site.",
+      },
+      {
+        question: "Do you remove old appliances from Abington homes?",
+        answer:
+          "Absolutely. Refrigerators, washers, dryers, stoves, and other large appliances are standard scope for our Abington junk removal service. We handle all carrying and disposal. No need to move anything to the curb — we come to where it is.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-whitman-ma",
+    town: "Whitman",
+    state: "MA",
+    titleTag: "Junk Removal Whitman MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Whitman, MA. Big Red Moving Company hauls furniture, appliances, and garage clutter from Whitman homes. Flat-rate pricing, fast scheduling.",
+    h1: "Junk Removal in Whitman, MA",
+    heroSubhead:
+      "Whitman junk removal — one call, one trip, done. Furniture, appliances, garage cleanouts, and more — handled fast with upfront pricing.",
+    bodyParagraph1:
+      "Whitman's established residential neighborhoods have plenty of homes with garages, basements, and storage spaces that have accumulated items over years or even decades. Big Red Moving Company serves Whitman with professional junk removal — fast scheduling, transparent pricing, and a hardworking crew that handles all the carrying and loading. Whether you're clearing out a single room, doing a full garage cleanout, or hauling away furniture and appliances after a renovation, we're ready to help.",
+    bodyParagraph2:
+      "We remove furniture, mattresses, appliances, electronics, renovation debris, and general household junk from Whitman homes. We serve all areas of town including neighborhoods near Route 27, Bedford Street, and the Route 18 corridor. Pricing is volume-based and quoted flat before we arrive — no surprise charges on the day. We offer same-week scheduling for most Whitman jobs and often can book within 24–48 hours for smaller loads.",
+    faq: [
+      {
+        question: "Do you do garage and basement cleanouts in Whitman?",
+        answer:
+          "Yes. Garage and basement cleanouts are a core part of our Whitman junk removal service. We clear out old appliances, tools, furniture, holiday decor, boxes, and general junk. We load everything ourselves and sweep up before leaving.",
+      },
+      {
+        question: "What does junk removal cost in Whitman?",
+        answer:
+          "Pricing is based on the volume and type of items. Most single-room or partial-load jobs in Whitman start under $250–$300; full garage or room cleanouts typically run $300–$500 depending on volume. We give you a flat quote before starting — no hourly surprises. Call us or fill out the form for a quick estimate.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-hanover-ma",
+    town: "Hanover",
+    state: "MA",
+    titleTag: "Junk Removal Hanover MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Hanover, MA. Big Red Moving Company hauls furniture, appliances, and garage junk from Hanover homes. Flat-rate pricing, same-week availability.",
+    h1: "Junk Removal in Hanover, MA",
+    heroSubhead:
+      "Hanover's trusted junk removal crew. Garage cleanouts, estate hauls, furniture removal — handled professionally with transparent pricing.",
+    bodyParagraph1:
+      "Hanover's well-kept suburban neighborhoods — from the Route 3 corridor to the residential streets near Hanover Center — are home to spacious single-family homes where garages, basements, and sheds become natural collection points for items that no longer have a use. Big Red Moving Company provides reliable junk removal across all of Hanover, handling everything from single-item pickups to full property cleanouts. We work with Hanover families, estate executors, and homeowners preparing for a sale who need a property cleared quickly and professionally.",
+    bodyParagraph2:
+      "We haul furniture, mattresses, appliances, electronics, renovation debris, yard waste, and general household clutter from Hanover homes. All pricing is flat-rate and quoted before we start — you know exactly what you're paying before we arrive. Most Hanover jobs are available same-week, and we work Monday through Saturday to accommodate your schedule. Our crew handles all loading and leaves the space clean when we're done.",
+    faq: [
+      {
+        question: "Do you handle estate cleanouts in Hanover?",
+        answer:
+          "Yes. Estate cleanouts are something we handle regularly in Hanover — clearing entire homes of furniture, appliances, personal items, and household goods before a sale or transition. We work efficiently and respectfully, and can coordinate with family members or real estate agents on-site.",
+      },
+      {
+        question: "Do you do garage cleanouts in Hanover?",
+        answer:
+          "Absolutely. Garage cleanouts are one of our most popular services in Hanover. We clear everything you want gone — old appliances, tools, lawn equipment, boxes, scrap lumber — load it all ourselves, and leave the garage floor clean and empty.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-pembroke-ma",
+    town: "Pembroke",
+    state: "MA",
+    titleTag: "Junk Removal Pembroke MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Pembroke, MA. Big Red Moving Company hauls furniture, appliances, and yard debris from Pembroke homes and properties. Flat-rate pricing.",
+    h1: "Junk Removal in Pembroke, MA",
+    heroSubhead:
+      "Pembroke junk removal — residential cleanouts, garage hauls, yard debris, and more. One trip, flat-rate pricing, done right.",
+    bodyParagraph1:
+      "Pembroke's mix of suburban neighborhoods and semi-rural properties — many with larger lots, detached garages, sheds, and outbuildings — generates a steady range of junk removal needs that Big Red Moving Company handles regularly. Whether you're clearing a garage packed with years of accumulated tools and equipment, hauling away old furniture and appliances from a renovation project, or doing a full property cleanout before a sale, we bring the right truck and crew to get it done in one trip. We serve all of Pembroke including neighborhoods near Route 3, Center Street, and the Pembroke/Hanson border.",
+    bodyParagraph2:
+      "Our Pembroke junk removal service covers furniture, mattresses, appliances, electronics, yard and brush debris, renovation debris, and general household clutter. For larger properties with outbuildings or significant volumes, we can bring multiple trucks or stage the work across visits. All pricing is flat-rate and quoted before we start — no surprises. We're typically available within the week in Pembroke and offer same-week scheduling on most jobs.",
+    faq: [
+      {
+        question: "Do you remove yard debris and outdoor junk from Pembroke properties?",
+        answer:
+          "Yes. Yard debris, brush, old outdoor furniture, lawn equipment, and items accumulated in sheds and outbuildings are all things we haul from Pembroke properties. Larger lots with significant outdoor volumes are something we handle routinely — tell us what you have and we'll bring the right truck.",
+      },
+      {
+        question: "Do you do full property cleanouts in Pembroke?",
+        answer:
+          "We do. Full property cleanouts — including detached garages, sheds, outbuildings, and the interior of the home — are within our scope in Pembroke. We can complete most cleanouts in a single visit and stage larger jobs across multiple trips. Contact us for a custom quote on larger properties.",
+      },
+    ],
+  },
+  {
+    slug: "junk-removal-cohasset-ma",
+    town: "Cohasset",
+    state: "MA",
+    titleTag: "Junk Removal Cohasset MA | Big Red Moving Company",
+    metaDescription:
+      "Junk removal in Cohasset, MA. Garage and basement cleanouts, estate clearing, furniture and appliance hauling. Flat-rate pricing from a Hingham-based crew.",
+    h1: "Junk Removal in Cohasset, MA",
+    heroSubhead:
+      "Cohasset junk removal from the crew next door in Hingham. Estate cleanouts, garage clear-outs, furniture and appliance hauling — flat-rate, quoted before we start.",
+    bodyParagraph1:
+      "Cohasset sits directly next door to our Hingham base, which makes it one of the fastest towns for us to reach and schedule. The housing here runs from historic homes around Cohasset Common and the Village to waterfront properties along Jerusalem Road and Atlantic Avenue, and each brings its own access challenges — long private drives, tight stone-wall entrances, and carriage houses that were never designed for a box truck. Our crew scouts the approach before removal day so the truck ends up where it needs to be, and we protect the floors, doorframes, and landscaping on the way out.",
+    bodyParagraph2:
+      "We handle the full range in Cohasset: furniture and mattresses, appliances, electronics, exercise equipment, renovation and yard debris, and complete garage, basement, attic, and estate cleanouts. Coastal properties tend to accumulate a lot in outbuildings and crawl spaces, and that's squarely our work. Every Cohasset job is quoted flat-rate before we begin — you'll know the number up front — and we donate or recycle whatever we reasonably can before anything heads to the transfer station.",
+    faq: [
+      {
+        question: "Can you get a truck down the private drives on Jerusalem Road?",
+        answer:
+          "Usually, yes. We work Cohasset's waterfront roads regularly and know which approaches a box truck can handle. Where access is genuinely too tight, we shuttle loads out with smaller vehicles rather than turning the job down. Mention the access when you call and we'll plan for it.",
+      },
+      {
+        question: "Do you handle full estate cleanouts in Cohasset?",
+        answer:
+          "Yes — estate cleanouts are one of our most common Cohasset jobs. We can clear an entire property including the main house, garage, attic, basement, and any outbuildings. We work carefully around items being kept or appraised, and we can stage the work across several visits when a family needs time.",
+      },
+      {
+        question: "How fast can you schedule a Cohasset job?",
+        answer:
+          "Cohasset is minutes from our Hingham base, so we often have same-week availability and can sometimes fit smaller loads in same-day. Call us with what you have and we'll tell you the soonest we can be there.",
+      },
     ],
   },
 ]
+
+/**
+ * Actual bordering / closest towns on the South Shore, nearest first.
+ * Used to build the "Also Serving Nearby Towns" links so a Pembroke reader is
+ * offered Hanover and Duxbury rather than Quincy 25 miles up Route 3.
+ */
+const ADJACENT_TOWNS: Record<string, string[]> = {
+  Hingham: ["Cohasset", "Hull", "Weymouth", "Norwell", "Scituate", "Rockland"],
+  Cohasset: ["Hingham", "Scituate", "Hull", "Norwell"],
+  Hull: ["Hingham", "Cohasset", "Weymouth"],
+  Quincy: ["Milton", "Braintree", "Weymouth", "Holbrook"],
+  Milton: ["Quincy", "Braintree", "Holbrook", "Weymouth"],
+  Braintree: ["Quincy", "Weymouth", "Holbrook", "Milton", "Abington"],
+  Weymouth: ["Braintree", "Hingham", "Quincy", "Norwell", "Abington", "Holbrook"],
+  Holbrook: ["Braintree", "Abington", "Weymouth", "Quincy", "Milton"],
+  Abington: ["Rockland", "Whitman", "Holbrook", "Weymouth", "Braintree"],
+  Whitman: ["Abington", "Rockland", "Hanover", "Hanson"],
+  Rockland: ["Abington", "Hanover", "Norwell", "Hingham", "Weymouth"],
+  Norwell: ["Hanover", "Rockland", "Scituate", "Hingham", "Marshfield", "Pembroke"],
+  Hanover: ["Norwell", "Rockland", "Pembroke", "Whitman", "Marshfield"],
+  Scituate: ["Cohasset", "Norwell", "Marshfield", "Hingham"],
+  Marshfield: ["Scituate", "Duxbury", "Pembroke", "Norwell", "Hanover"],
+  Pembroke: ["Hanover", "Duxbury", "Marshfield", "Norwell", "Hanson"],
+  Duxbury: ["Marshfield", "Pembroke", "Kingston", "Hanover"],
+}
+
+/**
+ * The nearest towns to `town` that actually have a page of the given service
+ * type. Falls back to filling from the remaining pages so the block is never
+ * short, and never links a page to itself.
+ */
+export function getNearbyPages(
+  town: string,
+  serviceType: "moving" | "junk-removal",
+  limit = 4,
+): LocationPage[] {
+  const pool = serviceType === "moving" ? movingLocationPages : junkRemovalLocationPages
+  const candidates = pool.filter((p) => p.town !== town)
+
+  const nearby = (ADJACENT_TOWNS[town] ?? [])
+    .map((name) => candidates.find((p) => p.town === name))
+    .filter((p): p is LocationPage => Boolean(p))
+
+  const filler = candidates.filter((p) => !nearby.includes(p))
+  return [...nearby, ...filler].slice(0, limit)
+}
+
+/**
+ * Town → available page slugs. Derived from the arrays above so the nav,
+ * footer and service-area grid can never drift out of sync with the pages
+ * that actually exist (a hardcoded map is how the moving town pages ended up
+ * unlinked from anywhere on the site).
+ */
+export function getTownLinks(town: string): {
+  moving: string | null
+  junkRemoval: string | null
+} {
+  return {
+    moving: movingLocationPages.find((p) => p.town === town)?.slug ?? null,
+    junkRemoval: junkRemovalLocationPages.find((p) => p.town === town)?.slug ?? null,
+  }
+}

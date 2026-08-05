@@ -51,6 +51,7 @@ export function About() {
                 src="/images/team/crew-group.jpg"
                 alt="Andrew, Anthony, and Charles — the Big Red Moving Company team"
                 fill
+                sizes="(max-width: 768px) 100vw, 512px"
                 className="object-cover"
                 style={{ objectPosition: 'center 20%' }}
               />

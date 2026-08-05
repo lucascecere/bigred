@@ -19,11 +19,12 @@ export function Hero() {
             className="font-display text-5xl md:text-7xl lg:text-8xl uppercase leading-none tracking-tight text-white animate-headline"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            HINGHAM&apos;S
-            <br />
-            JUNK REMOVAL
-            <br />
-            COMPANY.
+            {hero.headline.map((line, i) => (
+              <span key={line}>
+                {line}
+                {i < hero.headline.length - 1 && <br />}
+              </span>
+            ))}
           </h1>
 
           <p className="mt-6 text-[var(--brand-cream)] text-lg md:text-xl max-w-lg">

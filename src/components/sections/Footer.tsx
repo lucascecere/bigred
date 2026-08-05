@@ -1,18 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { siteContent } from '@content/site-content'
+import { getTownLinks } from '@content/location-pages'
+import { subServicePages } from '@content/sub-service-pages'
 import { StarIcon } from '@/components/ui/StarIcon'
-
-const priorityTownLinks: Record<string, string> = {
-  Hingham: '/junk-removal-hingham-ma',
-  Quincy: '/junk-removal-quincy-ma',
-  Weymouth: '/junk-removal-weymouth-ma',
-  Braintree: '/junk-removal-braintree-ma',
-  Scituate: '/junk-removal-scituate-ma',
-  Marshfield: '/junk-removal-marshfield-ma',
-  Duxbury: '/junk-removal-duxbury-ma',
-  Norwell: '/junk-removal-norwell-ma',
-}
 
 export function Footer() {
   const { footer, phone, email, serviceArea } = siteContent
@@ -71,28 +62,27 @@ export function Footer() {
               Service Area
             </h3>
             <ul className="list-none grid grid-cols-2 gap-x-4 gap-y-1.5">
-              {serviceArea.towns.map((town) => (
-                <li key={town} className="flex items-center gap-2">
-                  <span className="text-[var(--brand-red)] shrink-0">
-                    <StarIcon size={10} />
-                  </span>
-                  {priorityTownLinks[town] ? (
+              {serviceArea.towns.map((town) => {
+                const links = getTownLinks(town)
+                const href = links.junkRemoval
+                  ? `/${links.junkRemoval}`
+                  : links.moving
+                    ? `/${links.moving}`
+                    : '/#service-area'
+                return (
+                  <li key={town} className="flex items-center gap-2">
+                    <span className="text-[var(--brand-red)] shrink-0">
+                      <StarIcon size={10} />
+                    </span>
                     <Link
-                      href={priorityTownLinks[town]}
+                      href={href}
                       className="text-[var(--brand-cream)] text-sm opacity-70 hover:opacity-100 hover:text-[var(--brand-red)] transition-colors"
                     >
                       {town}
                     </Link>
-                  ) : (
-                    <a
-                      href="#service-area"
-                      className="text-[var(--brand-cream)] text-sm opacity-70 hover:opacity-100 hover:text-[var(--brand-red)] transition-colors"
-                    >
-                      {town}
-                    </a>
-                  )}
-                </li>
-              ))}
+                  </li>
+                )
+              })}
             </ul>
           </div>
 
@@ -107,19 +97,34 @@ export function Footer() {
             <div className="space-y-3 text-[var(--brand-cream)] text-sm opacity-70">
               <ul className="list-none space-y-2">
                 <li>
-                  <a href="#services" className="hover:text-[var(--brand-red)] transition-colors">
-                    Our Services
-                  </a>
+                  <Link href="/junk-removal" className="hover:text-[var(--brand-red)] transition-colors">
+                    Junk Removal — South Shore MA
+                  </Link>
                 </li>
                 <li>
-                  <a href="#faq" className="hover:text-[var(--brand-red)] transition-colors">
+                  <Link href="/moving" className="hover:text-[var(--brand-red)] transition-colors">
+                    Moving Company — South Shore MA
+                  </Link>
+                </li>
+                {subServicePages.map((service) => (
+                  <li key={service.slug}>
+                    <Link
+                      href={`/${service.slug}`}
+                      className="hover:text-[var(--brand-red)] transition-colors"
+                    >
+                      {service.navLabel}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href="/#faq" className="hover:text-[var(--brand-red)] transition-colors">
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-[var(--brand-red)] transition-colors">
-                    Get a Quote
-                  </a>
+                  <Link href="/contact" className="hover:text-[var(--brand-red)] transition-colors">
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>

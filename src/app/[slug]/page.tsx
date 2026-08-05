@@ -1,23 +1,38 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { movingLocationPages, junkRemovalLocationPages } from '@content/location-pages'
+import {
+  movingLocationPages,
+  junkRemovalLocationPages,
+  getTownLinks,
+  getNearbyPages,
+} from '@content/location-pages'
 import { siteContent } from '@content/site-content'
+import { getTownDisposal } from '@content/town-disposal'
+import { subServicePages, getSubServicePage } from '@content/sub-service-pages'
+import { SubServiceLanding } from '@/components/pages/SubServiceLanding'
 import {
   getLocationPageSchema,
   getBreadcrumbSchema,
   getFAQSchema,
 } from '@/lib/schema'
+import { SITE_URL } from '@/lib/site'
 
 export const dynamic = 'force-static'
 
+// This catch-all serves two flat-URL page types: per-town location pages and
+// per-service landing pages. Both live at the root so the URL shape matches
+// /moving and /junk-removal.
 const allPages = [
   ...movingLocationPages.map((p) => ({ ...p, serviceType: 'moving' as const })),
   ...junkRemovalLocationPages.map((p) => ({ ...p, serviceType: 'junk-removal' as const })),
 ]
 
 export function generateStaticParams() {
-  return allPages.map((p) => ({ slug: p.slug }))
+  return [
+    ...allPages.map((p) => ({ slug: p.slug })),
+    ...subServicePages.map((p) => ({ slug: p.slug })),
+  ]
 }
 
 export async function generateMetadata({
@@ -26,12 +41,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const page = allPages.find((p) => p.slug === slug)
+  const page = allPages.find((p) => p.slug === slug) ?? getSubServicePage(slug)
   if (!page) return {}
   return {
     title: page.titleTag,
     description: page.metaDescription,
-    alternates: { canonical: `https://bigredmovingco.com/${page.slug}` },
+    alternates: { canonical: `/${page.slug}` },
     openGraph: {
       title: page.titleTag,
       description: page.metaDescription,
@@ -46,6 +61,10 @@ export default async function LocationPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
+
+  const subService = getSubServicePage(slug)
+  if (subService) return <SubServiceLanding page={subService} />
+
   const page = allPages.find((p) => p.slug === slug)
   if (!page) notFound()
 
@@ -55,9 +74,18 @@ export default async function LocationPage({
   const serviceLabel = isMoving ? 'Moving Company South Shore MA' : 'Junk Removal South Shore MA'
   const serviceHref = isMoving ? '/moving' : '/junk-removal'
 
-  // Nearby towns — 4 others from the same service type, excluding current
-  const sameTypePages = isMoving ? movingLocationPages : junkRemovalLocationPages
-  const nearbyPages = sameTypePages.filter((p) => p.slug !== page.slug).slice(0, 4)
+  // Nearby towns — genuinely bordering towns first, not just the first 4 in the array
+  const nearbyPages = getNearbyPages(page.town, page.serviceType, 4)
+
+  // The other service in this same town, when a page for it exists. This is what
+  // ties the moving town pages into the (much larger) junk-removal cluster.
+  const townLinks = getTownLinks(page.town)
+  const siblingSlug = isMoving ? townLinks.junkRemoval : townLinks.moving
+
+  // Town-specific disposal reality. Only shown on junk removal pages — it's the
+  // question those readers actually have, and it's what makes each town page
+  // genuinely different from the others.
+  const disposal = isMoving ? undefined : getTownDisposal(page.town)
 
   // FAQ heading
   const faqHeading = isMoving
@@ -79,7 +107,7 @@ export default async function LocationPage({
             getLocationPageSchema({
               town: page.town,
               serviceType: page.serviceType,
-              url: `https://bigredmovingco.com/${page.slug}`,
+              url: `${SITE_URL}/${page.slug}`,
             })
           ),
         }}
@@ -89,9 +117,9 @@ export default async function LocationPage({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             getBreadcrumbSchema([
-              { name: 'Home', url: 'https://bigredmovingco.com' },
-              { name: serviceLabel, url: `https://bigredmovingco.com${serviceHref}` },
-              { name: page.titleTag, url: `https://bigredmovingco.com/${page.slug}` },
+              { name: 'Home', url: SITE_URL },
+              { name: serviceLabel, url: `${SITE_URL}${serviceHref}` },
+              { name: `${page.town}, MA`, url: `${SITE_URL}/${page.slug}` },
             ])
           ),
         }}
@@ -175,11 +203,60 @@ export default async function LocationPage({
           <p className="text-[var(--brand-steel)] leading-relaxed text-lg">
             {page.bodyParagraph2}
           </p>
+
+          {/* Cross-service link for the same town */}
+          {siblingSlug && (
+            <p className="mt-6 text-[var(--brand-steel)] leading-relaxed text-lg">
+              {isMoving ? 'Also need things hauled away? See our ' : 'Planning a move instead? See our '}
+              <Link
+                href={`/${siblingSlug}`}
+                className="text-[var(--brand-red)] font-semibold underline underline-offset-2 hover:text-[var(--brand-red-deep)] transition-colors"
+              >
+                {isMoving
+                  ? `junk removal service in ${page.town}`
+                  : `moving service in ${page.town}`}
+              </Link>
+              .
+            </p>
+          )}
         </div>
       </section>
 
+      {/* Town-specific disposal options */}
+      {disposal && (
+        <section className="bg-[var(--brand-cream)] py-16 border-t-2 border-[var(--brand-black)]/10">
+          <div className="max-w-3xl mx-auto px-5 sm:px-6">
+            <h2
+              className="font-display text-3xl md:text-4xl uppercase text-[var(--brand-black)] leading-none mb-5"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              {disposal.heading}
+            </h2>
+            <p className="text-[var(--brand-steel)] leading-relaxed text-lg mb-5">
+              {disposal.body}
+            </p>
+            <p className="text-[var(--brand-steel)] leading-relaxed">
+              Mattresses and box springs are a special case everywhere in the state —
+              Massachusetts banned them from disposal in 2022, which is why no town will take
+              one at the curb with the trash. See{' '}
+              <Link
+                href="/mattress-disposal"
+                className="text-[var(--brand-red)] font-semibold underline underline-offset-2 hover:text-[var(--brand-red-deep)] transition-colors"
+              >
+                how mattress disposal works in Massachusetts
+              </Link>
+              .
+            </p>
+            <p className="mt-5 text-sm text-[var(--brand-steel)]/70 leading-relaxed">
+              Town programs and fees change — check with {page.town} DPW for current rules
+              before you make a trip.
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* FAQ */}
-      <section className="bg-[var(--brand-cream)] py-16">
+      <section className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-5 sm:px-6">
           <div className="mb-10">
             <h2

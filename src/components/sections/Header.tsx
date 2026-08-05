@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { siteContent } from '@content/site-content'
 import { PhoneCTA } from '@/components/ui/PhoneCTA'
 
@@ -9,7 +10,7 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-[var(--brand-black)] border-b-2 border-[var(--brand-red)]">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
-          <a
+          <Link
             href="/"
             className="flex flex-col leading-none shrink-0"
             aria-label="Big Red Moving Company — Home"
@@ -21,18 +22,18 @@ export function Header() {
               height={70}
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
             {siteContent.header.navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-white text-sm font-medium uppercase tracking-wide hover:text-[var(--brand-red)] transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

@@ -1,17 +1,7 @@
 import Link from 'next/link'
 import { siteContent } from '@content/site-content'
+import { getTownLinks } from '@content/location-pages'
 import { StarIcon } from '@/components/ui/StarIcon'
-
-const priorityTownLinks: Record<string, string> = {
-  Hingham: '/junk-removal-hingham-ma',
-  Quincy: '/junk-removal-quincy-ma',
-  Weymouth: '/junk-removal-weymouth-ma',
-  Braintree: '/junk-removal-braintree-ma',
-  Scituate: '/junk-removal-scituate-ma',
-  Marshfield: '/junk-removal-marshfield-ma',
-  Duxbury: '/junk-removal-duxbury-ma',
-  Norwell: '/junk-removal-norwell-ma',
-}
 
 export function ServiceArea() {
   const { serviceArea } = siteContent
@@ -40,30 +30,48 @@ export function ServiceArea() {
           </p>
         </div>
 
-        {/* Towns list — semantic <ul> for SEO */}
+        {/* Towns list — semantic <ul> for SEO. Each town links to whichever
+            local pages exist for it, so no town page is left orphaned. */}
         <ul
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 list-none mb-14"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4 list-none mb-14"
           aria-label="Towns we serve"
         >
-          {serviceArea.towns.map((town) => (
-            <li key={town} className="flex items-center gap-2">
-              <span className="text-[var(--brand-red)] shrink-0">
-                <StarIcon size={12} />
-              </span>
-              {priorityTownLinks[town] ? (
-                <Link
-                  href={priorityTownLinks[town]}
-                  className="text-[var(--brand-black)] font-medium text-sm md:text-base hover:text-[var(--brand-red)] transition-colors underline-offset-2 hover:underline"
-                >
-                  {town}
-                </Link>
-              ) : (
-                <span className="text-[var(--brand-black)] font-medium text-sm md:text-base">
-                  {town}
+          {serviceArea.towns.map((town) => {
+            const links = getTownLinks(town)
+            return (
+              <li key={town} className="flex items-start gap-2">
+                <span className="text-[var(--brand-red)] shrink-0 mt-1">
+                  <StarIcon size={12} />
                 </span>
-              )}
-            </li>
-          ))}
+                <div className="flex flex-col gap-0.5 min-w-0">
+                  <span className="text-[var(--brand-black)] font-semibold text-sm md:text-base">
+                    {town}
+                  </span>
+                  <span className="flex flex-wrap gap-x-2 text-xs text-[var(--brand-steel)]">
+                    {links.junkRemoval && (
+                      <Link
+                        href={`/${links.junkRemoval}`}
+                        className="hover:text-[var(--brand-red)] transition-colors underline-offset-2 hover:underline"
+                      >
+                        Junk Removal
+                      </Link>
+                    )}
+                    {links.junkRemoval && links.moving && (
+                      <span aria-hidden="true" className="opacity-40">·</span>
+                    )}
+                    {links.moving && (
+                      <Link
+                        href={`/${links.moving}`}
+                        className="hover:text-[var(--brand-red)] transition-colors underline-offset-2 hover:underline"
+                      >
+                        Moving
+                      </Link>
+                    )}
+                  </span>
+                </div>
+              </li>
+            )
+          })}
         </ul>
 
         {/* SEO copy clusters */}

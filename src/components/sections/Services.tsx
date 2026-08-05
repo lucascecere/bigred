@@ -1,6 +1,16 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { siteContent } from '@content/site-content'
 import { DiagonalBanner } from '@/components/ui/DiagonalBanner'
+
+// Where each service card sends the reader. Without these the two money pages
+// (/junk-removal, /moving) had no inbound link from the homepage at all.
+const serviceLinks: Record<string, { href: string; label: string }> = {
+  'junk-removal': { href: '/junk-removal', label: 'Junk removal across the South Shore' },
+  'local-moves': { href: '/moving', label: 'Local moving across the South Shore' },
+  'labor-only': { href: '/moving', label: 'Labor-only loading help' },
+  'furniture-hauling': { href: '/junk-removal', label: 'Single-item furniture hauling' },
+}
 
 const serviceImages: Record<string, { src: string; alt: string }> = {
   'local-moves': {
@@ -15,9 +25,12 @@ const serviceImages: Record<string, { src: string; alt: string }> = {
     src: 'https://images.unsplash.com/photo-1714647211902-bb711d643a17?w=600&q=80&auto=format&fit=crop',
     alt: 'Person moving boxes in a living room',
   },
+  // Real crew photo rather than stock — the previous image was a foreign
+  // delivery van, which reads as generic to both visitors and Google for a
+  // business whose whole pitch is "we're your South Shore neighbors".
   'furniture-hauling': {
-    src: 'https://images.unsplash.com/photo-1517478615425-ea923377dac7?w=600&q=80&auto=format&fit=crop',
-    alt: 'Large appliance loaded into a delivery truck',
+    src: '/images/team/crew-action.png',
+    alt: 'The Big Red Moving crew loading a large item onto their red truck in Hingham, MA',
   },
 }
 
@@ -106,6 +119,7 @@ export function Services() {
                     src={serviceImages[service.id].src}
                     alt={serviceImages[service.id].alt}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                     className="object-cover"
                   />
                 </div>
@@ -124,6 +138,15 @@ export function Services() {
                 <p className="text-[var(--brand-steel)] text-sm leading-relaxed flex-1">
                   {service.description}
                 </p>
+                {serviceLinks[service.id] && (
+                  <Link
+                    href={serviceLinks[service.id].href}
+                    className="mt-4 inline-flex items-center gap-2 text-[var(--brand-red)] font-bold text-sm uppercase tracking-wide hover:gap-3 transition-all"
+                  >
+                    {serviceLinks[service.id].label}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                )}
               </div>
             </article>
           ))}

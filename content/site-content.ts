@@ -53,14 +53,13 @@ export interface ProcessStep {
   description: string
 }
 
+// NOTE: page titles, meta descriptions and OG tags are NOT defined here — they
+// live in each route's `metadata` export (src/app/**/page.tsx, layout.tsx) and
+// in content/service-pages.ts + content/location-pages.ts. A duplicate `meta`
+// block used to sit in this file doing nothing, which made it look like the
+// place to edit titles. Don't reintroduce it.
+
 export interface SiteContent {
-  meta: {
-    title: string
-    description: string
-    ogTitle: string
-    ogDescription: string
-    siteUrl: string
-  }
   phone: {
     display: string
     href: string
@@ -72,7 +71,8 @@ export interface SiteContent {
     navLinks: NavLink[]
   }
   hero: {
-    headline: string
+    /** One entry per rendered line of the H1. */
+    headline: string[]
     subhead: string
     ctaPrimary: CtaLink
     ctaSecondary: CtaLink
@@ -133,15 +133,6 @@ export interface SiteContent {
 }
 
 export const siteContent: SiteContent = {
-  meta: {
-    title: "Big Red Moving Company | Local Movers in Hingham, MA & South Shore",
-    description:
-      "Hingham-based local moving company serving the South Shore — Hingham, Cohasset, Scituate, Weymouth, Quincy, and surrounding towns. Family-owned, flat-rate pricing. Get a free quote today.",
-    ogTitle: "Big Red Moving Company | Hingham, MA",
-    ogDescription:
-      "Local movers based in Hingham. Family-owned, flat-rate pricing. Serving the South Shore.",
-    siteUrl: "https://bigredmovingco.com",
-  },
   phone: {
     display: "320-321-JUNK",
     href: "tel:+13203215865",
@@ -150,18 +141,24 @@ export const siteContent: SiteContent = {
   header: {
     logoText: "BIG RED MOVING",
     tagline: "HINGHAM, MA",
+    // Root-relative anchors ("/#about") on purpose — a bare "#about" resolves
+    // against the current URL, so on a town page the nav pointed at anchors
+    // that don't exist there.
     navLinks: [
-      { label: "Services", href: "#services" },
-      { label: "Service Area", href: "#service-area" },
-      { label: "About", href: "#about" },
-      { label: "Contact", href: "#contact" },
+      { label: "Junk Removal", href: "/junk-removal" },
+      { label: "Moving", href: "/moving" },
+      { label: "Service Area", href: "/#service-area" },
+      { label: "About", href: "/#about" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   hero: {
-    headline: "HINGHAM'S MOVING COMPANY.",
+    // Rendered as three lines by Hero.tsx. Keep in sync — this field used to be
+    // dead while the H1 was hardcoded in the component.
+    headline: ["HINGHAM'S", "JUNK REMOVAL", "COMPANY."],
     subhead:
       "Hingham's junk removal and hauling crew. Serving all of the South Shore.",
-    ctaPrimary: { label: "Get a Free Quote", href: "#contact" },
+    ctaPrimary: { label: "Get a Free Quote", href: "/#contact" },
     ctaSecondary: { label: "Call or Text 320-321-JUNK", href: "tel:+13203215865" },
     trustStrip: [
       "South Shore Local",
@@ -208,7 +205,7 @@ export const siteContent: SiteContent = {
     },
   ],
   stats: [
-    { value: "200+", label: "Moves Completed" },
+    { value: "100+", label: "Moves Completed" },
     { value: "3 Yrs", label: "Serving South Shore" },
     { value: "5-Star", label: "Google Rated" },
     { value: "17", label: "Towns Served" },
@@ -334,7 +331,7 @@ export const siteContent: SiteContent = {
     {
       question: "How much does a local job in Hingham cost?",
       answer:
-        "Most local jobs in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and hours needed. We charge hourly, so the final cost depends on how long the job takes. Contact us for a free estimate tailored to your specific job.",
+        "Most local jobs in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and the scope of the job. We quote flat-rate, so the price we give you before we start is the price you pay — no hourly meter running. Contact us for a free estimate tailored to your specific job.",
     },
     {
       question: "Do you do junk removal?",

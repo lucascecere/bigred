@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from '@/components/sections/Header'
 import { Footer } from '@/components/sections/Footer'
 import { getLocalBusinessSchema, getWebsiteSchema } from '@/lib/schema'
+import { SITE_URL } from '@/lib/site'
 
 const anton = Anton({
   subsets: ['latin'],
@@ -17,16 +18,19 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://bigredmovingco.com'),
-  title: 'Big Red Moving Company | Local Movers in Hingham, MA & South Shore',
+  metadataBase: new URL(SITE_URL),
+  title: 'Big Red Moving Company | Junk Removal & Local Movers — Hingham, MA',
   description:
-    'Hingham-based local moving company serving the South Shore — Hingham, Cohasset, Scituate, Weymouth, Quincy, and surrounding towns. Family-owned, flat-rate pricing. Get a free quote today.',
+    'Hingham-based junk removal and moving company serving the South Shore — garage cleanouts, estate clearing, furniture hauling, and local moves. Family-owned, flat-rate pricing. Serving Hingham, Quincy, Weymouth, Braintree, Scituate, and 12+ more towns.',
   keywords: [
+    'junk removal hingham ma',
+    'junk removal south shore ma',
+    'garage cleanout south shore',
+    'estate cleanout south shore ma',
     'movers hingham ma',
     'south shore moving company',
-    'local movers massachusetts',
-    'hingham moving company',
-    'moving company south shore',
+    'junk hauling south shore',
+    'furniture removal hingham ma',
   ],
   icons: {
     icon: [
@@ -37,15 +41,15 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://bigredmovingco.com',
+    canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: '/',
     siteName: 'Big Red Moving Company',
-    title: 'Big Red Moving Company | Local Movers in Hingham, MA',
-    description: 'Hingham-based movers serving the South Shore. Family-owned, flat-rate pricing.',
+    title: 'Big Red Moving Company | Junk Removal & Movers — Hingham, MA',
+    description: 'Junk removal and moving company based in Hingham. Garage cleanouts, estate clearing, local moves. Flat-rate pricing.',
     images: [
       {
         url: '/opengraph-image',
@@ -57,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Big Red Moving Company | Hingham, MA',
-    description: 'Local movers based in Hingham. Family-owned, flat-rate pricing.',
+    title: 'Big Red Moving Company | Junk Removal & Movers — Hingham, MA',
+    description: 'Junk removal and moving on the South Shore. Garage cleanouts, estate clearing, local moves. Flat-rate pricing.',
   },
 }
 
