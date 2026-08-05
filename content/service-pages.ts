@@ -33,7 +33,7 @@ export const movingServicePage: ServicePageContent = {
     },
     {
       heading: "Flat-Rate Pricing — No Surprises",
-      body: "We quote every move flat-rate before moving day. That means you know your total cost upfront — no hourly billing that drags on, no surprise charges for stairs, long carries, or fuel. We ask about your home size, floor plan, and any challenging items during the booking process, and we build all of that into your quote. Most South Shore moves range from a few hundred to a couple thousand dollars depending on home size and distance.",
+      body: "We quote every move flat-rate before moving day. That means you know your total cost upfront — no hourly billing that drags on, no surprise charges for stairs, long carries, or fuel. We ask about your home size, floor plan, and any challenging items during the booking process, and we build all of that into your quote. Every move is different, so we price yours specifically rather than working from a chart — tell us about it and we'll give you a firm number before the day.",
     },
   ],
   faq: [
@@ -86,7 +86,7 @@ export const junkRemovalServicePage: ServicePageContent = {
     },
     {
       heading: "Transparent Flat-Rate Pricing",
-      body: "We don't charge by the hour for junk removal. We quote you a flat rate based on the volume and type of items, so you know exactly what you're paying before we begin. Pricing is based on truck space used — we'll give you a solid quote over the phone or via the contact form. Most single-room or partial-load jobs start under $300; full home cleanouts vary based on volume.",
+      body: "We don't charge by the hour for junk removal. We quote you a flat rate based on the volume and type of items, so you know exactly what you're paying before we begin. Pricing is based on truck space used — we'll give you a solid quote over the phone or from a few photos, usually without needing to come out first. Whatever number we give you before we start is the number you pay.",
     },
   ],
   faq: [

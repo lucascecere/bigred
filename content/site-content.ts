@@ -260,7 +260,7 @@ export const siteContent: SiteContent = {
       stars: 5,
     },
     {
-      quote: "Flat rate pricing is what sold me. No hourly surprises. They quoted $350, that's what I paid. Simple as that.",
+      quote: "Flat rate pricing is what sold me. No hourly surprises. They quoted me a number up front and that's exactly what I paid. Simple as that.",
       author: "Lisa",
       town: "Braintree, MA",
       stars: 5,
@@ -331,7 +331,7 @@ export const siteContent: SiteContent = {
     {
       question: "How much does a local job in Hingham cost?",
       answer:
-        "Most local jobs in Hingham and surrounding South Shore towns run between $400 and $1,200 depending on home size and the scope of the job. We quote flat-rate, so the price we give you before we start is the price you pay — no hourly meter running. Contact us for a free estimate tailored to your specific job.",
+        "It depends on the size of the home and the scope of the job, so we quote every job individually rather than working from a price list. What we can tell you is how we quote: flat-rate, given before we start, with no hourly meter running and no surprise charges added on the day. Contact us with a description of the job and we'll give you a free estimate.",
     },
     {
       question: "Do you do junk removal?",
@@ -354,7 +354,7 @@ export const siteContent: SiteContent = {
     },
     {
       question: "How much does junk removal cost in the South Shore?",
-      answer: "Most junk removal jobs in the South Shore run between $150 and $500 depending on the volume and type of items. We price by the load, not by the hour — so you know exactly what you're paying before we start. Call us with a description of what needs to go and we'll give you a flat price on the spot."
+      answer: "It depends on the volume and the type of items, so we quote your specific load rather than reading off a chart. We price by the load, not by the hour, so you know exactly what you're paying before we start. Call us with a description of what needs to go — or send a couple of photos — and we'll give you a flat price on the spot."
     },
     {
       question: "Do you offer labor-only help if I have my own truck?",

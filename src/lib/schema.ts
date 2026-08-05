@@ -61,7 +61,8 @@ export function getLocalBusinessSchema(): Record<string, unknown> {
       "longitude": -70.8897,
     },
     "areaServed": areaServed,
-    "priceRange": "$$",
+    // No priceRange — we don't publish prices anywhere on the site, and a "$$"
+    // band is a guess we can't stand behind. Add it only if the client confirms.
     "currenciesAccepted": "USD",
     "sameAs": sameAs,
     "hasOfferCatalog": {

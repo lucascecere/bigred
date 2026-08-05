@@ -645,7 +645,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
       {
         question: "What does junk removal cost in Whitman?",
         answer:
-          "Pricing is based on the volume and type of items. Most single-room or partial-load jobs in Whitman start under $250–$300; full garage or room cleanouts typically run $300–$500 depending on volume. We give you a flat quote before starting — no hourly surprises. Call us or fill out the form for a quick estimate.",
+          "Pricing is based on the volume and type of items, so we quote your specific load rather than working from a chart. We give you a flat quote before starting — no hourly surprises, and no charges added on the day. Call us or fill out the form for a quick estimate.",
       },
     ],
   },
