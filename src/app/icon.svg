@@ -1,13 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="6" fill="#C8102E"/>
-  <!-- Ram pickup: bed (left) + cab (center) + hood/nose (right) -->
-  <path d="M3,14 L13,14 L13,9 L15,7 L21,7 L23,9 L26,10 L28,13 L29,15 L29,20 L3,20 Z" fill="white"/>
-  <!-- Cab window (red cutout) -->
-  <polygon points="14,9 15,7.5 21,7.5 22,9 22,13 14,13" fill="#C8102E"/>
-  <!-- Rear wheel -->
-  <circle cx="8" cy="23" r="3.5" fill="white"/>
-  <circle cx="8" cy="23" r="2" fill="#C8102E"/>
-  <!-- Front wheel -->
-  <circle cx="25" cy="23" r="3.5" fill="white"/>
-  <circle cx="25" cy="23" r="2" fill="#C8102E"/>
+  <g fill="#fff">
+    <rect x="3.2" y="5.5" width="4.6" height="21"/>
+    <path d="M6.5,5.5 H9.4 A5.1,5.1 0 0 1 9.4,15.7 H6.5 Z"/>
+    <path d="M6.5,15.3 H10.1 A5.6,5.6 0 0 1 10.1,26.5 H6.5 Z"/>
+    <rect x="17.6" y="5.5" width="4.6" height="21"/>
+    <path d="M21,5.5 H23.9 A5.1,5.1 0 0 1 23.9,15.7 H21 Z"/>
+    <path d="M22.4,14.2 L26.9,14.2 L29.8,26.5 L25.2,26.5 Z"/>
+  </g>
+  <g fill="#C8102E">
+    <path d="M7.8,8.9 H9.2 A2.2,2.2 0 0 1 9.2,12.9 H7.8 Z"/>
+    <path d="M7.8,18.7 H9.7 A2.5,2.5 0 0 1 9.7,23.3 H7.8 Z"/>
+    <path d="M22.2,8.9 H23.6 A2.2,2.2 0 0 1 23.6,12.9 H22.2 Z"/>
+  </g>
 </svg>
