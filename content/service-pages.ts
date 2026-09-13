@@ -12,9 +12,9 @@ export interface ServicePageContent {
 
 export const movingServicePage: ServicePageContent = {
   slug: "moving",
-  titleTag: "Moving Company South Shore MA | Big Red Moving Company",
+  titleTag: "Moving Company South Shore MA · Flat-Rate, 5-Star | Big Red",
   metaDescription:
-    "Local and short-distance moves across the South Shore, MA. Flat-rate pricing, family-owned. Serving Hingham, Quincy, Weymouth & 14+ more towns.",
+    "Flat-rate local movers across the South Shore, MA — one price, no surprises on moving day. Family-owned, 5-star rated, 17 towns. Call or text 320-321-JUNK.",
   h1: "South Shore Moving Company",
   heroSubhead:
     "Big Red Moving Company handles local and short-distance moves across the entire South Shore of Massachusetts. Flat-rate pricing. No surprises on moving day.",
@@ -65,9 +65,9 @@ export const movingServicePage: ServicePageContent = {
 
 export const junkRemovalServicePage: ServicePageContent = {
   slug: "junk-removal",
-  titleTag: "Junk Removal South Shore MA | Big Red Moving Company",
+  titleTag: "Junk Removal South Shore MA · Flat-Rate, 5-Star Rated | Big Red",
   metaDescription:
-    "Junk removal and hauling across the South Shore MA. Furniture, appliances, garage cleanouts, estate clearing. Flat-rate pricing. Call Big Red Moving Company.",
+    "Flat-rate junk removal across the South Shore, MA — price up front, no surprises. Furniture, appliances, garage & estate cleanouts. Call or text 320-321-JUNK.",
   h1: "Junk Removal South Shore MA",
   heroSubhead:
     "Big Red Moving Company hauls away the stuff you don't want anymore. Furniture, appliances, yard debris, full garage cleanouts, estate clearing — flat-rate pricing, same-week availability.",

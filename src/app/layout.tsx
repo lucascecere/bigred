@@ -19,9 +19,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Big Red Moving Company | Junk Removal & Local Movers — Hingham, MA',
+  title: 'Big Red Moving Company | Junk Removal & Movers · Hingham, MA',
   description:
-    'Hingham-based junk removal and moving company serving the South Shore — garage cleanouts, estate clearing, furniture hauling, and local moves. Family-owned, flat-rate pricing. Serving Hingham, Quincy, Weymouth, Braintree, Scituate, and 12+ more towns.',
+    'Flat-rate junk removal and local movers in Hingham, MA — price up front, no surprises. Cleanouts, hauling and moves across 17 South Shore towns. Call or text 320-321-JUNK.',
   keywords: [
     'junk removal hingham ma',
     'junk removal south shore ma',

@@ -16,9 +16,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-hingham-ma",
     town: "Hingham",
     state: "MA",
-    titleTag: "Moving Company Hingham MA | Big Red Moving Company",
+    titleTag: "Moving Company Hingham MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Hingham, MA. Big Red Moving Company serves World's End, Crow Point, and all Hingham neighborhoods. Flat-rate pricing, family-owned.",
+      "Flat-rate local movers in Hingham, MA — one price, no surprises on moving day. Downtown to World's End. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Hingham, MA",
     heroSubhead:
       "Hingham's trusted local movers. From downtown to World's End, we handle every move with care and flat-rate pricing — no surprises on moving day.",
@@ -43,9 +43,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-quincy-ma",
     town: "Quincy",
     state: "MA",
-    titleTag: "Moving Company Quincy MA | Big Red Moving Company",
+    titleTag: "Moving Company Quincy MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Quincy, MA. Big Red Moving Company handles apartment moves, high-rises, and relocations across the City of Presidents. Flat-rate pricing.",
+      "Flat-rate local movers in Quincy, MA — one price, no surprises on moving day. Apartments, high-rises, relocations. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Quincy, MA",
     heroSubhead:
       "From Quincy Center high-rises to Wollaston Beach cottages, Big Red Moving Company handles every Quincy move with flat-rate pricing and a professional crew.",
@@ -70,9 +70,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-weymouth-ma",
     town: "Weymouth",
     state: "MA",
-    titleTag: "Moving Company Weymouth MA | Big Red Moving Company",
+    titleTag: "Moving Company Weymouth MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Weymouth, MA. Big Red Moving Company handles apartment and residential moves across South, North, East, and West Weymouth. Flat-rate pricing.",
+      "Flat-rate local movers in Weymouth, MA — one price, no surprises on moving day. House and apartment moves, all four villages. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Weymouth, MA",
     heroSubhead:
       "Weymouth's go-to moving crew. Dense neighborhoods, apartment buildings, split-levels — we've seen it all. Flat-rate pricing, no surprises.",
@@ -97,9 +97,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-braintree-ma",
     town: "Braintree",
     state: "MA",
-    titleTag: "Moving Company Braintree MA | Big Red Moving Company",
+    titleTag: "Moving Company Braintree MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Braintree, MA. Big Red Moving Company serves all Braintree neighborhoods with flat-rate pricing. Easy I-93 access, family-owned.",
+      "Flat-rate local movers in Braintree, MA — one price, no surprises on moving day. Every neighborhood, easy I-93 access. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Braintree, MA",
     heroSubhead:
       "Braintree movers you can trust. Strong I-93 access means we get there fast and keep your move on schedule. Flat-rate pricing, no hidden fees.",
@@ -124,9 +124,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-scituate-ma",
     town: "Scituate",
     state: "MA",
-    titleTag: "Moving Company Scituate MA | Big Red Moving Company",
+    titleTag: "Moving Company Scituate MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Scituate, MA. Big Red Moving Company specializes in coastal and waterfront home moves. Flat-rate pricing, family-owned on the South Shore.",
+      "Flat-rate local movers in Scituate, MA — one price, no surprises on moving day. Coastal and waterfront homes. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Scituate, MA",
     heroSubhead:
       "Scituate coastal movers. We handle waterfront homes, seasonal moves, and everything in between — with flat-rate pricing and a crew that respects your property.",
@@ -151,9 +151,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-marshfield-ma",
     town: "Marshfield",
     state: "MA",
-    titleTag: "Moving Company Marshfield MA | Big Red Moving Company",
+    titleTag: "Moving Company Marshfield MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Marshfield, MA. Big Red Moving Company handles seasonal coastal and residential moves across Marshfield. Flat-rate pricing, family-owned.",
+      "Flat-rate local movers in Marshfield, MA — one price, no surprises on moving day. Seasonal and year-round moves. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Marshfield, MA",
     heroSubhead:
       "Marshfield's local movers. Seasonal beach properties, sprawling colonials, and everything in between — handled with care and flat-rate pricing.",
@@ -178,9 +178,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-duxbury-ma",
     town: "Duxbury",
     state: "MA",
-    titleTag: "Moving Company Duxbury MA | Big Red Moving Company",
+    titleTag: "Moving Company Duxbury MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Duxbury, MA. Big Red Moving Company serves upscale residential and waterfront properties across Duxbury. Flat-rate pricing, family-owned.",
+      "Flat-rate local movers in Duxbury, MA — one price, no surprises on moving day. Residential and waterfront homes. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Duxbury, MA",
     heroSubhead:
       "Duxbury's trusted movers. Upscale homes, waterfront estates, and coastal properties — moved with the care and professionalism they deserve.",
@@ -205,9 +205,9 @@ export const movingLocationPages: LocationPage[] = [
     slug: "moving-company-norwell-ma",
     town: "Norwell",
     state: "MA",
-    titleTag: "Moving Company Norwell MA | Big Red Moving Company",
+    titleTag: "Moving Company Norwell MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
-      "Local movers in Norwell, MA. Big Red Moving Company handles residential and suburban moves across Norwell. Flat-rate pricing, family-owned.",
+      "Flat-rate local movers in Norwell, MA — one price, no surprises on moving day. Residential and suburban moves. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Moving Company in Norwell, MA",
     heroSubhead:
       "Norwell residential movers. Quiet streets, spacious homes, and a crew that makes moving day easy — flat-rate pricing, no surprises.",
@@ -235,9 +235,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-hingham-ma",
     town: "Hingham",
     state: "MA",
-    titleTag: "Junk Removal Hingham MA | Big Red Moving Company",
+    titleTag: "Junk Removal Hingham MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Hingham, MA. Big Red Moving Company hauls estate cleanouts, furniture, and debris from waterfront homes and neighborhoods. Fast & affordable.",
+      "Flat-rate junk removal in Hingham, MA — price up front, no surprises. Estate cleanouts, furniture, debris. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Hingham, MA",
     heroSubhead:
       "Hingham's trusted junk removal team. From full estate cleanouts near Crow Point to single-item hauls, we clear the clutter so you don't have to.",
@@ -267,9 +267,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-quincy-ma",
     town: "Quincy",
     state: "MA",
-    titleTag: "Junk Removal Quincy MA | Big Red Moving Company",
+    titleTag: "Junk Removal Quincy MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Quincy, MA. Big Red Moving Company clears apartments, multi-family units, and high-rises across the City of Presidents. Same-week availability.",
+      "Flat-rate junk removal in Quincy, MA — price up front, no surprises. Apartments, multi-families, high-rises. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Quincy, MA",
     heroSubhead:
       "Quincy junk removal for apartments, high-rises, and multi-family homes. We haul it all — fast, affordable, upfront pricing.",
@@ -299,9 +299,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-weymouth-ma",
     town: "Weymouth",
     state: "MA",
-    titleTag: "Junk Removal Weymouth MA | Big Red Moving Company",
+    titleTag: "Junk Removal Weymouth MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Weymouth, MA. Big Red Moving Company handles residential cleanouts, garage hauls, and debris removal across Weymouth. Upfront pricing.",
+      "Flat-rate junk removal in Weymouth, MA — price up front, no surprises. Cleanouts, garage hauls, debris. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Weymouth, MA",
     heroSubhead:
       "Weymouth junk removal made easy. Garage cleanouts, old furniture, renovation debris — we load it, haul it, and leave your space clean.",
@@ -331,9 +331,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-braintree-ma",
     town: "Braintree",
     state: "MA",
-    titleTag: "Junk Removal Braintree MA | Big Red Moving Company",
+    titleTag: "Junk Removal Braintree MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Braintree, MA. Big Red Moving Company hauls furniture, renovation debris, and household junk from Braintree homes. Fast, flat-rate pricing.",
+      "Flat-rate junk removal in Braintree, MA — price up front, no surprises. Furniture, reno debris, household junk. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Braintree, MA",
     heroSubhead:
       "Braintree junk removal done right. Suburban cleanouts, renovation debris, old furniture — we haul it fast with upfront pricing and zero hassle.",
@@ -363,9 +363,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-scituate-ma",
     town: "Scituate",
     state: "MA",
-    titleTag: "Junk Removal Scituate MA | Big Red Moving Company",
+    titleTag: "Junk Removal Scituate MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Scituate, MA. Big Red Moving Company clears coastal homes, estate cleanouts, and seasonal property hauls. Upfront pricing, family-owned.",
+      "Flat-rate junk removal in Scituate, MA — price up front, no surprises. Coastal homes, estate cleanouts. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Scituate, MA",
     heroSubhead:
       "Scituate's trusted junk removal crew. Coastal estate cleanouts, seasonal property hauls, and single-item pickups — handled with care and upfront pricing.",
@@ -395,9 +395,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-marshfield-ma",
     town: "Marshfield",
     state: "MA",
-    titleTag: "Junk Removal Marshfield MA | Big Red Moving Company",
+    titleTag: "Junk Removal Marshfield MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Marshfield, MA. Big Red Moving Company hauls furniture, appliances, and debris from beach properties and suburban homes. Upfront pricing.",
+      "Flat-rate junk removal in Marshfield, MA — price up front, no surprises. Furniture, appliances, beach-house debris. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Marshfield, MA",
     heroSubhead:
       "Marshfield junk removal for beach cottages, colonial homes, and everything in between. We load it, haul it, and leave your space clean.",
@@ -427,9 +427,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-duxbury-ma",
     town: "Duxbury",
     state: "MA",
-    titleTag: "Junk Removal Duxbury MA | Big Red Moving Company",
+    titleTag: "Junk Removal Duxbury MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Duxbury, MA. Big Red Moving Company handles estate cleanouts, upscale home hauls, and coastal property debris removal. Upfront pricing.",
+      "Flat-rate junk removal in Duxbury, MA — price up front, no surprises. Estate cleanouts, whole-home hauls. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Duxbury, MA",
     heroSubhead:
       "Duxbury's trusted junk removal team. Upscale homes, estate cleanouts, and waterfront properties — cleared with the care and professionalism they deserve.",
@@ -459,9 +459,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-norwell-ma",
     town: "Norwell",
     state: "MA",
-    titleTag: "Junk Removal Norwell MA | Big Red Moving Company",
+    titleTag: "Junk Removal Norwell MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Norwell, MA. Big Red Moving Company clears garages, basements, and entire homes across Norwell. Upfront pricing, family-owned.",
+      "Flat-rate junk removal in Norwell, MA — price up front, no surprises. Garages, basements, whole homes. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Norwell, MA",
     heroSubhead:
       "Norwell junk removal made simple. Garage cleanouts, basement hauls, old furniture — one call and it's gone.",
@@ -491,9 +491,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-hull-ma",
     town: "Hull",
     state: "MA",
-    titleTag: "Junk Removal Hull MA | Big Red Moving Company",
+    titleTag: "Junk Removal Hull MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Hull, MA. Big Red Moving Company clears seasonal homes, beach cottages, and peninsula properties at Nantasket Beach. Upfront flat-rate pricing.",
+      "Flat-rate junk removal in Hull, MA — price up front, no surprises. Beach cottages, seasonal homes. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Hull, MA",
     heroSubhead:
       "Hull's trusted junk removal crew. Seasonal cleanouts, beach cottage hauls, and estate clearing on the Nantasket Peninsula — handled efficiently with upfront pricing.",
@@ -518,9 +518,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-milton-ma",
     town: "Milton",
     state: "MA",
-    titleTag: "Junk Removal Milton MA | Big Red Moving Company",
+    titleTag: "Junk Removal Milton MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Milton, MA. Big Red Moving Company hauls furniture, appliances, and estate cleanouts from Milton's historic homes and neighborhoods. Upfront pricing.",
+      "Flat-rate junk removal in Milton, MA — price up front, no surprises. Furniture, appliances, estate cleanouts. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Milton, MA",
     heroSubhead:
       "Milton's trusted junk removal crew. Historic homes, large estates, and established neighborhoods — cleared with care and transparent flat-rate pricing.",
@@ -545,9 +545,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-holbrook-ma",
     town: "Holbrook",
     state: "MA",
-    titleTag: "Junk Removal Holbrook MA | Big Red Moving Company",
+    titleTag: "Junk Removal Holbrook MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Holbrook, MA. Big Red Moving Company hauls furniture, appliances, and household junk from Holbrook homes. Fast scheduling, upfront pricing.",
+      "Flat-rate junk removal in Holbrook, MA — price up front, no surprises. Furniture, appliances, household junk. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Holbrook, MA",
     heroSubhead:
       "Holbrook junk removal done right. Garage cleanouts, old furniture, appliances, and more — we load it, haul it, and leave your space clean.",
@@ -572,9 +572,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-rockland-ma",
     town: "Rockland",
     state: "MA",
-    titleTag: "Junk Removal Rockland MA | Big Red Moving Company",
+    titleTag: "Junk Removal Rockland MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Rockland, MA. Big Red Moving Company clears garages, basements, and homes across Rockland. Flat-rate pricing, same-week availability.",
+      "Flat-rate junk removal in Rockland, MA — price up front, no surprises. Garages, basements, whole homes. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Rockland, MA",
     heroSubhead:
       "Rockland junk removal — fast, affordable, and done right. Garage cleanouts, furniture hauls, renovation debris — one call handles it all.",
@@ -599,9 +599,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-abington-ma",
     town: "Abington",
     state: "MA",
-    titleTag: "Junk Removal Abington MA | Big Red Moving Company",
+    titleTag: "Junk Removal Abington MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Abington, MA. Big Red Moving Company hauls furniture, appliances, and household junk from Abington homes. Upfront pricing, same-week availability.",
+      "Flat-rate junk removal in Abington, MA — price up front, no surprises. Furniture, appliances, household junk. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Abington, MA",
     heroSubhead:
       "Abington junk removal made simple. Old furniture, appliances, garage clutter — one call and it's gone.",
@@ -626,9 +626,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-whitman-ma",
     town: "Whitman",
     state: "MA",
-    titleTag: "Junk Removal Whitman MA | Big Red Moving Company",
+    titleTag: "Junk Removal Whitman MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Whitman, MA. Big Red Moving Company hauls furniture, appliances, and garage clutter from Whitman homes. Flat-rate pricing, fast scheduling.",
+      "Flat-rate junk removal in Whitman, MA — price up front, no surprises. Furniture, appliances, garage clutter. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Whitman, MA",
     heroSubhead:
       "Whitman junk removal — one call, one trip, done. Furniture, appliances, garage cleanouts, and more — handled fast with upfront pricing.",
@@ -653,9 +653,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-hanover-ma",
     town: "Hanover",
     state: "MA",
-    titleTag: "Junk Removal Hanover MA | Big Red Moving Company",
+    titleTag: "Junk Removal Hanover MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Hanover, MA. Big Red Moving Company hauls furniture, appliances, and garage junk from Hanover homes. Flat-rate pricing, same-week availability.",
+      "Flat-rate junk removal in Hanover, MA — price up front, no surprises. Furniture, appliances, garage junk. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Hanover, MA",
     heroSubhead:
       "Hanover's trusted junk removal crew. Garage cleanouts, estate hauls, furniture removal — handled professionally with transparent pricing.",
@@ -680,9 +680,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-pembroke-ma",
     town: "Pembroke",
     state: "MA",
-    titleTag: "Junk Removal Pembroke MA | Big Red Moving Company",
+    titleTag: "Junk Removal Pembroke MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Pembroke, MA. Big Red Moving Company hauls furniture, appliances, and yard debris from Pembroke homes and properties. Flat-rate pricing.",
+      "Flat-rate junk removal in Pembroke, MA — price up front, no surprises. Furniture, appliances, yard debris. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Pembroke, MA",
     heroSubhead:
       "Pembroke junk removal — residential cleanouts, garage hauls, yard debris, and more. One trip, flat-rate pricing, done right.",
@@ -707,9 +707,9 @@ export const junkRemovalLocationPages: LocationPage[] = [
     slug: "junk-removal-cohasset-ma",
     town: "Cohasset",
     state: "MA",
-    titleTag: "Junk Removal Cohasset MA | Big Red Moving Company",
+    titleTag: "Junk Removal Cohasset MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
-      "Junk removal in Cohasset, MA. Garage and basement cleanouts, estate clearing, furniture and appliance hauling. Flat-rate pricing from a Hingham-based crew.",
+      "Flat-rate junk removal in Cohasset, MA — price up front, no surprises. Garage, basement and estate cleanouts. 5-star rated. Call or text 320-321-JUNK.",
     h1: "Junk Removal in Cohasset, MA",
     heroSubhead:
       "Cohasset junk removal from the crew next door in Hingham. Estate cleanouts, garage clear-outs, furniture and appliance hauling — flat-rate, quoted before we start.",

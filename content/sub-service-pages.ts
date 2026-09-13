@@ -29,9 +29,9 @@ export const subServicePages: SubServicePage[] = [
     slug: "estate-cleanouts",
     parent: "junk-removal",
     navLabel: "Estate Cleanouts",
-    titleTag: "Estate Cleanout Services South Shore MA | Big Red Moving Company",
+    titleTag: "Estate Cleanouts South Shore MA · Flat-Rate | Big Red",
     metaDescription:
-      "Full estate cleanouts across the South Shore of MA. We clear entire homes — furniture, appliances, attics, basements, garages — with flat-rate pricing and a crew that works at your pace.",
+      "Flat-rate estate cleanouts across the South Shore, MA. We clear the whole home — furniture, attics, basements, garages — at your pace. Call or text 320-321-JUNK.",
     h1: "Estate Cleanouts on the South Shore",
     heroSubhead:
       "Clearing a parent's home is not a normal junk job, and we don't treat it like one. Flat-rate pricing, an owner on site, and a crew that will slow down when you need it to.",
@@ -88,9 +88,9 @@ export const subServicePages: SubServicePage[] = [
     slug: "garage-cleanouts",
     parent: "junk-removal",
     navLabel: "Garage Cleanouts",
-    titleTag: "Garage Cleanout Services South Shore MA | Big Red Moving Company",
+    titleTag: "Garage Cleanouts South Shore MA · Flat-Rate | Big Red",
     metaDescription:
-      "Garage cleanouts across the South Shore of MA. We haul out tools, lawn equipment, old furniture, tires and years of clutter — flat-rate pricing, usually done in a few hours.",
+      "Flat-rate garage cleanouts across the South Shore, MA. Tools, lawn gear, old furniture, tires — years of clutter gone in a few hours. Call or text 320-321-JUNK.",
     h1: "Garage Cleanouts on the South Shore",
     heroSubhead:
       "Get the garage back. We haul out everything you point at — you don't lift anything, and you know the price before we start.",
@@ -142,9 +142,9 @@ export const subServicePages: SubServicePage[] = [
     slug: "basement-attic-cleanouts",
     parent: "junk-removal",
     navLabel: "Basement & Attic Cleanouts",
-    titleTag: "Basement & Attic Cleanout South Shore MA | Big Red Moving Company",
+    titleTag: "Basement & Attic Cleanouts South Shore MA · Flat-Rate | Big Red",
     metaDescription:
-      "Basement and attic cleanouts across the South Shore of MA. Narrow staircases, low headroom and heavy items handled — flat-rate pricing, all lifting done for you.",
+      "Flat-rate basement and attic cleanouts across the South Shore, MA. Narrow stairs, low headroom, heavy items — we do the lifting. Call or text 320-321-JUNK.",
     h1: "Basement & Attic Cleanouts",
     heroSubhead:
       "The two hardest rooms to empty in any house. Narrow stairs, low ceilings, and forty years of things that went down and never came back up. We do the carrying.",
@@ -196,9 +196,9 @@ export const subServicePages: SubServicePage[] = [
     slug: "mattress-disposal",
     parent: "junk-removal",
     navLabel: "Mattress Disposal",
-    titleTag: "Mattress & Box Spring Disposal South Shore MA | Big Red Moving Company",
+    titleTag: "Mattress Disposal South Shore MA · Flat-Rate Pickup | Big Red",
     metaDescription:
-      "Massachusetts bans mattresses and box springs from the trash. We pick them up anywhere on the South Shore and take them for recycling — flat-rate, no curbside sticker needed.",
+      "MA bans mattresses from the trash. Flat-rate mattress and box spring pickup anywhere on the South Shore — no curbside sticker needed. Call or text 320-321-JUNK.",
     h1: "Mattress & Box Spring Disposal in Massachusetts",
     heroSubhead:
       "You can't put it on the curb anymore — Massachusetts banned mattresses and box springs from disposal in 2022. We pick yours up from wherever it is and take it to be recycled.",
@@ -255,9 +255,9 @@ export const subServicePages: SubServicePage[] = [
     slug: "furniture-appliance-removal",
     parent: "junk-removal",
     navLabel: "Furniture & Appliance Removal",
-    titleTag: "Furniture & Appliance Removal South Shore MA | Big Red Moving Company",
+    titleTag: "Furniture & Appliance Removal South Shore · Flat-Rate | Big Red",
     metaDescription:
-      "Single-item and full-load furniture and appliance removal across the South Shore MA. Sofas, sectionals, treadmills, fridges, washers — we do the lifting. Flat-rate pricing.",
+      "Flat-rate furniture and appliance removal, South Shore MA. Sofas, treadmills, fridges, washers — single item or full load, we lift. Call or text 320-321-JUNK.",
     h1: "Furniture & Appliance Removal",
     heroSubhead:
       "One sofa or a full house. We take the sectional that won't fit down the stairs, the treadmill nobody uses, and the fridge in the garage — no full booking required.",
@@ -314,9 +314,9 @@ export const subServicePages: SubServicePage[] = [
     slug: "labor-only-movers",
     parent: "moving",
     navLabel: "Labor-Only / Loading Help",
-    titleTag: "Labor-Only Movers & Loading Help South Shore MA | Big Red Moving Company",
+    titleTag: "Labor-Only Movers South Shore MA · No Truck Fee | Big Red",
     metaDescription:
-      "Renting a truck or using a POD on the South Shore? We supply the crew to load, unload, or both. Two-man minimum, hourly rate, no truck fee. Serving 17 MA towns.",
+      "Renting a truck or using a POD? Our crew loads, unloads, or both — hourly, two-man minimum, no truck fee. 17 South Shore towns. Call or text 320-321-JUNK.",
     h1: "Labor-Only Movers & Loading Help",
     heroSubhead:
       "You've got the truck or the container. We've got the crew. Load, unload, or both — no truck fee, because you're not renting ours.",
