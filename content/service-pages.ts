@@ -15,7 +15,7 @@ export const movingServicePage: ServicePageContent = {
   titleTag: "Moving Company South Shore MA · Flat-Rate, 5-Star | Big Red",
   metaDescription:
     "Flat-rate local movers across the South Shore, MA — one price, no surprises on moving day. Family-owned, 5-star rated, 17 towns. Call or text 320-321-JUNK.",
-  h1: "South Shore Moving Company",
+  h1: "Flat-Rate South Shore Moving Company",
   heroSubhead:
     "Big Red Moving Company handles local and short-distance moves across the entire South Shore of Massachusetts. Flat-rate pricing. No surprises on moving day.",
   sections: [
@@ -68,7 +68,7 @@ export const junkRemovalServicePage: ServicePageContent = {
   titleTag: "Junk Removal South Shore MA · Flat-Rate, 5-Star Rated | Big Red",
   metaDescription:
     "Flat-rate junk removal across the South Shore, MA — price up front, no surprises. Furniture, appliances, garage & estate cleanouts. Call or text 320-321-JUNK.",
-  h1: "Junk Removal South Shore MA",
+  h1: "Flat-Rate Junk Removal, South Shore MA",
   heroSubhead:
     "Big Red Moving Company hauls away the stuff you don't want anymore. Furniture, appliances, yard debris, full garage cleanouts, estate clearing — flat-rate pricing, same-week availability.",
   sections: [

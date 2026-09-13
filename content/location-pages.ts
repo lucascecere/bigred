@@ -19,7 +19,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Hingham MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Hingham, MA — one price, no surprises on moving day. Downtown to World's End. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Hingham, MA",
+    h1: "Flat-Rate Moving Company in Hingham, MA",
     heroSubhead:
       "Hingham's trusted local movers. From downtown to World's End, we handle every move with care and flat-rate pricing — no surprises on moving day.",
     bodyParagraph1:
@@ -46,7 +46,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Quincy MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Quincy, MA — one price, no surprises on moving day. Apartments, high-rises, relocations. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Quincy, MA",
+    h1: "Flat-Rate Moving Company in Quincy, MA",
     heroSubhead:
       "From Quincy Center high-rises to Wollaston Beach cottages, Big Red Moving Company handles every Quincy move with flat-rate pricing and a professional crew.",
     bodyParagraph1:
@@ -73,7 +73,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Weymouth MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Weymouth, MA — one price, no surprises on moving day. House and apartment moves, all four villages. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Weymouth, MA",
+    h1: "Flat-Rate Moving Company in Weymouth, MA",
     heroSubhead:
       "Weymouth's go-to moving crew. Dense neighborhoods, apartment buildings, split-levels — we've seen it all. Flat-rate pricing, no surprises.",
     bodyParagraph1:
@@ -100,7 +100,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Braintree MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Braintree, MA — one price, no surprises on moving day. Every neighborhood, easy I-93 access. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Braintree, MA",
+    h1: "Flat-Rate Moving Company in Braintree, MA",
     heroSubhead:
       "Braintree movers you can trust. Strong I-93 access means we get there fast and keep your move on schedule. Flat-rate pricing, no hidden fees.",
     bodyParagraph1:
@@ -127,7 +127,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Scituate MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Scituate, MA — one price, no surprises on moving day. Coastal and waterfront homes. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Scituate, MA",
+    h1: "Flat-Rate Moving Company in Scituate, MA",
     heroSubhead:
       "Scituate coastal movers. We handle waterfront homes, seasonal moves, and everything in between — with flat-rate pricing and a crew that respects your property.",
     bodyParagraph1:
@@ -154,7 +154,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Marshfield MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Marshfield, MA — one price, no surprises on moving day. Seasonal and year-round moves. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Marshfield, MA",
+    h1: "Flat-Rate Moving Company in Marshfield, MA",
     heroSubhead:
       "Marshfield's local movers. Seasonal beach properties, sprawling colonials, and everything in between — handled with care and flat-rate pricing.",
     bodyParagraph1:
@@ -181,7 +181,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Duxbury MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Duxbury, MA — one price, no surprises on moving day. Residential and waterfront homes. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Duxbury, MA",
+    h1: "Flat-Rate Moving Company in Duxbury, MA",
     heroSubhead:
       "Duxbury's trusted movers. Upscale homes, waterfront estates, and coastal properties — moved with the care and professionalism they deserve.",
     bodyParagraph1:
@@ -208,7 +208,7 @@ export const movingLocationPages: LocationPage[] = [
     titleTag: "Moving Company Norwell MA · Flat-Rate, Local Crew | Big Red",
     metaDescription:
       "Flat-rate local movers in Norwell, MA — one price, no surprises on moving day. Residential and suburban moves. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Moving Company in Norwell, MA",
+    h1: "Flat-Rate Moving Company in Norwell, MA",
     heroSubhead:
       "Norwell residential movers. Quiet streets, spacious homes, and a crew that makes moving day easy — flat-rate pricing, no surprises.",
     bodyParagraph1:
@@ -238,7 +238,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Hingham MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Hingham, MA — price up front, no surprises. Estate cleanouts, furniture, debris. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Hingham, MA",
+    h1: "Flat-Rate Junk Removal in Hingham, MA",
     heroSubhead:
       "Hingham's trusted junk removal team. From full estate cleanouts near Crow Point to single-item hauls, we clear the clutter so you don't have to.",
     bodyParagraph1:
@@ -270,7 +270,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Quincy MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Quincy, MA — price up front, no surprises. Apartments, multi-families, high-rises. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Quincy, MA",
+    h1: "Flat-Rate Junk Removal in Quincy, MA",
     heroSubhead:
       "Quincy junk removal for apartments, high-rises, and multi-family homes. We haul it all — fast, affordable, upfront pricing.",
     bodyParagraph1:
@@ -302,7 +302,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Weymouth MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Weymouth, MA — price up front, no surprises. Cleanouts, garage hauls, debris. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Weymouth, MA",
+    h1: "Flat-Rate Junk Removal in Weymouth, MA",
     heroSubhead:
       "Weymouth junk removal made easy. Garage cleanouts, old furniture, renovation debris — we load it, haul it, and leave your space clean.",
     bodyParagraph1:
@@ -334,7 +334,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Braintree MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Braintree, MA — price up front, no surprises. Furniture, reno debris, household junk. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Braintree, MA",
+    h1: "Flat-Rate Junk Removal in Braintree, MA",
     heroSubhead:
       "Braintree junk removal done right. Suburban cleanouts, renovation debris, old furniture — we haul it fast with upfront pricing and zero hassle.",
     bodyParagraph1:
@@ -366,7 +366,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Scituate MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Scituate, MA — price up front, no surprises. Coastal homes, estate cleanouts. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Scituate, MA",
+    h1: "Flat-Rate Junk Removal in Scituate, MA",
     heroSubhead:
       "Scituate's trusted junk removal crew. Coastal estate cleanouts, seasonal property hauls, and single-item pickups — handled with care and upfront pricing.",
     bodyParagraph1:
@@ -398,7 +398,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Marshfield MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Marshfield, MA — price up front, no surprises. Furniture, appliances, beach-house debris. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Marshfield, MA",
+    h1: "Flat-Rate Junk Removal in Marshfield, MA",
     heroSubhead:
       "Marshfield junk removal for beach cottages, colonial homes, and everything in between. We load it, haul it, and leave your space clean.",
     bodyParagraph1:
@@ -430,7 +430,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Duxbury MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Duxbury, MA — price up front, no surprises. Estate cleanouts, whole-home hauls. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Duxbury, MA",
+    h1: "Flat-Rate Junk Removal in Duxbury, MA",
     heroSubhead:
       "Duxbury's trusted junk removal team. Upscale homes, estate cleanouts, and waterfront properties — cleared with the care and professionalism they deserve.",
     bodyParagraph1:
@@ -462,7 +462,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Norwell MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Norwell, MA — price up front, no surprises. Garages, basements, whole homes. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Norwell, MA",
+    h1: "Flat-Rate Junk Removal in Norwell, MA",
     heroSubhead:
       "Norwell junk removal made simple. Garage cleanouts, basement hauls, old furniture — one call and it's gone.",
     bodyParagraph1:
@@ -494,7 +494,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Hull MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Hull, MA — price up front, no surprises. Beach cottages, seasonal homes. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Hull, MA",
+    h1: "Flat-Rate Junk Removal in Hull, MA",
     heroSubhead:
       "Hull's trusted junk removal crew. Seasonal cleanouts, beach cottage hauls, and estate clearing on the Nantasket Peninsula — handled efficiently with upfront pricing.",
     bodyParagraph1:
@@ -521,7 +521,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Milton MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Milton, MA — price up front, no surprises. Furniture, appliances, estate cleanouts. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Milton, MA",
+    h1: "Flat-Rate Junk Removal in Milton, MA",
     heroSubhead:
       "Milton's trusted junk removal crew. Historic homes, large estates, and established neighborhoods — cleared with care and transparent flat-rate pricing.",
     bodyParagraph1:
@@ -548,7 +548,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Holbrook MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Holbrook, MA — price up front, no surprises. Furniture, appliances, household junk. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Holbrook, MA",
+    h1: "Flat-Rate Junk Removal in Holbrook, MA",
     heroSubhead:
       "Holbrook junk removal done right. Garage cleanouts, old furniture, appliances, and more — we load it, haul it, and leave your space clean.",
     bodyParagraph1:
@@ -575,7 +575,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Rockland MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Rockland, MA — price up front, no surprises. Garages, basements, whole homes. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Rockland, MA",
+    h1: "Flat-Rate Junk Removal in Rockland, MA",
     heroSubhead:
       "Rockland junk removal — fast, affordable, and done right. Garage cleanouts, furniture hauls, renovation debris — one call handles it all.",
     bodyParagraph1:
@@ -602,7 +602,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Abington MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Abington, MA — price up front, no surprises. Furniture, appliances, household junk. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Abington, MA",
+    h1: "Flat-Rate Junk Removal in Abington, MA",
     heroSubhead:
       "Abington junk removal made simple. Old furniture, appliances, garage clutter — one call and it's gone.",
     bodyParagraph1:
@@ -629,7 +629,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Whitman MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Whitman, MA — price up front, no surprises. Furniture, appliances, garage clutter. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Whitman, MA",
+    h1: "Flat-Rate Junk Removal in Whitman, MA",
     heroSubhead:
       "Whitman junk removal — one call, one trip, done. Furniture, appliances, garage cleanouts, and more — handled fast with upfront pricing.",
     bodyParagraph1:
@@ -656,7 +656,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Hanover MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Hanover, MA — price up front, no surprises. Furniture, appliances, garage junk. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Hanover, MA",
+    h1: "Flat-Rate Junk Removal in Hanover, MA",
     heroSubhead:
       "Hanover's trusted junk removal crew. Garage cleanouts, estate hauls, furniture removal — handled professionally with transparent pricing.",
     bodyParagraph1:
@@ -683,7 +683,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Pembroke MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Pembroke, MA — price up front, no surprises. Furniture, appliances, yard debris. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Pembroke, MA",
+    h1: "Flat-Rate Junk Removal in Pembroke, MA",
     heroSubhead:
       "Pembroke junk removal — residential cleanouts, garage hauls, yard debris, and more. One trip, flat-rate pricing, done right.",
     bodyParagraph1:
@@ -710,7 +710,7 @@ export const junkRemovalLocationPages: LocationPage[] = [
     titleTag: "Junk Removal Cohasset MA · Flat-Rate, 5-Star Rated | Big Red",
     metaDescription:
       "Flat-rate junk removal in Cohasset, MA — price up front, no surprises. Garage, basement and estate cleanouts. 5-star rated. Call or text 320-321-JUNK.",
-    h1: "Junk Removal in Cohasset, MA",
+    h1: "Flat-Rate Junk Removal in Cohasset, MA",
     heroSubhead:
       "Cohasset junk removal from the crew next door in Hingham. Estate cleanouts, garage clear-outs, furniture and appliance hauling — flat-rate, quoted before we start.",
     bodyParagraph1:
