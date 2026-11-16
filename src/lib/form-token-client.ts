@@ -32,10 +32,23 @@ export function prefetchFormToken(): void {
   }
 }
 
+const MAX_AGE_MS = 30 * 60 * 1000
+
+export const FORM_TOKEN_FAILED =
+  'This form could not load properly. Please refresh the page and try again, or call us.'
+
+// A token older than 30 minutes is fetched fresh (the wait below keeps it from
+// reading as too fast). THROWS when no token can be had, so the form never
+// sends a request the server would refuse as a bot (2026-11-16).
 export async function formToken(): Promise<string> {
   prefetchFormToken()
-  const got = await pending
-  if (!got) return ''
+  let got = await pending
+  if (got && performance.now() - got.at > MAX_AGE_MS) {
+    pending = null
+    prefetchFormToken()
+    got = await pending
+  }
+  if (!got) throw new Error(FORM_TOKEN_FAILED)
   const wait = MIN_AGE_MS - (performance.now() - got.at)
   if (wait > 0) await new Promise((r) => setTimeout(r, wait))
   return got.token

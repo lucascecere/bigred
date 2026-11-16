@@ -173,31 +173,35 @@ function genericRfq(message: string): boolean {
 
 // ---------- sales pitches (people selling TO Big Red, not booking a move) ----------
 
+// A pitch takes TWO OR MORE distinct patterns AND no buyer intent (2026-11-16
+// audit: "quick call", "Google reviews", "15 minutes", "first page",
+// "funding", "more customers", "unsubscribe" and a bare "VA" all showed up in
+// real messages, so they are gone). Even a pitch is only HELD for review in
+// the Command Center, never dropped.
 const PITCH_PHRASES = [
-  /virtual assistant|\bVAs?\b|MAVIS/,
-  /\bSEO\b|search engines?|first page|top of (the )?search|rank(ing)?s? (higher|on google)|more traffic/i,
-  /financing|funding|lending|line of credit|working capital|merchant cash|no personal guarantee/i,
+  /virtual assistants?|\bMAVIS\b/i,
+  /\bSEO\b|search engine (optimi[sz]ation|rankings?)|top of (the )?search results|rank(ing)?s? (higher|on google)|more (website )?traffic|online visibility/i,
+  /merchant (services|processing|cash)|dealer fees|line of credit|working capital|no personal guarantee|business (loan|funding|financing)/i,
   /guest (post|article)|contribute an? article|my article|publish(ing)? it on your (site|website)/i,
-  /AI (agent|employee|system)|custom.built AI/i,
-  /lead.generation|more (customers|leads|clients|sales)|generate more/i,
-  /acquire businesses|considered selling|buyers actively/i,
-  /reviews? provider|google reviews|trustpilot/i,
+  /AI (agent|employee|system|receptionist)|custom.built AI/i,
+  /lead.generation|generate more (leads|sales)|qualified (leads|appointments)/i,
+  /acquire businesses|considered selling (your|the) business|buyers actively/i,
+  /reviews? provider|(buy|boost) (google )?reviews|trustpilot/i,
   /wikipedia/i,
-  /reply (stop|yes)|respond with stop|opt.?out|unsubscribe/i,
-  /tried emailing (you|but)|reaching out here instead|didn.t (seem to )?land/i,
-  /mobile experience|website (design|redesign)|improve (your )?(site|website|store)|areas? (for|of) improvement|shopify (expert|developer|apps?)/i,
-  /book (a|your) (call|demo)|cal\.com|calendly|15 minutes|quick (call|chat)/i,
+  /mobile experience|website (design|redesign)|redesign (your|the) (site|website)|areas? (for|of) improvement/i,
+  /cal\.com|calendly|book (a|your) (free )?demo/i,
   /targeted visitors|drive (traffic|visitors)|keyword options/i,
-  /article (idea|on)|\barticle\b.{0,80}(your (site|website|audience|readers))/i,
+  /article (idea|on)|collaborat(e|ion) (on|with you on) (an? )?(article|post)/i,
+  /social media (management|marketing) (services|agency)|marketing agency|our agency|white.label/i,
 ];
 
 /** Wording a real customer uses (moving / junk removal). */
-export const BUYER_INTENT = /\b(my|our) (move|house|home|apartment|apt|condo|place|stuff|things|furniture|piano|couch|sofa|boxes|storage|unit|office|mom|dad|parents|garage|basement|attic|junk)\b|moving (from|to|out|in|day|date)|\bmove (out|in|date|day)\b|\bmy move\b|apartment|boxes|bedroom|\bstairs\b|elevator|piano|couch|dresser|mattress|furniture|junk|clean.?out|\bquote\b|estimate|how much|pric(e|es|ing)|\bcost\b|availab(le|ility)|this (weekend|week|month)|next (week|month)/i;
+export const BUYER_INTENT = /\b(need|needs) (help|\d+ (guys|movers|men))|\b(load|loading|unload|unloading)\b|\btruck\b|\bpods?\b|\bcall me( back)?\b|\bplease call\b|\bclosing\b|\bwalk.?up\b|\b\d+ ?(bed|br|bedroom)\b|\b(my|our) (move|house|home|apartment|apt|condo|place|stuff|things|furniture|piano|couch|sofa|boxes|storage|unit|office|mom|dad|parents|garage|basement|attic|junk)\b|moving (from|to|out|in|day|date)|\bmove (out|in|date|day)\b|\bmy move\b|apartment|boxes|bedroom|\bstairs\b|elevator|piano|couch|dresser|mattress|furniture|junk|clean.?out|\bquote\b|estimate|how much|pric(e|es|ing)|\bcost\b|availab(le|ility)|this (weekend|week|month)|next (week|month)/i;
 
 export function salesPitch(message: string, buyerIntent: RegExp): boolean {
   if (!message) return false;
   const hits = PITCH_PHRASES.filter((r) => r.test(message)).length;
-  return hits >= 2 || (hits >= 1 && !buyerIntent.test(message));
+  return hits >= 2 && !buyerIntent.test(message);
 }
 
 // ---------- the verdict ----------
@@ -218,7 +222,16 @@ export type FormInput = {
   buyerIntent?: RegExp;
 };
 
-export type Verdict = { spam: boolean; reasons: string[] };
+// spam = the rules doubt it; bot = a DEFINITE bot (refused, only counted).
+// Anything else flagged is content-only and HELD for review in the Command
+// Center, never dropped (Lucas 11-16: when in doubt, deliver).
+export type Verdict = { spam: boolean; bot: boolean; reasons: string[] };
+
+const DEFINITE = new Set(['honeypot', 'token:missing', 'token:bad', 'token:fast', 'email:disposable', 'email:no-mx']);
+export function definiteBot(reasons: string[]): boolean {
+  if (reasons.some((r) => DEFINITE.has(r))) return true;
+  return reasons.includes('company:faker') && reasons.includes('email:unrelated');
+}
 
 export async function judgeForm(input: FormInput, opts: { skipToken?: boolean } = {}): Promise<Verdict> {
   const reasons: string[] = [];
@@ -228,12 +241,12 @@ export async function judgeForm(input: FormInput, opts: { skipToken?: boolean } 
     reasons.push(reason);
   };
 
-  if (typeof input.honey === 'string' && input.honey.trim()) return { spam: true, reasons: ['honeypot'] };
+  if (typeof input.honey === 'string' && input.honey.trim()) return { spam: true, bot: true, reasons: ['honeypot'] };
 
   if (!opts.skipToken) {
     const tok = checkFormToken(input.token);
-    if (tok === 'missing' || tok === 'bad' || tok === 'fast') return { spam: true, reasons: [`token:${tok}`] };
-    if (tok === 'stale') flag(2, 'token:stale');
+    if (tok === 'missing' || tok === 'bad' || tok === 'fast') return { spam: true, bot: true, reasons: [`token:${tok}`] };
+    // A stale token (page open over a day) is a person: never scored (11-16 audit).
   }
 
   const name = (input.name ?? '').trim();
@@ -261,7 +274,10 @@ export async function judgeForm(input: FormInput, opts: { skipToken?: boolean } 
   }
   if (genericRfq(message)) flag(2, 'message:generic-rfq');
   // A pitch is spam on its own: vendors write from their own real addresses.
-  if (salesPitch(message, input.buyerIntent ?? BUYER_INTENT)) return { spam: true, reasons: [...reasons, 'message:sales-pitch'] };
+  if (salesPitch(message, input.buyerIntent ?? BUYER_INTENT)) {
+    const r = [...reasons, 'message:sales-pitch'];
+    return { spam: true, bot: definiteBot(r), reasons: r };
+  }
 
   // Content alone never flags a lead whose email fits the person: faker-looking
   // names only count when the address doesn't belong to them.
@@ -271,5 +287,6 @@ export async function judgeForm(input: FormInput, opts: { skipToken?: boolean } 
   // Something in the content (faker company, stale token, RFQ scam wording)
   // has to agree. A bare form with no message is not evidence on its own.
   const contentScore = score - (reasons.includes('no-detail') ? 1 : 0) - reasons.filter((r) => r.startsWith('email:') && !r.includes('(no points)')).reduce((n, r) => n + (r.startsWith('email:no-website') || r === 'email:unrelated' ? 1 : 2), 0);
-  return { spam: score >= 3 && badAddress && (unrelated || contentScore >= 1), reasons };
+  const spam = score >= 3 && badAddress && (unrelated || contentScore >= 1);
+  return { spam, bot: spam && definiteBot(reasons), reasons };
 }

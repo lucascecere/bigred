@@ -9,12 +9,22 @@ const resend = new Resend(env.RESEND_API_KEY)
 // Resend returns { error } instead of throwing, so a rejected send used to look
 // exactly like a delivered one. Throw it, so the route (and the Command Center
 // report) know the lead email did not go out.
+export const LEAD_FROM = 'Big Red Moving <leads@bigredmovingco.com>'
+export const leadSubject = (data: LeadFormData) => `New Moving Lead — ${data.name}`
+
+// Lucas 11-16: lead alerts go to Big Red's business inbox on its own domain
+// (info@bigredmovingco.com) and to Charlie (LEAD_NOTIFICATION_EMAIL), and the
+// reply-to is the LEAD, so hitting reply reaches the customer.
+export function leadRecipients(): string[] {
+  return [...new Set(['info@bigredmovingco.com', env.LEAD_NOTIFICATION_EMAIL].map((e) => e.trim().toLowerCase()).filter(Boolean))]
+}
+
 export async function sendLeadEmail(data: LeadFormData): Promise<void> {
   const { error } = await resend.emails.send({
-    from: 'Big Red Moving <leads@bigredmovingco.com>',
-    replyTo: 'info@bigredmovingco.com',
-    to: env.LEAD_NOTIFICATION_EMAIL,
-    subject: `New Moving Lead — ${data.name}`,
+    from: LEAD_FROM,
+    replyTo: data.email,
+    to: leadRecipients(),
+    subject: leadSubject(data),
     html: buildEmailHtml(data),
   })
   if (error) throw new Error(`${error.name ?? 'send failed'}: ${error.message ?? 'unknown Resend error'}`)

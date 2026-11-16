@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { siteContent } from '@content/site-content'
 import { LeadFormSchema } from '@/types/lead'
 import { PhoneCTA } from '@/components/ui/PhoneCTA'
-import { formToken, useFormToken } from '@/lib/form-token-client'
+import { formToken, useFormToken, FORM_TOKEN_FAILED } from '@/lib/form-token-client'
 
 type FieldErrors = Record<string, string>
 
@@ -59,8 +59,9 @@ export function Contact() {
       } else {
         setError(json.error ?? 'Something went wrong. Please call us directly.')
       }
-    } catch {
-      setError('Network error. Please call us directly.')
+    } catch (err) {
+      // No form token: nothing was sent (the server would refuse it as a bot).
+      setError(err instanceof Error && err.message === FORM_TOKEN_FAILED ? err.message : 'Network error. Please call us directly.')
     }
 
     setLoading(false)

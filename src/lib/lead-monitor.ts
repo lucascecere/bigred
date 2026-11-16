@@ -50,3 +50,59 @@ export async function reportLeadToCommandCenter(input: {
     console.error('[LEAD_MONITOR_FAILED]', err)
   }
 }
+
+async function postToCommandCenter(body: Record<string, unknown>, tag: string): Promise<boolean> {
+  const url = process.env.LEAD_EVENT_URL
+  const key = process.env.LEAD_EVENT_SECRET
+  if (!url || !key) return false
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': key, 'x-lead-site': SITE },
+      body: JSON.stringify({ site: SITE, ...body }),
+      signal: AbortSignal.timeout(5000),
+    })
+    if (!res.ok) console.error(`[${tag}]`, res.status, await res.text().catch(() => ''))
+    return res.ok
+  } catch (err) {
+    console.error(`[${tag}]`, err)
+    return false
+  }
+}
+
+// A lead the content rules doubt (pitch wording, scam signs) but that is not a
+// definite bot: HELD for review in the Command Center, not emailed here.
+// `alert` is exactly how the lead email would have gone out, for a Release in
+// CC. False when CC could not take it: the route then delivers it as normal.
+export async function holdLeadInCommandCenter(input: {
+  data: LeadFormData
+  reasons: string[]
+  alert: { from: string; to: string[]; reply_to: string; subject: string }
+}): Promise<boolean> {
+  const { data } = input
+  return postToCommandCenter(
+    {
+      held: true,
+      reasons: input.reasons.slice(0, 12),
+      occurred_at: new Date().toISOString(),
+      name: data.name,
+      email: data.email,
+      phone: data.phone || undefined,
+      form: 'moving quote',
+      summary: [
+        data.serviceType && `Service: ${data.serviceType}`,
+        `From: ${data.movingFrom}`,
+        `To: ${data.movingTo}`,
+        data.moveDate && `Move date: ${data.moveDate}`,
+        data.notes,
+      ].filter(Boolean).join('\n'),
+      alert: input.alert,
+    },
+    'LEAD_MONITOR_HOLD_FAILED',
+  )
+}
+
+/** A refused definite bot: reasons only (no PII), for the Monday count. */
+export async function reportSpamCountToCommandCenter(reasons: string[]): Promise<void> {
+  await postToCommandCenter({ action: 'spam_count', reasons: reasons.slice(0, 12) }, 'LEAD_MONITOR_SPAM_COUNT_FAILED')
+}

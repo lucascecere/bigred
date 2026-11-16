@@ -1,8 +1,8 @@
 import { NextRequest, after } from 'next/server'
 import { LeadFormSchema } from '@/types/lead'
-import { sendLeadEmail } from '@/lib/email'
+import { sendLeadEmail, LEAD_FROM, leadRecipients, leadSubject } from '@/lib/email'
 import { judgeForm } from '@/lib/spam'
-import { reportLeadToCommandCenter } from '@/lib/lead-monitor'
+import { reportLeadToCommandCenter, holdLeadInCommandCenter, reportSpamCountToCommandCenter } from '@/lib/lead-monitor'
 import { siteContent } from '../../../../content/site-content'
 
 // In-memory rate limiter.
@@ -90,10 +90,12 @@ export async function POST(request: NextRequest): Promise<Response> {
     )
   }
 
-  // 4b. Spam guard (src/lib/spam.ts): honeypot, a signed form token proving the
-  // page was loaded first, faker leads, sales pitches and scams. Spam gets the
-  // same success a person sees but sends nothing; there is no database here,
-  // so it is logged as [FORM_SPAM] and dropped.
+  // 4b. Spam guard (src/lib/spam.ts, 2026-11-16). A DEFINITE bot (honeypot,
+  // no/forged/instant token, faker company + stolen address, disposable or
+  // no-MX domain) gets the normal success and nothing else: one [FORM_SPAM]
+  // line (no PII) and a count in the Command Center. Content-only doubt
+  // (pitch wording, scam signs) is HELD for review in CC with the exact lead
+  // email for Release; if CC can't take it, the lead is delivered as normal.
   const data = result.data
   const verdict = await judgeForm({
     name: data.name,
@@ -103,9 +105,21 @@ export async function POST(request: NextRequest): Promise<Response> {
     token: data._t,
     honey: data._honey,
   })
-  if (verdict.spam) {
-    console.warn('[FORM_SPAM]', verdict.reasons.join(', '), JSON.stringify({ name: data.name, email: data.email, from: data.movingFrom, to: data.movingTo, notes: data.notes ?? '' }))
+  if (verdict.bot) {
+    console.warn('[FORM_SPAM]', 'big-red-moving', verdict.reasons.join('; '))
+    after(() => reportSpamCountToCommandCenter(verdict.reasons))
     return Response.json({ success: true })
+  }
+  if (verdict.spam) {
+    const held = await holdLeadInCommandCenter({
+      data,
+      reasons: verdict.reasons,
+      alert: { from: LEAD_FROM, to: leadRecipients(), reply_to: data.email, subject: leadSubject(data) },
+    })
+    if (held) {
+      console.warn('[FORM_HELD]', 'big-red-moving', verdict.reasons.join('; '))
+      return Response.json({ success: true })
+    }
   }
 
   // 5. Send notification email via Resend, and tell the YWF Command Center
