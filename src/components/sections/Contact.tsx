@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { siteContent } from '@content/site-content'
 import { LeadFormSchema } from '@/types/lead'
 import { PhoneCTA } from '@/components/ui/PhoneCTA'
+import { formToken, useFormToken } from '@/lib/form-token-client'
 
 type FieldErrors = Record<string, string>
 
@@ -13,6 +14,7 @@ export function Contact() {
   const [error, setError] = useState<string | null>(null)
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({})
   const [honey, setHoney] = useState('')
+  useFormToken()
 
   const { contact, phone } = siteContent
 
@@ -49,7 +51,7 @@ export function Contact() {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...validation.data, _honey: honey }),
+        body: JSON.stringify({ ...validation.data, _honey: honey, _t: await formToken() }),
       })
       const json = await res.json()
       if (json.success) {

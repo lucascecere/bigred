@@ -1,6 +1,8 @@
-import { NextRequest } from 'next/server'
+import { NextRequest, after } from 'next/server'
 import { LeadFormSchema } from '@/types/lead'
 import { sendLeadEmail } from '@/lib/email'
+import { judgeForm } from '@/lib/spam'
+import { reportLeadToCommandCenter } from '@/lib/lead-monitor'
 import { siteContent } from '../../../../content/site-content'
 
 // In-memory rate limiter.
@@ -88,16 +90,35 @@ export async function POST(request: NextRequest): Promise<Response> {
     )
   }
 
-  // 4b. Honeypot check — if the hidden field is filled, it's a bot
-  if (result.data._honey) {
-    // Silently succeed to avoid tipping off the bot
+  // 4b. Spam guard (src/lib/spam.ts): honeypot, a signed form token proving the
+  // page was loaded first, faker leads, sales pitches and scams. Spam gets the
+  // same success a person sees but sends nothing; there is no database here,
+  // so it is logged as [FORM_SPAM] and dropped.
+  const data = result.data
+  const verdict = await judgeForm({
+    name: data.name,
+    email: data.email,
+    message: data.notes ?? '',
+    hasDetail: true,
+    token: data._t,
+    honey: data._honey,
+  })
+  if (verdict.spam) {
+    console.warn('[FORM_SPAM]', verdict.reasons.join(', '), JSON.stringify({ name: data.name, email: data.email, from: data.movingFrom, to: data.movingTo, notes: data.notes ?? '' }))
     return Response.json({ success: true })
   }
 
-  // 5. Send notification email via Resend
+  // 5. Send notification email via Resend, and tell the YWF Command Center
+  // whether it went out (after the response; the report never throws).
+  let notifyError: string | null = null
   try {
-    await sendLeadEmail(result.data)
-  } catch {
+    await sendLeadEmail(data)
+  } catch (err) {
+    notifyError = err instanceof Error ? err.message : String(err)
+  }
+  after(() => reportLeadToCommandCenter({ data, clientNotified: !notifyError, notifyError }))
+  if (notifyError) {
+    console.error('[LEAD_NOTIFY_FAILED]', notifyError)
     return Response.json(
       {
         success: false,
